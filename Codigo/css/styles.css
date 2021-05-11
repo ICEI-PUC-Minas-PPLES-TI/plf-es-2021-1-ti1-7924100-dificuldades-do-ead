@@ -1,0 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
