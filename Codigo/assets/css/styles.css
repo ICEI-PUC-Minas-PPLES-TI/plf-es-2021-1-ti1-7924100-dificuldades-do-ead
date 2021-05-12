@@ -1,3 +1,52 @@
+/*==========PAGE============*/
+
 .pageTitle {
     font-size: 3rem;
 }
+
+.main {
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+}
+
+
+/*==========================*/
+
+
+/*=========LIST==========*/
+
+.list {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    max-width: 300px;
+    max-height: 300px;
+    background-color: var(--shallow-purple);
+    border-radius: 20px;
+}
+
+.listTitle {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.menuList {
+    margin: 20px 20px 0 0;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.menuList:hover {
+    background-color: #00000012;
+}
+
+
+/*========================*/
