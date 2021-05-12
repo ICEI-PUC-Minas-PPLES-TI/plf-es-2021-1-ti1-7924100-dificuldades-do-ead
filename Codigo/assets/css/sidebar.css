@@ -30,7 +30,7 @@
 body {
     position: relative;
     margin: var(--header-height) 0 0 0;
-    padding: 0 100rem;
+    padding: 0 1rem;
     font-family: var(--body-font);
     font-size: var(--normal-font-size-mobile);
     transition: .5s;
@@ -83,7 +83,7 @@ a {
 .l-navbar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     width: var(--nav-width-mobile);
     height: 100vh;
     background-color: var(--first-color);
@@ -142,7 +142,7 @@ a {
 /*Show navbar movil*/
 
 .show {
-    left: -100%;
+    left: 0;
 }
 
 
@@ -193,6 +193,9 @@ a {
         left: 0;
         padding: 1rem 1rem 0 0;
         width: calc(var(--nav-width) - 50px);
+        margin: 10px 10px 30px 10px;
+        height: 98vh;
+        border-radius: 10px;
     }
     /*Show navbar desktop*/
     .show {
