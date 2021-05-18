@@ -90,6 +90,38 @@ h3 {
 .menuList:hover {
     background-color: #00000012;
 }
+.button-1{
+    width: 10rem;
+    height: 3rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: var(--white);
+    border:none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: var(--deep-blue);
+}
+.button-1:hover{
+    cursor: pointer;
+    background-color: var(--blue-sky);
+    color: var(--deep-blue);
+}
+.button-2{
+    width: 10rem;
+    height: 3rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: var(--deep-blue);
+    border:none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: var(--shok-pink);
+}
+.button-2:hover{
+    cursor: pointer;
+    background-color: var(--sun-yellow);
+    color: var(--deep-blue);
+}
 
 
 /*========================*/
