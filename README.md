@@ -6,7 +6,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 * André de Oliveira Brandão
 * Breno Rosa Almeida
-* Nome completo do aluno 3
+* Gabriel Victor Couto Martins de Paula
 * Nome completo do aluno 4
 
 ## Professores responsáveis
