@@ -5,7 +5,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 ## Alunos integrantes da equipe
 
 * André de Oliveira Brandão
-* Nome completo do aluno 2
+* Breno Rosa Almeida
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
