@@ -99,8 +99,12 @@ a {
     justify-content: space-between;
     overflow: hidden;
 }
+.logo-sidebar div{
+    color: #ebebeb !important;
+}
 .logo-sidebar{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
