@@ -99,8 +99,21 @@ a {
     justify-content: space-between;
     overflow: hidden;
 }
-
-.nav__logo,
+.logo-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav__logo{
+    margin:0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav__logo img{
+    width: 80%;
+    ma
+}
 .nav__link {
     display: grid;
     grid-template-columns: max-content max-content;
