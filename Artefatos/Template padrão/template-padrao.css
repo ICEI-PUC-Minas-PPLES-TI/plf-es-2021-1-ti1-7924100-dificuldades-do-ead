@@ -1,7 +1,9 @@
 :root {
-    --tomato-red: #FF4C4C;
+    --tomato-red: #db2727;
     --juice-red: #F59C9C;
     --white: #EBEBEB;
+    --grey: #d1d1d1;
+    --dark-grey: #333;
     --sun-yellow: #FFBE0B;
     --orange: #FB5607;
     --shok-pink: #FF006E;
@@ -10,14 +12,19 @@
     --deep-blue: #081732;
     --dark-blue: #000714;
 }
-
+*{
+    margin:0;
+    padding: 0;
+}
 body {
     background-color: var(--white);
+
 }
 
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
+    color: var(--dark-blue);
 }
 
 h2 {
@@ -29,23 +36,67 @@ h3 {
     font-family: 'Roboto', sans-serif;
     color: var(--deep-blue);
     font-weight: bold;
-}
-/*==========PAGE============*/
+}/*
+div,section,h1,h2,h3{
+    border: 1px solid black;
+}*/
 
+/*==========PAGE============*/
+.template-title{
+    grid-row: 1;
+    grid-column: 1/3;
+    margin:auto;
+    border: 2px solid var(--deep-blue);
+    border-radius: 10px;
+    padding:10px 80px;
+}
 .pageTitle {
     font-size: 3rem;
 }
 
 .main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 4fr 4fr;
+}
+.pt-1 {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-column: 1;
+    grid-row: 2;
+}
+.pt-2 {
+    display: flex;
+    flex: 1 3 3;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.pt-3{
+    padding: 20px;
+}
 
 
 /*==========================*/
-
+.input-title, .input-description{
+    background-color: var(--grey);
+    border:none;
+    border-radius: 15px;
+    font-family: 'Roboto';
+    height: 3rem;
+    resize: none;
+    margin:10px;
+    color: var(--dark-grey);
+    font-size: 1.3rem;
+}
+.input-title{
+    padding: 5px 20px;
+}
+.input-description{
+    height: 400px;
+    padding: 20px;
+}
 
 /*=========LIST==========*/
 
@@ -90,6 +141,11 @@ h3 {
 .menuList:hover {
     background-color: #00000012;
 }
+.botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .button-1{
     width: 10rem;
     height: 3rem;
@@ -122,6 +178,45 @@ h3 {
     background-color: var(--sun-yellow);
     color: var(--deep-blue);
 }
-
-
+.button-3{
+    width: 10rem;
+    height: 3rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: var(--tomato-red);
+    border:none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: var(--juice-red);
+}
+.button-3:hover{
+    cursor: pointer;
+    background-color: var(--tomato-red);
+    color: var(--juice-red);
+}
 /*========================*/
+
+/*========ICONS==========*/
+.icons i{
+    font-size: 3rem;
+    color: var(--dark-blue);
+}
+
+.item-da-lista{
+    border-radius: 30px;
+    background-color: var(--blue-sky);
+    padding: 20px;
+    font-size: 1rem;
+    color: var(--dark-blue);
+}
+.item-lista-content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.check{
+    width: 56px;
+    height: 56px;
+    border: 2px solid var(--deep-blue);
+    border-radius: 8px;
+    margin: auto;
+}
