@@ -97,6 +97,7 @@ div,section,h1,h2,h3{
 
 /*=========LIST==========*/
 
+
 .list {
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -106,12 +107,15 @@ div,section,h1,h2,h3{
     min-height: 300px;
 }
 .color-0{
-    background-color: var(--shallow-purple);
+    background-color: var(--grey);
 }
 .color-1{
-    background-color: var(--sun-yellow);
+    background-color: var(--shallow-purple);
 }
 .color-2{
+    background-color: var(--sun-yellow);
+}
+.color-3{
     background-color: var(--blue-sky);
 }
 
@@ -138,6 +142,23 @@ div,section,h1,h2,h3{
 .menuList:hover {
     background-color: #00000012;
 }
+
+.addList {
+    margin: 50px 50px 50px 50px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.addList:hover {
+    background-color: #00000012;
+}
+
 .botoes{
     display: flex;
     flex-direction: column;
