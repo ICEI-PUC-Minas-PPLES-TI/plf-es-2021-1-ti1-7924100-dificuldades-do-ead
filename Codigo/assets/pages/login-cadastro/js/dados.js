@@ -1,30 +1,11 @@
-//Função de Ler os Dados
-/*function lerDados() {
-    let strDados = localStorage.getItem('db');
-
-    if (strDados) {
-        objDados = JSON.parse(strDados);
-    }
-    else {
-        objDados = {
-            Cadastros: [
-                { Nome: "André De Oliveira", Email: "andre_1234@yahoo.com.br", Senha: "andre1234" },
-                { Nome: "Breno Rosa", Email: "breno_1234@yahoo.com.br", Senha: "breno1234" },
-                { Nome: "Gabriel Victor", Email: "gabriel_1234@yahoo.com.br", Senha: "gabriel1234" },
-                { Nome: "João Gabriel", Email: "joao_1234@yahoo.com.br", Senha: "joao1234" }
-            ]
-        }
-    }
-
-    return objDados;
-}*/
-
+//Esee é o banco de dados dos Cadastros Padrões
 var objDados =
     [
         { Nome: "André De Oliveira", Email: "andre_1234@yahoo.com.br", Senha: "andre1234" },
         { Nome: "Breno Rosa", Email: "breno_1234@yahoo.com.br", Senha: "breno1234" },
         { Nome: "Gabriel Victor", Email: "gabriel_1234@yahoo.com.br", Senha: "gabriel1234" },
-        { Nome: "João Gabriel", Email: "joao_1234@yahoo.com.br", Senha: "joao1234" }
+        { Nome: "João Gabriel", Email: "joao_1234@yahoo.com.br", Senha: "joao1234" },
+        { Nome: "Admin", Email: "admin@admin.com", Senha: "admin" }
     ]
 
 //Função de Salvar os Dados
@@ -34,8 +15,6 @@ function salvaDados(dados) {
 
 //Função de Incluir e Salvar os Dados
 function incluirDados() {
-    //Ler os Dados do localStorage
-    let objDados = lerDados();
 
     //Incluir um Novo Cadastro
     let strNome = document.getElementById('campoNome').value;
@@ -46,22 +25,27 @@ function incluirDados() {
         Email: strEmail,
         Senha: strSenha
     };
+    //Cria um novo Cadastro no Banco de Dados
     db.push(novoCadastro);
 
-    //Salvar os Dados no localStorage novamente
+    //Salvar os Dados no localStorage 
     salvaDados(objDados);
+    //Console dos cadastros depois de ter criado algum novoCadastro
+    console.log(db);
 }
 
 //Função de Login
 function loginDados() {
+    //Pega os valores das variáveis Email e Senha
     var Email = document.querySelector("input#Email").value;
     var Senha = document.querySelector("input#Senha").value;
 
+    //Ler os dados do Banco de Dados(db)
     for (let i = 0; i < db.length; i++) {
         var usuario = db[i];
-        console.log(usuario);
 
-        //Verifica se o Usuário é Valido
+        //Consoles caso queira testar
+        /*console.log(usuarios);
         console.log(Email);
         console.log(Senha);
         console.log(usuario.Email);
@@ -69,42 +53,30 @@ function loginDados() {
         console.log(typeof (Email));
         console.log(typeof (Senha));
         console.log(typeof (usuario.Email));
-        console.log(typeof (usuario.Senha));
+        console.log(typeof (usuario.Senha));*/
+
+        //Verifica se o Usuário é Valido 
 
         if (Email == usuario.Email && Senha == usuario.Senha) {
+            //Aqui vai entrar na página do Aplicativo,mas por enquanto esta como só um alerta mesmo
             alert("Entrou");
             localStorage.setItem("acesso", true);
 
             window.alert("Login Sucedido");
-
         }
-    }
 
+        //Tentando fazer uma função para quando o usuário e senha forem inválidos Emitir um alerta de erro
+        /*if (Email != usuario.Email && Senha != usuario.Senha){
+            localStorage.setItem("acesso", false);
+        }
+        
+        if(logado != true){
+            alert("Você não esta autenticado!");
+            window.location.href="cadastro.html";
+        }*/
+    }
 }
-/*function loginDados() {
-    var Email = document.querySelector("input#Email").value;
-    var Senha = document.querySelector("input#Senha").value;
-    let objDados = lerDados();
 
-    //Verifica todos os Cadastros de login
-    for(i=0; i< objDados.Cadastros.lenght; i++){
-        var usuario = objDados.Cadastros[i];
-
-        //Verifica se o Usuário é Valido
-        if (Email == usuario.Email && Senha == usuario.Senha ){
-            Cadastros.Email = usuario.Email;
-            Cadastros.Senha = usuario.Senha;
-            //Salva os Dados de Login
-            salvaDados();
-
-            return true;
-        }
-        else{
-            alert ("Usuário ou Senha Inválidos!");
-        }
-    }
-    return false;
-}*/
 
 
 

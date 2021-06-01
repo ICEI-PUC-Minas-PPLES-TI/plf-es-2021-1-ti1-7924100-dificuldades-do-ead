@@ -1,4 +1,4 @@
-
+//Adicionar uma class no body
 var btnSignin = document.querySelector("#signin");
 var btnSignup = document.querySelector("#signup");
 var body = document.querySelector("body");

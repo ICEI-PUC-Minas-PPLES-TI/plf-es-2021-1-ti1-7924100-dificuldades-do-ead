@@ -1,4 +1,4 @@
-/*Função que irá verificar se o usuário tem Acesso, se */
+/*Função que irá verificar se o usuário tem Acesso permitido ou não*/
 /*var logado = false;
 
 if(localStorage.getItem("acesso") == "true"){
