@@ -1,0 +1,94 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ecf0f1;
+}
+
+.form-container {
+  display: flex;
+  height: 98vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-container .form-wrap {/**/
+  border-radius: 15px;
+  background: #fff;
+  width: 40%;
+  height: 53%;
+  padding: 15px 20px;
+}
+.form-container .form-wrap h1 {/*titulo <listfy/>*/
+  background: #FFBE0B;
+  border-radius: 30px;
+  padding: 4px 10px;
+  text-align: center;
+  margin: 15px 175px 15px;
+  font-size: 35px;
+}
+
+.form-container .form-wrap h2 {/*subtitulo recuperacao senha*/
+  text-align: center;
+  margin: 0px 0px 20px;
+  font-size: 19px;
+}
+
+.form-container .form-wrap .form-box {
+  margin: 15px 0px 15px;
+}
+
+.form-container .form-wrap .form-box input[type="text"] {/*caixas de email/resp/novasenha*/
+  padding: 5px 8px;
+  border-radius: 15px;
+  border: 0px solid #353535;
+  color: #353535;
+  width: 100%;
+  background-color: #ecf0f1;
+}
+
+.form-container .form-wrap .form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container .form-wrap .form-submit input[type="submit"] {/*botao trocar senha*/
+  padding: 4px 10px;
+  border: none;
+  border-radius: 15px;
+  background: #081732;
+  color: #ecf0f1;
+  font-weight: 750;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 15px 0px 15px;
+}
+.form-container .form-wrap .form-question {
+  padding: 5px 8px;
+  border-radius: 15px;
+  border: 0px solid #353535;
+  width: 100%;
+  background-color: #ecf0f1;
+}
+
+.form-container .form-wrap .return-page {
+  display: flex;
+  justify-content: center;
+}
+
+/*.form-container .form-wrap .return-page input[type="submit"] {/*botao trocar senha
+  padding: 4px 10px;
+  border: none;
+  border-radius: 15px;
+  background: #081732;
+  color: #ecf0f1;
+  font-weight: 750;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 15px 0px 15px;
+}*/
