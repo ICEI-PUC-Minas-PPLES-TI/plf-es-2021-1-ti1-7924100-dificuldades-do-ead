@@ -19,7 +19,7 @@ body {
     background-color: #fff;
     border-radius: 15px;
     width: 960px;
-    height: 50%;
+    height: 60%;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -141,6 +141,12 @@ body {
 }
 .item-social-media{
     color: #081732;
+}
+.form-question{
+    border: 1px solid #bdc3c7;
+    background-color: #ecf0f1;
+    border: 0;
+    color: black;
 }
 /*Formulário*/
 .form{
