@@ -1,85 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-bt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!--=========BOXICONS===========-->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <!--============================-->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-
-    <!--==================STYLES======================-->
-    <link rel="stylesheet" href="assets/css/sidebar.css" />
-    <link rel="stylesheet" href="assets/css/template.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <!--==============================================-->
-    <title>Nome da aplicação</title>
+    <title>Cadastro Login</title>
+    <link rel="stylesheet" href="assets/pages/login-cadastro/css/cadastro.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
-<body id="body-pd">
-    <header class="header" id="header">
-        <div class="header__toggle">
-            <i class='bx bx-menu' id="header-toggle"></i>
-        </div>
+<body>
+    <div class="container">
+        <!--Conteúdo 1-->
 
-        <div class="header__img">
-            <img src="assets/icons/account_circle_black_24dp.svg" alt="">
-        </div>
-
-    </header>
-
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div>
-                <a href="#" class="nav__logo">
-                    <i class='bx bx-question-mark'></i>
-                    <span class="nav__logo-name">Sobre</span>
-                </a>
-
-                <div class="nav__list">
-                    <a href="#" class="nav__link active">
-                        <i class='bx bx-question-mark'></i>
-                        <span class="nav__name">Sobre</span>
-                    </a>
-                    <a href="#" class="nav__link active">
-                        <i class='bx bxs-donate-heart'></i>
-                        <span class="nav__name">Fazer uma doação</span>
-                    </a>
-
-                    <a href="#" class="nav__link">
-                        <i class='bx bxs-chat'></i>
-                        <span class="nav__name">Feedback</span>
-                    </a>
-
-                    <a href="#" class="nav__link">
-                        <i class='bx bx-code-alt'></i>
-                        <span class="nav__name">Repositório</span>
-                    </a>
-                </div>
+        <div class="conteudo conteudo_1">
+            <div class="coluna_1">
+                <h2 class="tittle tittle-primary">bem-vindo!</h2>
+                <!--Cadastro de Login-->
+                <p class="description description-primary">Para se manter conectado com a gente</p>
+                <p class="description description-primary">por favor faça o Cadastro com suas informações.</p>
+                <button id="signin" class="btn btn-primary">entrar</button>
             </div>
+            <div class="coluna_2">
+                <h2 class="tittle tittle-second">crie a sua conta</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- Mídias Sociais -->
+                <p class="description description-second">ou use a sua conta do Email:</p>
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="Nome" placeholder=" Nome" id="campoNome">
+                    </label>
 
-            <a href="#" class="nav__link">
-                <i class='bx bx-log-out nav__icon'></i>
-                <span class="nav__name">Log Out</span>
-            </a>
-        </nav>
-    </div>
-    <main class="main">
-        <h1 class="pageTitle">Listas</h1>
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder=" Email" id="campoEmail">
+                    </label>
 
-        
-        <div class="list">
-            <h2 class="listTitle">Engenharia de software</h2>
-            <i class='bx bx-dots-vertical-rounded menuList'></i>
+                    <label class="label-input" for="">
+                        <i class="fas fa-question icon-modify"></i>
+                        <input type="Nome" id="campoPergunta">
+                        <select class="form-question">
+                            <option value="">Pergunta de segurança</option>
+                            <option value="1">Nome do animal de estimação da infancia</option>
+                            <option value="2">Primeiro Video Game</option>
+                            <option value="3">exemplo 3</option>
+                        </select>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-comments icon-modify"></i>
+                        <input type="Nome" placeholder=" Resposta - Pergunta de Segurança" id="campoResposta">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder=" Senha" id="campoSenha">
+                    </label>
+
+
+                </form>
+                <button onclick="incluirDados()" class="btn btn-second">inscreva-se</button>
+            </div><!-- Segunda Coluna -->
         </div>
 
-    </main>
-    <script src="assets/js/sidebar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+        <!--Fim Conteudo 1-->
+
+        <!--Conteúdo 2-->
+        <div class="conteudo conteudo_2">
+            <!--Tela de Login-->
+            <div class="coluna_1">
+                <h2 class="tittle tittle-primary">olá amigo!</h2>
+                <p class="description description-primary">Insira seus dados da Conta</p>
+                <p class="description description-primary">e começa a journada com a gente!</p>
+                <button id="signup" class="btn btn-primary">inscreva-se</button>
+            </div>
+            <div class="coluna_2"><!-- Mídias Sociais -->
+                <h2 class="tittle tittle-second">faça o login com sua conta</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- Fim Mídias Sociais -->
+                <p class="description description-second">ou use a sua conta do Email:</p>
+                <form class="form">
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder=" Email" id="Email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder=" Senha" id="Senha">
+                    </label>
+
+                    <a class="password" href="#">Esqueceu a sua Senha?</a>
+
+                </form>
+                <button onclick="loginDados()" id="btn_Incluir_Cadastro" class="btn btn-second">entrar</button>
+            </div>
+        </div><!-- Fim Conteúdo 2 -->
+    </div>
+    <!--JavaScript-->
+    <script src="assets/pages/login-cadastro/js/animacaocadastro.js"></script>
+    <script src="assets/pages/login-cadastro/js/dados.js"></script>
+    <script src="assets/pages/login-cadastro/js/logado.js"></script>
+    <script src="assets/pages/login-cadastro/js/dados_de_usuarios.js"></script>
+</body>
 
 </html>
