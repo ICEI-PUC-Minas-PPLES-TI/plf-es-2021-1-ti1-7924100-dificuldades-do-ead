@@ -52,13 +52,11 @@ function renderizarConteudo(){
         botão para que o usuário crie novas listas.
     */
     preRenderListas.push(`
-        <div class="add-list-button">
+        <div class="add-list-button" onclick="novaLista()">
             <i class='bx bx-plus-circle'></i>
         </div>
     `);
 
     // Todas as listas são inseridas no documento
     listas.innerHTML = preRenderListas.toString();
-    
-
 }
