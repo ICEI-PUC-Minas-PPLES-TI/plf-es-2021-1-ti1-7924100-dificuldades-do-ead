@@ -1,4 +1,5 @@
 var db = {
+    ultimoId:5,
     usuarios: [
         { id: 1, Nome: "André De Oliveira", Email: "andre_1234@yahoo.com.br", Senha: "andre1234" },
         { id: 2, Nome: "Breno Rosa", Email: "breno_1234@yahoo.com.br", Senha: "breno1234" },
