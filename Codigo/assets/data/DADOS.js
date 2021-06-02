@@ -8,12 +8,12 @@ var db = {
         { id: 4, Nome: "João Gabriel", Email: "joao_1234@yahoo.com.br", Senha: "joao1234" },
         { id: 5, Nome: "Admin", Email: "admin@admin.com", Senha: "admin" }
     ],
-    listasUsiarios:[
+    listasUsuarios:[
         { id: 1, listas:[
             {
                 lista_id:1, 
                 lista_nome:'Lista exemplo', 
-                lista_cor:'#ff0228',
+                lista_cor:'#FF006E',
                 lista_itens:[
                     {
                         titulo:'Quiz da palestra',
@@ -30,7 +30,7 @@ var db = {
             {
                 lista_id:2, 
                 lista_nome:'Engenharia de software', 
-                lista_cor:'#ff0228',
+                lista_cor:'#3A86FF',
                 lista_itens:[
                     {
                         titulo:'Quiz da palestra',
@@ -45,7 +45,6 @@ var db = {
                 ]
             }
         ]},
-
         { id: 2,},
         { id: 3,},
         { id: 4,},
