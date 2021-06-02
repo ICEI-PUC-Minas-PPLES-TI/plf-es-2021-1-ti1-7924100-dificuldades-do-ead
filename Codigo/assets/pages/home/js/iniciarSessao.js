@@ -1,6 +1,7 @@
 
 //Armazenamento do elemento que recebe as listas
-var listas = document.querySelector("div.main-content"); 
+var listas = document.querySelector("div.main-content-lists");
+
 
 var dadosDasListas = {}; // variavel que armazena somente a lista de listas
 var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
@@ -44,18 +45,7 @@ function renderizarConteudo(){
             </div>
             `);
     }
-
-    /*
-        Ao fina dos ciclos de repetição e com o array contendo
-        todos os dados necessários para a criação dos elementos
-        É adicionado um ultimo elemento ao final do array, que é o
-        botão para que o usuário crie novas listas.
-    */
-    preRenderListas.push(`
-        <div class="add-list-button" onclick="novaLista()">
-            <i class='bx bx-plus-circle'></i>
-        </div>
-    `);
+   
     //Esse trecho remove as virgulas do array antes ser transformados em string
     preRenderListas = preRenderListas.join("");
 

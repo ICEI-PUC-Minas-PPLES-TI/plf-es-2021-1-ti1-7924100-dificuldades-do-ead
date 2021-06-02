@@ -8,7 +8,7 @@
     display: grid;
     grid-template-rows: 1fr 10fr;
 }
-.main-content{
+.main-content, .main-content-lists{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
