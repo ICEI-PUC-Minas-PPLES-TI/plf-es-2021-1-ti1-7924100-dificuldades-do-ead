@@ -65,6 +65,10 @@ function loginDados() {
             localStorage.setItem("acesso", true);
 
             window.alert("Login Sucedido");
+            console.log("Redirecionano.......");
+            window.location.href = "assets/pages/home/home.html";
+            db.usuarioLogadoAtualmente = usuario.id;
+            console.log("Id de Login: "+db.usuarioLogadoAtualmente+"\n dados desse usuário: "+usuario);
         }
 
         //Tentando fazer uma função para quando o usuário e senha forem inválidos Emitir um alerta de erro
