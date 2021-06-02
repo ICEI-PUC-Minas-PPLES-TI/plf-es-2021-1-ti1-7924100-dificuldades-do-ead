@@ -23,6 +23,7 @@ function renderizarConteudo(){
         if(numero == userNumero){
             //listas encontradas
             dadosDasListas = arrayDasListas[i]
+            localStorage.setItem('indexDaListaDoUsuario', i)
         }else{
             console.log('Nope!')
         }
@@ -52,5 +53,6 @@ function renderizarConteudo(){
     // Todas as listas são inseridas no documento
     listas.innerHTML = preRenderListas.toString();
     
-
+    //salva dados no local storage
+    localStorage.setItem('db', JSON.stringify(db))
 }

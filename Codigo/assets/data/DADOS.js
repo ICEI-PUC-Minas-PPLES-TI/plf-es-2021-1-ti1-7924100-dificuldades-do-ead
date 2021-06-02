@@ -1,5 +1,6 @@
 var db = {
     usuarioLogadoAtualmente:0,
+    indexDaListaDousuario:0,
     ultimoId:5,
     usuarios: [
         { id: 1, Nome: "Gabriel Victor", Email: "gabriel@yahoo.com.br", Senha: "gabriel1234" },

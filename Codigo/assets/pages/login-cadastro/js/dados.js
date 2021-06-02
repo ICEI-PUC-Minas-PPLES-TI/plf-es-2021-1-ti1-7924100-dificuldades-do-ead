@@ -1,4 +1,6 @@
 
+var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
 //Função de Salvar os Dados
 function salvaDados(dados) {
@@ -30,6 +32,7 @@ function incluirDados() {
 
 //Função de Login
 function loginDados() {
+    
     //Pega os valores das variáveis Email e Senha
     var Email = document.querySelector("input#Email").value;
     var Senha = document.querySelector("input#Senha").value;
@@ -62,7 +65,7 @@ function loginDados() {
             
             db.usuarioLogadoAtualmente = usuario.id; //setando o id de sessão
             console.log("Id de Login: "+db.usuarioLogadoAtualmente); //mais logs com informação
-            localStorage.setItem('usuarioLogadoAtualmente', usuario.id);
+            salvaDados(db)
             console.log(usuario);
         }
 
