@@ -23,7 +23,7 @@
                 <p class="description description-primary">por favor faça o Cadastro com suas informações.</p>
                 <button id="signin" class="btn btn-primary">entrar</button>
             </div>
-            <div class="coluna_2">
+            <div class="coluna_2"><!--Começo Mídias Sociais-->
                 <h2 class="tittle tittle-second">crie a sua conta</h2>
                 <div class="social-media">
                     <ul class="list-social-media">
@@ -43,9 +43,9 @@
                             </li>
                         </a>
                     </ul>
-                </div><!-- Mídias Sociais -->
+                </div><!-- Fim Mídias Sociais -->
                 <p class="description description-second">ou use a sua conta do Email:</p>
-                <form class="form">
+                <form class="form"><!--Campos de Nome,Emal,Pergunta de Segurança, Senha-->
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
                         <input type="Nome" placeholder=" Nome" id="campoNome">
@@ -58,7 +58,7 @@
 
                     <label class="label-input" for="">
                         <i class="fas fa-question icon-modify"></i>
-                        <input type="Nome" id="campoPergunta">
+                        <input type="Pergunta de Segurança" id="campoPergunta">
                         <select class="form-question">
                             <option value="">Pergunta de segurança</option>
                             <option value="1">Nome do animal de estimação da infancia</option>
@@ -69,16 +69,14 @@
 
                     <label class="label-input" for="">
                         <i class="far fa-comments icon-modify"></i>
-                        <input type="Nome" placeholder=" Resposta - Pergunta de Segurança" id="campoResposta">
+                        <input type="Resposta Pergunta de Segurança" placeholder=" Resposta - Pergunta de Segurança" id="campoResposta">
                     </label>
 
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
                         <input type="password" placeholder=" Senha" id="campoSenha">
                     </label>
-
-
-                </form>
+                </form><!--Fim Campos-->
                 <button onclick="incluirDados()" class="btn btn-second">inscreva-se</button>
             </div><!-- Segunda Coluna -->
         </div>
@@ -117,7 +115,7 @@
                 </div><!-- Fim Mídias Sociais -->
                 <p class="description description-second">ou use a sua conta do Email:</p>
                 <form class="form">
-
+                    <!--Login Email e Senha-->
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="email" placeholder=" Email" id="Email">
