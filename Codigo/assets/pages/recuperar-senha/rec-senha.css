@@ -75,3 +75,14 @@ input[type="submit"]{
 .link-login a:hover{
   text-decoration: underline;
 }
+/*Animação Botão Trocar Senha*/
+.btn-trocar-senha{
+  background-color: #081732;
+  border: 1px solid #081732;
+  transition: background-color 1s;
+}
+.btn-trocar-senha:hover{
+  background-color: #fff;
+  border: 1px solid #081732;
+  color: #081732;
+}/*Fim animação*/
