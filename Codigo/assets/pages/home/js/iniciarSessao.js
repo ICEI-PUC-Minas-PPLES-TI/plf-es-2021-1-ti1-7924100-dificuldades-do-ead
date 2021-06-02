@@ -39,7 +39,7 @@ function renderizarConteudo(){
     for( let j = 0 ; j < dadosDasListas.listas.length ; j++){
         var cor = dadosDasListas.listas[j].lista_cor;
         
-        preRenderListas.unshift(`
+        preRenderListas.push(`
             <div class="list" style="background-color:${cor} !important;">
                 <h2 class="listTitle">${dadosDasListas.listas[j].lista_nome}</h2>
                 <i class='bx bx-dots-vertical-rounded menuList'></i>
