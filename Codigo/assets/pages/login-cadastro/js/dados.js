@@ -29,7 +29,7 @@ function incluirDados() {
     db.usuarios.push(novoCadastro);
 
     //Salvar os Dados no localStorage 
-    salvaDados(objDados);
+    salvaDados(db);
     //Console dos cadastros depois de ter criado algum novoCadastro
     console.log(db);
 }
