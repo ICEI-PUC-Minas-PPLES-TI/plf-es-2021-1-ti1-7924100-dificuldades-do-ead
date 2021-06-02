@@ -20,7 +20,7 @@ function incluirDados() {
     let strNome = document.getElementById('campoNome').value;
     let strEmail = document.getElementById('campoEmail').value;
     let strSenha = document.getElementById('campoSenha').value;
-    db.ultimoId++;
+    db.ultimoId++; // icremento da variavel do banco que regista qual foi o ultimo id cadastrado e usado
     let novoCadastro = {
         id: db.ultimoId,
         Nome: strNome,

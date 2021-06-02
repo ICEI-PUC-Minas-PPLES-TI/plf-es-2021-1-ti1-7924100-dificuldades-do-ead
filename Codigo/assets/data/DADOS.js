@@ -7,4 +7,30 @@ var db = {
         { id: 4, Nome: "João Gabriel", Email: "joao_1234@yahoo.com.br", Senha: "joao1234" },
         { id: 5, Nome: "Admin", Email: "admin@admin.com", Senha: "admin" }
     ],
+    listasUsiarios:[
+        { id: 1, listas:[
+            {
+                lista_id:1, 
+                lista_nome:'Engenharia de software', 
+                lista_cor:'#ff0228',
+                lista_itens:[
+                    {
+                        titulo:'Quiz da palestra',
+                        descricao:'Para segunda feira um quiz sobre a palestra de Ana Regina',
+                        data:'07/06/2021'
+                    },
+                    {
+                        titulo:'Teste de software',
+                        descricao:'Fazer teste de um software',
+                        data:'10/06/2021'
+                    }
+                ]
+            }
+        ]},
+        
+        { id: 2,},
+        { id: 3,},
+        { id: 4,},
+        { id: 5,},
+    ]
 }
