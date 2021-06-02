@@ -8,7 +8,7 @@
 body{
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg,#FF4C4C, #8338EC);
+  background: linear-gradient(120deg,#fffC, #081732);
   height: 100vh;
   overflow: hidden;
 }
@@ -24,7 +24,8 @@ body{
 .center h1{/*titulo(recuperar senha)*/
   text-align: center;
   padding: 20px 0;
-  background-color: #8338EC;
+  background-color: #081732;
+  color: #fff;
   margin: 15px 105px 15px;
   border-radius: 50px;
 }
@@ -86,3 +87,15 @@ input[type="submit"]{
   border: 1px solid #081732;
   color: #081732;
 }/*Fim animação*/
+
+
+/*botao da pergunta*/
+.pergunta-seg{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #bdc3c7;
+  background-color: #ecf0f1;
+  border: 0;
+  color: black;
+  border-radius: 25px;
+}
