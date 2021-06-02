@@ -56,7 +56,11 @@ function renderizarConteudo(){
             <i class='bx bx-plus-circle'></i>
         </div>
     `);
+    //Esse trecho remove as virgulas do array antes ser transformados em string
+    preRenderListas = preRenderListas.join("");
 
     // Todas as listas são inseridas no documento
     listas.innerHTML = preRenderListas.toString();
+    
+
 }
