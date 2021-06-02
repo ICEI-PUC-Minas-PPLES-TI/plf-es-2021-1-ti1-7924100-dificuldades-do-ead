@@ -60,5 +60,16 @@
     background-color: #AAA;
     border-radius: 20px;
     margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-list-button i{
+    font-size: 10rem;
+}
+.add-list-button:hover{
+    background-color: #CCC;
+    color: #444;
+    cursor: pointer;
 }
 /*========================*/
