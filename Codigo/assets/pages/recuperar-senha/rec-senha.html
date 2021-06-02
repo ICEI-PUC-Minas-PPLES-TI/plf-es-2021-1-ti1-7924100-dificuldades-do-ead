@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 
 <html lang="pt-bt">
@@ -16,7 +13,7 @@
     <h1>Recuperar Senha</h1>
     <form method="post">
       <div class="campo-texto">
-        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Email" id="campoEmail">
       </div>
       <div class="campo-texto">
         <select class="pergunta-seg">
@@ -24,21 +21,23 @@
           <option value="1">Nome do animal de estimação da infancia</option>
           <option value="2">Primeiro Video Game</option>
           <option value="3">exemplo 3</option>
-      </select>
+        </select>
       </div>
       <div class="campo-texto">
-        <input type="text" placeholder="Resposta Pergunta Segurança">
+        <input type="text" placeholder="Resposta Pergunta Segurança" id="campoPergunta>
       </div>
-      <div class="campo-texto">
-        <input type="password" placeholder="Nova Senha">
+      <div class=" campo-texto">
+        <input type="password" placeholder="Nova Senha" id="campoSenha">
       </div>
-      <input type="submit" value="Trocar Senha" class="btn-trocar-senha">
+      <input onclick="trocarSenha()" type="submit" value="Trocar Senha" class="btn-trocar-senha">
       <div class="link-login">
         <a href="linkPARApaginaLogin">Voltar para a página de Login</a>
       </div>
     </form>
   </div>
+  <script src="assets/data/DADOS.js"></script>
+  <script src="assets/pages/login-cadastro/js/dados.js"></script>
 </body>
 
-</html>
 
+</html>
