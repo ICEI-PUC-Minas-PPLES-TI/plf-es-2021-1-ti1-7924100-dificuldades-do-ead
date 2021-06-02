@@ -8,6 +8,11 @@
     display: grid;
     grid-template-rows: 1fr 10fr;
 }
+.main-content{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 
 /*==========================*/
@@ -18,10 +23,11 @@
 .list {
     display: grid;
     grid-template-columns: 4fr 1fr;
-    max-width: 300px;
-    max-height: 300px;
+    width: 300px;
+    height: 300px;
     background-color: var(--shallow-purple);
     border-radius: 20px;
+    margin: 10px;
 }
 
 .listTitle {
@@ -48,5 +54,11 @@
     background-color: #00000012;
 }
 
-
+.add-list-button{
+    width: 300px;
+    height: 300px;
+    background-color: #AAA;
+    border-radius: 20px;
+    margin: 10px;
+}
 /*========================*/
