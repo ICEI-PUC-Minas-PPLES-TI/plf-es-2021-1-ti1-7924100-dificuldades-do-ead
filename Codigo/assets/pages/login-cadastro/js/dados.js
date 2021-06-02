@@ -26,7 +26,7 @@ function incluirDados() {
         Senha: strSenha
     };
     //Cria um novo Cadastro no Banco de Dados
-    db.push(novoCadastro);
+    db.usuarios.push(novoCadastro);
 
     //Salvar os Dados no localStorage 
     salvaDados(objDados);
@@ -41,8 +41,8 @@ function loginDados() {
     var Senha = document.querySelector("input#Senha").value;
 
     //Ler os dados do Banco de Dados(db)
-    for (let i = 0; i < db.length; i++) {
-        var usuario = db[i];
+    for (let i = 0; i < db.usuarios.length; i++) {
+        var usuario = db.usuarios[i];
 
         //Consoles caso queira testar
         /*console.log(usuarios);
