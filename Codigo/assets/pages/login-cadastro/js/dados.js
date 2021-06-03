@@ -84,14 +84,6 @@ function loginDados() {
     }
 }
 
-
-
-
-
-
-
-
-/*
 //[---------------RECUPERAR SENHA-------------]
 
 function trocarSenha() {
@@ -121,4 +113,4 @@ function trocarSenha() {
     }
 }
 
-//[------------------------FIM RECUPERAR SENHA-----------]*/
+//[------------------------FIM RECUPERAR SENHA-----------]
