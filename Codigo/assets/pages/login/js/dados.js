@@ -1,6 +1,3 @@
-var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
-var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
-
 //Função de Salvar os Dados
 function salvaDados(dados) {
     localStorage.setItem('db', JSON.stringify(dados));
@@ -8,6 +5,10 @@ function salvaDados(dados) {
 
 //Função de Incluir e Salvar os Dados
 function incluirDados() {
+
+
+    var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+    var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
     //Incluir um Novo Cadastro
     let strNome = document.getElementById('campoNome').value;
@@ -37,10 +38,13 @@ function incluirDados() {
 
 //Função de Login
 function loginDados() {
-    
+
     //Pega os valores das variáveis Email e Senha
     var Email = document.querySelector("input#Email").value;
     var Senha = document.querySelector("input#Senha").value;
+
+    var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+    var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
     //Ler os dados do Banco de Dados(db)
     for (let i = 0; i < db.usuarios.length; i++) {
@@ -67,9 +71,9 @@ function loginDados() {
             window.alert("Login Sucedido");
             console.log("Redirecionano......."); //log de redirecionamento
             window.location.href = "assets/pages/home/home.html"; // redicionamento de usuário
-            
+
             db.usuarioLogadoAtualmente = usuario.id; //setando o id de sessão
-            console.log("Id de Login: "+db.usuarioLogadoAtualmente); //mais logs com informação
+            console.log("Id de Login: " + db.usuarioLogadoAtualmente); //mais logs com informação
             salvaDados(db)
             console.log(usuario);
         }
