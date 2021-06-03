@@ -8,7 +8,7 @@
 body{
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg,#FF4C4C, #8338EC);
+  background: linear-gradient(120deg,#fffC, #081732);
   height: 100vh;
   overflow: hidden;
 }
@@ -24,7 +24,8 @@ body{
 .center h1{/*titulo(recuperar senha)*/
   text-align: center;
   padding: 20px 0;
-  background-color: #8338EC;
+  background-color: #081732;
+  color: #fff;
   margin: 15px 105px 15px;
   border-radius: 50px;
 }
@@ -53,7 +54,7 @@ input[type="submit"]{
   width: 100%;
   height: 50px;
   border: 0px;
-  background: #081732;
+  background: linear-gradient(to left,rgba(184, 184, 184, 0.8), #081732);
   border-radius: 25px;
   font-size: 18px;
   color: #e9f4fb;
@@ -77,12 +78,31 @@ input[type="submit"]{
 }
 /*Animação Botão Trocar Senha*/
 .btn-trocar-senha{
-  background-color: #081732;
-  border: 1px solid #081732;
-  transition: background-color 1s;
+  margin-top: 1rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left,rgba(184, 184, 184, 0.8), #081732);
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 .btn-trocar-senha:hover{
-  background-color: #fff;
-  border: 1px solid #081732;
-  color: #081732;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right,rgba(184, 184, 184, 0.8), #081732);
 }/*Fim animação*/
+
+
+/*botao da pergunta*/
+.pergunta-seg{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #bdc3c7;
+  background-color: #ecf0f1;
+  border: 0;
+  color: black;
+  border-radius: 25px;
+  font-size: 16px;
+}

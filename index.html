@@ -1,145 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-bt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Listfy - Cadastro de Usuário</title>
     <link rel="stylesheet" href="assets/pages/login-cadastro/css/cadastro.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="assets/pages/login-cadastro/js/dados.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <!--Conteúdo 1-->
-
-        <div class="conteudo conteudo_1">
-            <div class="coluna_1">
-                <h2 class="tittle tittle-primary">bem-vindo!</h2>
-                <!--Cadastro de Login-->
-                <p class="description description-primary">Para se manter conectado com a gente</p>
-                <p class="description description-primary">por favor faça o Cadastro com suas informações.</p>
-                <button id="signin" class="btn btn-primary">entrar</button>
-            </div>
-            <div class="coluna_2"><!--Começo Mídias Sociais-->
-                <h2 class="tittle tittle-second">crie a sua conta</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- Fim Mídias Sociais -->
-                <p class="description description-second">ou use a sua conta do Email:</p>
-                <form class="form"><!--Campos de Nome,Emal,Pergunta de Segurança, Senha-->
-                    <label class="label-input" for="">
-                        <i class="far fa-user icon-modify"></i>
-                        <input type="Nome" placeholder=" Nome" id="campoNome">
-                    </label>
-
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder=" Email" id="campoEmail">
-                    </label>
-
-                    <label class="label-input" for="">
-                        <i class="fas fa-question icon-modify"></i>
-                        <input type="Pergunta de Segurança" id="campoPergunta">
-                        <select class="form-question">
-                            <option value="">Pergunta de segurança</option>
-                            <option value="1">Nome do animal de estimação da infancia</option>
-                            <option value="2">Primeiro Video Game</option>
-                            <option value="3">exemplo 3</option>
-                        </select>
-                    </label>
-
-                    <label class="label-input" for="">
-                        <i class="far fa-comments icon-modify"></i>
-                        <input type="Resposta Pergunta de Segurança" placeholder=" Resposta - Pergunta de Segurança" id="campoResposta">
-                    </label>
-
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder=" Senha" id="campoSenha">
-                    </label>
-                </form><!--Fim Campos-->
-                <button onclick="incluirDados()" class="btn btn-second">inscreva-se</button>
-            </div><!-- Segunda Coluna -->
+    <main>
+        <h1>Crie Sua Conta</h1>
+        <div class="social-media">
+            <a href="#">
+                <img src="assets/pages/login-cadastro/img/facebook.png" alt="Facebook">
+            </a>
+            <a href="#">
+                <img src="assets/pages/login-cadastro/img/google.png" alt="Google">
+            </a>
+            <a href="#">
+                <img src="assets/pages/login-cadastro/img/twitter.png" alt="Twitter">
+            </a>
         </div>
 
-        <!--Fim Conteudo 1-->
+        <div class="alternative">
+            <span>Or</span>
+        </div>
 
-        <!--Conteúdo 2-->
-        <div class="conteudo conteudo_2">
-            <!--Tela de Login-->
-            <div class="coluna_1">
-                <h2 class="tittle tittle-primary">olá amigo!</h2>
-                <p class="description description-primary">Insira seus dados da Conta</p>
-                <p class="description description-primary">e começa a journada com a gente!</p>
-                <button id="signup" class="btn btn-primary">inscreva-se</button>
-            </div>
-            <div class="coluna_2"><!-- Mídias Sociais -->
-                <h2 class="tittle tittle-second">faça o login com sua conta</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- Fim Mídias Sociais -->
-                <p class="description description-second">ou use a sua conta do Email:</p>
-                <form class="form">
-                    <!--Login Email e Senha-->
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder=" Email" id="Email">
-                    </label>
+        <form action="">
+            <label for="Nome">
+                <span>Nome</span>
+                <input type="Nome" placeholder="Nome" id="campoNome">
+            </label>
+            <label for="Pergunta">
+                <span>Pergunta de Segurança</span>
+                <!--<input type="text" placeholder="" id="campoPergunta">-->
+                <select class="pergunta-seg">
+                    <option value="">Pergunta de segurança</option>
+                    <option value="1">Nome do animal de estimação da infancia</option>
+                    <option value="2">Primeiro Video Game</option>
+                    <option value="3">exemplo 3</option>
+                </select>
+            </label>
+            <label for="Resposta">
+                <span>Resposta</span>
+                <input type="Pergunta" placeholder="Resposta" id="campoResposta">
+            </label>
+            <label for="Email">
+                <span>Email</span>
+                <input type="email" placeholder="Email" id="campoEmail">
+            </label>
+            <label for="Senha">
+                <span>Senha</span>
+                <input type="password" placeholder="Password" id="campoSenha">
+            </label>
 
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder=" Senha" id="Senha">
-                    </label>
+            <input onclick="incluirDados()" type="button" value="Inscreva-se">
 
-                    <a class="password" href="#">Esqueceu a sua Senha?</a>
+        </form>
+    </main>
+    <section class="images">
+        <img src="assets/pages/login-cadastro/img/mobile.svg" alt="Fundo">
+        <div class="circle"></div>
+    </section>
 
-                </form>
-                <button onclick="loginDados()" id="btn_Incluir_Cadastro" class="btn btn-second">entrar</button>
-            </div>
-        </div><!-- Fim Conteúdo 2 -->
-    </div>
-    <!--JavaScript-->
-    <script src="assets/pages/login-cadastro/js/animacaocadastro.js"></script>
-    <script src="assets/pages/login-cadastro/js/dados.js"></script>
+    <script src="assets/pages/login-cadastro/js/dados_de_usuarios.js"></script>
     <script src="assets/data/DADOS.js"></script>
     <script>
         localStorage.setItem("db", db);
     </script>
+
 </body>
 
 </html>
