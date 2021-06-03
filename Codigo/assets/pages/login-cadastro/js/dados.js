@@ -1,4 +1,3 @@
-
 var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
 var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
@@ -12,12 +11,14 @@ function incluirDados() {
 
     //Incluir um Novo Cadastro
     let strNome = document.getElementById('campoNome').value;
+    let strResposta = document.getElementById('campoResposta').value;
     let strEmail = document.getElementById('campoEmail').value;
     let strSenha = document.getElementById('campoSenha').value;
     db.ultimoId++; // icremento da variavel do banco que regista qual foi o ultimo id cadastrado e usado
     let novoCadastro = {
         id: db.ultimoId,
         Nome: strNome,
+        Resposta: strResposta,
         Email: strEmail,
         Senha: strSenha
     };
@@ -28,6 +29,9 @@ function incluirDados() {
     salvaDados(db);
     //Console dos cadastros depois de ter criado algum novoCadastro
     console.log(db);
+    alert("Cadastro Bem-Sucedido");
+    console.log("Redirecionano.......");
+    window.location.href = "login/login.html";
 }
 
 //Função de Login
@@ -85,6 +89,10 @@ function loginDados() {
 
 
 
+
+
+
+/*
 //[---------------RECUPERAR SENHA-------------]
 
 function trocarSenha() {
@@ -114,4 +122,4 @@ function trocarSenha() {
     }
 }
 
-//[------------------------FIM RECUPERAR SENHA-----------]
+//[------------------------FIM RECUPERAR SENHA-----------]*/
