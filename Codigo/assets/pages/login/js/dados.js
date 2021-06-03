@@ -97,7 +97,7 @@ function loginDados() {
 
 
 
-/*
+
 //[---------------RECUPERAR SENHA-------------]
 
 function trocarSenha() {
@@ -120,11 +120,11 @@ function trocarSenha() {
 
             window.alert("Senha alterada com sucesso");
 
-            window.location.href = "#";//colocar link para pagina de login
+            //window.location.href = "/plf-es-2021-1-ti1-7924100-dificuldades-do-ead/Codigo/login.html";//colocar link para pagina de login
 
             salvaDados(db)
         }
     }
 }
 
-//[------------------------FIM RECUPERAR SENHA-----------]*/
+//[------------------------FIM RECUPERAR SENHA-----------]
