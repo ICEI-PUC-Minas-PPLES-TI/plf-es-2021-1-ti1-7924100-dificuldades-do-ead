@@ -99,25 +99,30 @@ a {
     justify-content: space-between;
     overflow: hidden;
 }
-.logo-sidebar div{
+
+.logo-sidebar div {
     color: #ebebeb !important;
 }
-.logo-sidebar{
+
+.logo-sidebar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.nav__logo{
-    margin:0 !important;
+
+.nav__logo {
+    margin: 0 !important;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.nav__logo img{
+
+.nav__logo img {
     width: 80%;
-    ma
+    margin: 0 auto;
 }
+
 .nav__link {
     display: grid;
     grid-template-columns: max-content max-content;
