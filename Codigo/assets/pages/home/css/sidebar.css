@@ -80,6 +80,27 @@ a {
 
 /*===== NAV =====*/
 
+.logo-sidebar div {
+    color: #ebebeb !important;
+}
+
+.logo-sidebar img {
+    width: 100%;
+}
+
+.logo-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__logo,
+.logo-sidebar,
+.nav__logo img {
+    width: 100%;
+}
+
 .l-navbar {
     position: fixed;
     top: 0;
@@ -100,7 +121,6 @@ a {
     overflow: hidden;
 }
 
-.nav__logo,
 .nav__link {
     display: grid;
     grid-template-columns: max-content max-content;
@@ -111,16 +131,6 @@ a {
 
 .nav__logo {
     margin-bottom: 2rem;
-}
-
-.nav__logo-icon {
-    font-size: 1.25rem;
-    color: var(--white-color);
-}
-
-.nav__logo-name {
-    color: var(--white-color);
-    font-weight: 700;
 }
 
 .nav__link {
