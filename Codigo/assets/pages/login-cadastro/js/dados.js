@@ -31,7 +31,7 @@ function incluirDados() {
     console.log(db);
     alert("Cadastro Bem-Sucedido");
     console.log("Redirecionano.......");
-    window.location.href = "login/login.html";
+    window.location.href = "login.html";
 }
 
 //Função de Login
