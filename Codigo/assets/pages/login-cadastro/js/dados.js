@@ -60,7 +60,6 @@ function loginDados() {
 
         if (Email == usuario.Email && Senha == usuario.Senha) {
             //Aqui vai entrar na página do Aplicativo,mas por enquanto esta como só um alerta mesmo
-            alert("Entrou");
             localStorage.setItem("acesso", true);
 
             window.alert("Login Sucedido");
