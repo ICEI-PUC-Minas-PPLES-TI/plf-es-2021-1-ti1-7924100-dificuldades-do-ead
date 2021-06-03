@@ -4,11 +4,11 @@ function salvaDados(dados) {
 }
 
 //[---------------RECUPERAR SENHA-------------]
-
+var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 function trocarSenha() {
 
-    var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
-    var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
+
 
     var Email = document.querySelector("input#Email").value;
     var Resposta = document.querySelector("input#Resposta").value;
