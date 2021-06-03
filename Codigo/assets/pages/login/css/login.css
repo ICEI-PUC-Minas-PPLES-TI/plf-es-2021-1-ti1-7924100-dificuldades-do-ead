@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg,#081732, #fffC);
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.container{
+    background: white;
+    width: 600px;
+    padding: 3rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+main h2{
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+main h2::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 26px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(120deg,#fffC, #081732);
+}
+
+.password{
+    color: #081732;;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.input-field{
+    position: relative;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {/*Linha em baixo do Campo Email e Senha*/
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {/*Linha em baixo do Campo Email e Senha*/
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(120deg,#fffC, #081732);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.input-field input{/*Texto do Email e Senha*/
+    outline: none;
+    font-size: 1rem;
+    color: black;
+}
+.input-field input::placeholder{
+    color: rgba(0, 0, 0, 0.2);
+}
+form input[type="button"]{/*Botão Entrar*/
+    margin-top: 1rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left,rgba(184, 184, 184, 0.8), #081732);
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+form input[type="button"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right,rgba(184, 184, 184, 0.8), #081732);
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.footer span {/*Texto a baixo do Botão Entrar*/
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+}
+.footer .social-field {/*Inputs de logar com o Twitter ou Facebook*/
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.footer .social-field a i {
+    margin: 0 0.5rem;
+    width: 15px;
+}
+.footer .social-field a{
+    text-decoration: none;
+    color: white;
+}
+.footer .social-field .twitter {
+    background: linear-gradient(to right, #56a7f2, #468aca);
+}
+.footer .social-field .twitter:hover {
+    background: linear-gradient(to right, #468aca, #56a7f2);
+}
+.footer .social-field .facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+.footer .social-field .facebook:hover {
+    background: linear-gradient(to right, #2a5298, #1e3c72);
+}
+.footer .social-field .google {
+    background: linear-gradient(to right, #db4a39, #aa473c);
+}
+.footer .social-field .google:hover {
+    background: linear-gradient(to right, #aa473c, #db4a39);
+}
