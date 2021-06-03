@@ -2,13 +2,13 @@
 function salvaDados(dados) {
     localStorage.setItem('db', JSON.stringify(dados));
 }
+var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
 //Função de Incluir e Salvar os Dados
 function incluirDados() {
 
 
-    var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
-    var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
     //Incluir um Novo Cadastro
     let strNome = document.getElementById('campoNome').value;
