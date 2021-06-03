@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="pt-bt">
+
+<head>
+    <meta charset="utf-8">
+    <title>Listfy - Recuperar Senha</title>
+    <link rel="stylesheet" href="assets/pages/recuperar-senha/rec-senha.css">
+</head>
+
+<body>
+    <div class="center">
+        <h1>Recuperar Senha</h1>
+        <form>
+            <div class="campo-texto">
+                <input type="text" placeholder="Email" id="Email">
+            </div>
+            <div class="campo-texto">
+                <select class="pergunta-seg">
+          <option value="">Pergunta de segurança</option>
+          <option value="1">Nome do animal de estimação da infancia</option>
+          <option value="2">Primeiro Video Game</option>
+          <option value="3">exemplo 3</option>
+        </select>
+            </div>
+            <div class="campo-texto">
+                <input type="text" placeholder="Resposta Pergunta Segurança" id="Resposta">
+            </div>
+            <div class=" campo-texto">
+                <input type="password" placeholder="Nova Senha" id="campoSenha">
+            </div>
+            <button onclick="trocarSenha()" value="Trocar Senha" class="btn-trocar-senha">Trocar Senha</button>
+
+            <div class="link-login">
+                <a href="login.html">Voltar para a página de Login</a>
+            </div>
+        </form>
+    </div>
+    <script src="assets/pages/recuperar-senha/rec-senha.js"></script>
+</body>
+
+
+</html>
