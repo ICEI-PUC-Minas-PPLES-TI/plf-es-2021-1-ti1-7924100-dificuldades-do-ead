@@ -19,8 +19,10 @@ var corNovaLista = '#8338EC'
 function novaLista() {
 
     var listas = document.querySelector('div.main-content-lists');
-    listas.removeChild(listas.lastChild)
+
+
     var nomeNovaLista = window.prompt("Digite um nome para a nova lista: ").toString();
+
     console.log(nomeNovaLista)
     if (nomeNovaLista == null || nomeNovaLista == '') {
         nomeNovaLista = 'Lista sem nome';
@@ -28,12 +30,12 @@ function novaLista() {
     //Objeto para armazenamento da lista
 
     var lista = {
-        lista_id: metadadosDasListas.ultimoIdLista + 1,
-        lista_nome: nomeNovaLista,
-        lista_cor: corNovaLista,
-        lista_itens: []
-    }
-    //Armazenamento da nova lista no storage
+            lista_id: metadadosDasListas.ultimoIdLista + 1,
+            lista_nome: nomeNovaLista,
+            lista_cor: corNovaLista,
+            lista_itens: []
+        }
+        //Armazenamento da nova lista no storage
     db.listasUsuarios[indexListas].listas.push(lista)
     localStorage.setItem('db', JSON.stringify(db));
 

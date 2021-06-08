@@ -2,6 +2,8 @@
 function salvaDados(dados) {
     localStorage.setItem('db', JSON.stringify(dados));
 }
+
+
 var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
 var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
