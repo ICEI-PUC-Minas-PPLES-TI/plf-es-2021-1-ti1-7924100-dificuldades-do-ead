@@ -41,15 +41,28 @@ main form input{
     height: 40px;
     border-radius: 8px;
     font-weight: bold;
-    
 }
-
 .icon-log-out{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 0.3rem;
 }
+.btn-delete-account{
+    display: flex;
+    background: tomato;
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.icon-delete-account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
 .edit{
     cursor: pointer;
 }
@@ -75,6 +88,12 @@ main form input{
     }
     .img_user{
         font-size: 50px;
+    }
+    .btn-delete-account{
+        width: 220px;
+    }
+    .icon-delete-account{
+        font-size: 1.9rem;
     }
     
 }
