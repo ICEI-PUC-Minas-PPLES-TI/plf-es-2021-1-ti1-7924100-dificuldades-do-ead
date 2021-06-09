@@ -32,7 +32,7 @@ function incluirDados() {
     console.log(db);
     alert("Cadastro Bem-Sucedido");
     console.log("Redirecionano.......");
-    window.location.href = "login/login.html";
+    window.location.href = "../login/login.html";
 
 }
 
@@ -70,7 +70,7 @@ function loginDados() {
 
             window.alert("Login Sucedido");
             console.log("Redirecionano......."); //log de redirecionamento
-            window.location.href = "assets/pages/home/home.html"; // redicionamento de usuário
+            window.location.href = "../home/home.html"; // redicionamento de usuário
 
             db.usuarioLogadoAtualmente = usuario.id; //setando o id de sessão
             console.log("Id de Login: " + db.usuarioLogadoAtualmente); //mais logs com informação
