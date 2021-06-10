@@ -1,5 +1,5 @@
 var db = {
-    usuarioLogadoAtualmente: 0,
+    usuarioLogadoAtualmente: 1,
     indexDaListaDousuario: 0,
     ultimoId: 5,
     usuarios: [

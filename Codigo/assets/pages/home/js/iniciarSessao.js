@@ -3,29 +3,29 @@
 var listas = document.querySelector("div.main-content-lists");
 
 
-var dadosDasListas = {}; // variavel que armazena somente a lista de listas
-var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
-var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
-
 /*
     Essa função busca e apresenta na tela as listas do usuário
     que acabou de fazer login
 */
 function renderizarConteudo(){
+    var dadosDasListas; // variavel que armazena somente a lista de listas
+    var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+    var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
     console.log("Iniciando sessão");
     arrayDasListas = db.listasUsuarios // Array de listas
     
     //busca pelas listas no array
     for(let i = 0 ; i < arrayDasListas.length ; i++){
-        let numero = Number(arrayDasListas[i].id);
-        let userNumero = localStorage.getItem('usuarioLogadoAtualmente');
+        let numero = arrayDasListas[i].id;
+        let userNumero = db.usuarioLogadoAtualmente;
+        console.log('Id: ' + numero +'\n'+'UserNumero: '+userNumero);
         if(numero == userNumero){
             //listas encontradas
             dadosDasListas = arrayDasListas[i]
             localStorage.setItem('indexDaListaDoUsuario', i)
         }else{
-            console.log('Nope!')
+            console.log('Procurando...')
         }
     }
     var preRenderListas = []
