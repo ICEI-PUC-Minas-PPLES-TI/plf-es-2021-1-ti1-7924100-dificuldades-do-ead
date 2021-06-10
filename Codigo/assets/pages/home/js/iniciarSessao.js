@@ -51,7 +51,7 @@ function renderizarConteudo(){
     preRenderListas = preRenderListas.join("");
 
     // Todas as listas são inseridas no documento
-    listas.innerHTML = preRenderListas.toString();
+    listas.innerHTML += preRenderListas.toString();
     
     //salva dados no local storage
     localStorage.setItem('db', JSON.stringify(db))
