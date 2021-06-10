@@ -3047,6 +3047,20 @@ textarea.form-control-lg {
   .button-neon:focus{
     color: white;
   }
+  .footer_area{
+    padding-top: 1rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 550px){
+  .footer_area{
+    font-size: x-small;
+  }
+}
+.footer_area{
+  background: linear-gradient(to left, #8338EC , #081732 90%);
+  padding-top: 1.2rem;
+  height: 60px;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
