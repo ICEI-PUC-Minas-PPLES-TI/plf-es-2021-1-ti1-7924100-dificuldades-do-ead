@@ -40,9 +40,9 @@ function renderizarConteudo(){
         var cor = dadosDasListas.listas[j].lista_cor;
         
         preRenderListas.push(`
-            <div class="list" style="background-color:${cor} !important;">
+            <div class="list" id="my-list-id${dadosDasListas.listas[j].lista_id}" style="background-color:${cor} !important;">
                 <div class="hidded-options" id="lista-${dadosDasListas.listas[j].lista_id}">
-                    <div class="list-trash">
+                    <div class="list-trash" onclick="abrirModalDeletarLista(${dadosDasListas.listas[j].lista_id})">
                         <i class='bx bxs-trash'></i>
                     </div>
                     <div class="list-edit">

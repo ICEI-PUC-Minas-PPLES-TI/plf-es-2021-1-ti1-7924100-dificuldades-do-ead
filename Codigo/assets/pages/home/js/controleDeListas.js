@@ -60,9 +60,9 @@ function novaLista(control) {
         localStorage.setItem('db', JSON.stringify(db));
 
         listas.innerHTML += `
-        <div class="list" style="background-color:${lista.lista_cor} !important;">
+        <div class="list" id="my-list-id${lista.lista_id}" style="background-color:${lista.lista_cor} !important;">
             <div class="hidded-options" id="lista-${lista.lista_id}">
-                <div class="list-trash">
+                <div class="list-trash" onclick="abrirModalDeletarLista(${lista.lista_id})">
                     <i class='bx bxs-trash'></i>
                 </div>
                 <div class="list-edit">
@@ -77,11 +77,11 @@ function novaLista(control) {
         console.log('Resumo das alterações');
         console.log(db)
         limparInputDeTexto(); //limpeza do input com o titulo da lista
-        closeModal();
+        fecharModalNovaLista();
     } else {
         console.log('Criação de lista CANCELADA');
         limparInputDeTexto(); //limpeza do input com o titulo da lista
-        closeModal();
+        fecharModalNovaLista();
     }
     /*
         A função a seguir limpa o input de texto da no modal para criação
@@ -92,6 +92,25 @@ function novaLista(control) {
         input.value = '';
     }
 }
+
+
+function deleteLista(confirm){
+    if(confirm){
+        let preDelete = localStorage.getItem('deleteId'); // Recuperando o banco de dados inteiro do localStorage
+        let lista_id = JSON.parse(preDelete) // Tornando os dados recuperados em um objeto
+        document.querySelector(`div#my-list-id${lista_id}`).remove()
+        fecharModalDeletarLista();
+    }else{
+        fecharModalDeletarLista();
+    }
+}
+
+
+
+
+
+
+
 
 /*
     Esconder e mostrar opções de listas ao clicar nos 3 pontinhos
@@ -128,16 +147,33 @@ function mostrarMenu(listaId) {
     FUNÇÕES RELACIONADAS AOS MODAIS
     =======================================
 */
-function openModal() {
+function abrirModalNovaLista() {
     let modal = document.querySelector('div.modal');
     let overlay = document.querySelector('div#overlay')
     modal.classList.add('active')
     overlay.classList.add('active')
 }
 
-function closeModal() {
+function fecharModalNovaLista() {
     let modal = document.querySelector('div.modal');
     let overlay = document.querySelector('div#overlay')
     modal.classList.remove('active')
     overlay.classList.remove('active')
+}
+
+function abrirModalDeletarLista(deleteId) {
+    let modal = document.querySelector('div.modal-delete');
+    let overlay = document.querySelector('div#overlay')
+    modal.classList.add('active')
+    overlay.classList.add('active')
+    //Selecionando lista a ser deletada
+    localStorage.setItem('deleteId', JSON.stringify(deleteId));
+}
+
+function fecharModalDeletarLista() {
+    let modal = document.querySelector('div.modal-delete');
+    let overlay = document.querySelector('div#overlay')
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+    localStorage.removeItem('deleteId')
 }

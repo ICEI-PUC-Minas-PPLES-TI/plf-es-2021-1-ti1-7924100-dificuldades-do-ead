@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/template.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/modal-delete.css">
     <!--==============================================-->
     <title>Listfy</title>
 </head>
@@ -91,9 +92,11 @@
 
         <div class="main-content">
             <div class="main-content-lists">
-                <div class="list" style="background-color:#1dB954 !important;">
-                    <div class="hidded-options" id="lista-10">
-                        <div class="list-trash">
+
+
+                <div class="list" id="my-list-id99" style="background-color:#1dB954 !important;">
+                    <div class="hidded-options" id="lista-99">
+                        <div class="list-trash" onclick="abrirModalDeletarLista(99)">
                             <i class='bx bxs-trash'></i>
                         </div>
                         <div class="list-edit">
@@ -101,16 +104,19 @@
                         </div>
                     </div>
                     <h2 class="listTitle">Lista Experimental</h2>
-                    <i onclick="mostrarMenu(10)" class='bx bx-dots-vertical-rounded menuList'></i>
+                    <i onclick="mostrarMenu(99)" class='bx bx-dots-vertical-rounded menuList'></i>
                 </div>
+
+
             </div>
-            <div class="add-list-button" onclick="openModal()">
+            <div class="add-list-button" onclick="abrirModalNovaLista()">
                 <i class='bx bx-plus-circle'></i>
             </div>
         </div>
 
 
     </main>
+    <!--MODAL PARA CRIAÇÃO DE LISTAS-->
     <div class="modal" id="modal">
         <div class="modal-header">
           <h1>Nova Lista</h1>
@@ -156,8 +162,29 @@
             </button>
           </div>
         </div>
-    
       </div>
+      <!--FIM DO MODAL PARA CRIAÇÃO DE LISTAS-->
+
+
+      <div class="modal-delete" id="modal-delete">
+        <div class="modal-header">
+          <h1>Quer mesmo apagar essa lista?</h1>
+        </div>
+        <div class="modal-body">
+          <div class="options-buttons">
+            <button class="modal-closer" onclick="deleteLista(false)">
+              <i class='bx bx-x-circle' ></i>
+            </button>
+            <button class="list-deleter" onclick="deleteLista(true)">
+              <i class='bx bx-plus-circle' ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
       <div id="overlay"></div>
     <script src="js/iniciarSessao.js"></script>
     <script src="js/sidebar.js"></script>
