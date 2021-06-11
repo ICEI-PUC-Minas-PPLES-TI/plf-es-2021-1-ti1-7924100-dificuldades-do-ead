@@ -6,7 +6,6 @@ function novaLista(control) {
         cor: 'cor'
     }
     */
-    //var dadosNovaLista = window.prompt("Digite um nome para a nova lista: ").toString();
     var dadosNovaLista;
     if (control) {
         dadosNovaLista = {
@@ -14,7 +13,7 @@ function novaLista(control) {
             nomeLista: '',
             cor: ''
         }
-        dadosNovaLista.nome = document.querySelector('input.nome-da-lista').value;
+        dadosNovaLista.nomeLista = document.querySelector('input.nome-da-lista').value;
         var corRadio = document.querySelectorAll('input.color-selector');
         for (let i = 0, length = corRadio.length; i < length; i++) {
             if (corRadio[i].checked) {
@@ -43,17 +42,17 @@ function novaLista(control) {
         }
         console.log(metadadosDasListas)
         var listas = document.querySelector('div.main-content-lists');
-        var lista = {
-            lista_id: metadadosDasListas.ultimoIdLista + 1,
-            lista_nome: nomeNovaLista,
-            lista_cor: corNovaLista,
-            lista_itens: []
-        }
-        console.log(nomeNovaLista)
-        if (nomeNovaLista == null || nomeNovaLista == '') {
-            nomeNovaLista = 'Lista sem nome';
+        console.log(dadosNovaLista.nomeLista)
+        if (dadosNovaLista.nomeLista == null || dadosNovaLista.nomeLista == '') {
+            dadosNovaLista.nomeLista = 'Lista sem nome';
         }
         //Objeto para armazenamento da lista
+        var lista = {
+            lista_id: metadadosDasListas.ultimoIdLista + 1,
+            lista_nome: dadosNovaLista.nomeLista,
+            lista_cor: dadosNovaLista.cor,
+            lista_itens: []
+        }
 
 
         //Armazenamento da nova lista no storage
@@ -61,7 +60,7 @@ function novaLista(control) {
         localStorage.setItem('db', JSON.stringify(db));
 
         listas.innerHTML += `
-        <div class="list" style="background-color:${corNovaLista} !important;">
+        <div class="list" style="background-color:${lista.lista_cor} !important;">
             <div class="hidded-options" id="lista-${lista.lista_id}">
                 <div class="list-trash">
                     <i class='bx bxs-trash'></i>
@@ -70,13 +69,14 @@ function novaLista(control) {
                     <i class='bx bxs-pencil'></i>
                 </div>
             </div>
-            <h2 class="listTitle">${nomeNovaLista}</h2>
+            <h2 class="listTitle">${lista.lista_nome}</h2>
             <i onclick="mostrarMenu(${lista.lista_id})" class='bx bx-dots-vertical-rounded menuList'></i>
         </div>
     `;
         console.log("Lista adicionanda ao storage");
         console.log('Resumo das alterações');
         console.log(db)
+        closeModal();
     } else {
         console.log('Criação de lista CANCELADA');
         closeModal();
