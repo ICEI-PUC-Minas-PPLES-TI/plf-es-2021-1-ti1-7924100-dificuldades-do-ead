@@ -205,4 +205,39 @@
         z-index: 999;
         
     }
+    .options-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .options-buttons button {
+        width: 40%;
+        max-width:8rem;
+        height: 60px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        border: none;
+    }
+    .nome-da-lista {
+        background-color: var(--grey);
+        border: none;
+        border-radius: 10px;
+        width: 90%;
+        font-family: 'Roboto', sans-serif;
+        height: 3rem;
+        resize: none;
+        margin: 10px;
+        color: var(--dark-grey);
+        font-size: 1.3rem;
+        margin: 0 auto;
+        padding-left: 10px;
+    }
 }
