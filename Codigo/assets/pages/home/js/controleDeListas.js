@@ -96,26 +96,40 @@ function novaLista(control) {
 
 function deleteLista(confirm){
     if(confirm){
-        let preDelete = localStorage.getItem('deleteId'); // Recuperando o banco de dados inteiro do localStorage
-        let lista_id = JSON.parse(preDelete) // Tornando os dados recuperados em um objeto
-        //===================Apagando lista do local storage============
 
+        //Essas duas linhas de código buscam no local storage qual lista deve ser apagada
+        let preDelete = localStorage.getItem('deleteId'); 
+        let lista_id = JSON.parse(preDelete);
+
+
+        /*==============================================================
+        Recuperando o local Storage inteiro para manipulação
+        ================================================================*/
         var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
         var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
-        console.log(db)
+        //console.log(db)
+        /*==============================================================*/
 
+        /*
+            A 3 variáveis declaradas logo abaixo 
+            servem para localizar o conjunto de listas pertencentes
+            o usuário logado
+        */
         var indexListas = Number(localStorage.getItem('indexDaListaDoUsuario'));
-        console.log(indexListas);
-
+        //console.log(indexListas);
         var listasDoUsuario = db.listasUsuarios[indexListas].listas;
-        console.log(listasDoUsuario)
-
+        //console.log(listasDoUsuario)
         var metadadosDasListas = {
             listasLen: listasDoUsuario.length - 1,
             ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
         }
-        console.log(metadadosDasListas)
+        //console.log(metadadosDasListas)
 
+
+        /*
+            O For que vem logo abaixo deste comentário busca a lista no banco e apaga
+            ela com a função slice() de arrays, em seguida os dados modificados são gravados
+        */
         for(let i = 0 ; i < listasDoUsuario.length ; i++){
             if(listasDoUsuario[i].lista_id == lista_id){
                 db.listasUsuarios[indexListas].listas.splice(i, 1)
@@ -123,11 +137,11 @@ function deleteLista(confirm){
                 console.log('Elemento apagado do localStorage com sucesso');
             }
         }
-
         //===================================================================
         document.querySelector(`div#my-list-id${lista_id}`).remove()
         fecharModalDeletarLista();
     }else{
+        //Se a operação de exclusão for cancelada o modal simplismente é fechado
         fecharModalDeletarLista();
     }
 }
