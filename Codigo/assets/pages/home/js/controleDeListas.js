@@ -76,10 +76,20 @@ function novaLista(control) {
         console.log("Lista adicionanda ao storage");
         console.log('Resumo das alterações');
         console.log(db)
+        limparInputDeTexto(); //limpeza do input com o titulo da lista
         closeModal();
     } else {
         console.log('Criação de lista CANCELADA');
+        limparInputDeTexto(); //limpeza do input com o titulo da lista
         closeModal();
+    }
+    /*
+        A função a seguir limpa o input de texto da no modal para criação
+        de listas, independente se ela for criada ou não
+    */
+    function limparInputDeTexto(){
+        let input = document.querySelector('input.nome-da-lista');
+        input.value = '';
     }
 }
 
