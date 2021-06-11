@@ -64,6 +64,12 @@ var corNovaLista = '#8338EC'
     Esconder e mostrar opções de listas ao clicar nos 3 pontinhos
 */
 
+/*
+    Ao ser chamada a seguinte função troca as classes de todos os menus da pagina para
+    um que possui o display none;
+
+    Assim não precisa desativar um menu em específico
+*/
 function esconderTodosOsMenusDeLista(){
     var menus = document.querySelectorAll('div.list-options');
     for(let i = 0 ; i < menus.length ; i++){
@@ -72,6 +78,10 @@ function esconderTodosOsMenusDeLista(){
     }
 }
 
+/*Essa função apresenta o menu na div ou lista que fez a chamada.
+    durante a chamada ocorre uma passagem de parâmetro que é o id da lista em especifico 
+    da qual o menu será mostrado
+*/
 function mostrarMenu(listaId){
     esconderTodosOsMenusDeLista();
     var menu = document.querySelector(`div#lista-${listaId}`);
