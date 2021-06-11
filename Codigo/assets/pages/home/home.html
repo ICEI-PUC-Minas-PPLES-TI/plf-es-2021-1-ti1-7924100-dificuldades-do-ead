@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/modal-delete.css">
+    <link rel="stylesheet" href="css/modal-editor.css">
     <!--==============================================-->
     <title>Listfy</title>
 </head>
@@ -93,20 +94,20 @@
         <div class="main-content">
             <div class="main-content-lists">
 
-                <!--LISTA EXPERIMENTAL
+                <!--LISTA EXPERIMENTAL-->
                 <div class="list" id="my-list-id99" style="background-color:#1dB954 !important;">
                     <div class="hidded-options" id="lista-99">
                         <div class="list-trash" onclick="abrirModalDeletarLista(99)">
                             <i class='bx bxs-trash'></i>
                         </div>
-                        <div class="list-edit">
+                        <div class="list-edit" onclick="abrirModalEditarLista(99)">
                             <i class='bx bxs-pencil'></i>
                         </div>
                     </div>
                     <h2 class="listTitle">Lista Experimental</h2>
                     <i onclick="mostrarMenu(99)" class='bx bx-dots-vertical-rounded menuList'></i>
                 </div>
-                -->
+                
 
             </div>
             <div class="add-list-button" onclick="abrirModalNovaLista()">
@@ -184,6 +185,55 @@
         </div>
       </div>
       <!--FIM DO MODAL PARA EXCLUSÃO DE LISTAS-->
+
+      <!--MODAL PARA EDIÇÂO DE LISTAS-->
+    <div class="modal-editor" id="modal-editor">
+        <div class="modal-editor-header">
+          <h1>Editar Lista</h1>
+        </div>
+        <div class="modal-editor-body">
+          <div class="section-nome-da-lista">
+            <input type="text" class="novo-nome-da-lista" placeholder="Digite um novo nome para a lista">
+          </div>
+          <div class="radio-buttons">
+            <label class="custom-radio">
+              <input type="radio" name="radio" value="#FFBE0B" class="color-editor-selector"/>
+              <span class="radio-btn" style="background-color: #FFBE0B">
+              </span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="radio" value="#FF006E" class="color-editor-selector"/>
+              <span class="radio-btn" style="background-color: #FF006E">
+              </span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="radio" value="#8338EC" class="color-editor-selector"/>
+              <span class="radio-btn" style="background-color: #8338EC">
+              </span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="radio" value="#3A86FF" class="color-editor-selector"/>
+              <span class="radio-btn" style="background-color: #3A86FF">
+              </span>
+            </label>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="radio" value="#1Db954" class="color-editor-selector"/>
+            <span class="radio-btn" style="background-color: #1Db954">
+            </span>
+          </label>
+          </div>
+          <div class="options-buttons">
+            <button class="modal-cancel-edit" onclick="editarLista(false)">
+              <i class='bx bx-x-circle' ></i>
+            </button>
+            <button class="list-Editor" onclick="editarLista(true)">
+              <i class='bx bx-plus-circle' ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--FIM DO MODAL PARA EDIÇÂO DE LISTAS-->
 
 
 

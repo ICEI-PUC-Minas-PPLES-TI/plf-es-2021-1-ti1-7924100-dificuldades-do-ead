@@ -36,13 +36,13 @@ function novaLista(control) {
         var listasDoUsuario = db.listasUsuarios[indexListas].listas;
         console.log(listasDoUsuario)
         var metadadosDasListas;
-        if(listasDoUsuario.length == null || listasDoUsuario.length == 0 || listasDoUsuario.length == ''){
+        if (listasDoUsuario.length == null || listasDoUsuario.length == 0 || listasDoUsuario.length == '') {
             metadadosDasListas = {
                 listasLen: 0,
                 ultimoIdLista: 999
             }
             localStorage.setItem('ultimoIdLista', metadadosDasListas.ultimoIdLista)
-        }else{
+        } else {
             metadadosDasListas = {
                 listasLen: listasDoUsuario.length - 1,
                 ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
@@ -74,7 +74,7 @@ function novaLista(control) {
                 <div class="list-trash" onclick="abrirModalDeletarLista(${lista.lista_id})">
                     <i class='bx bxs-trash'></i>
                 </div>
-                <div class="list-edit">
+                <div class="list-edit" onclick="abrirModalEditarLista(${lista.lista_id})">
                     <i class='bx bxs-pencil'></i>
                 </div>
             </div>
@@ -96,18 +96,18 @@ function novaLista(control) {
         A função a seguir limpa o input de texto da no modal para criação
         de listas, independente se ela for criada ou não
     */
-    function limparInputDeTexto(){
+    function limparInputDeTexto() {
         let input = document.querySelector('input.nome-da-lista');
         input.value = '';
     }
 }
 
 
-function deleteLista(confirm){
-    if(confirm){
+function deleteLista(confirm) {
+    if (confirm) {
 
         //Essas duas linhas de código buscam no local storage qual lista deve ser apagada
-        let preDelete = localStorage.getItem('deleteId'); 
+        let preDelete = localStorage.getItem('deleteId');
         let lista_id = JSON.parse(preDelete);
 
 
@@ -128,18 +128,11 @@ function deleteLista(confirm){
         //console.log(indexListas);
         var listasDoUsuario = db.listasUsuarios[indexListas].listas;
         //console.log(listasDoUsuario)
-        var metadadosDasListas
-        if(listasDoUsuario.length == null || listasDoUsuario.length == 0 || listasDoUsuario.length == ''){
-            metadadosDasListas = {
-                listasLen: 0,
-                ultimoIdLista: listasDoUsuario[0].lista_id
-            }
-        }else{
-            metadadosDasListas = {
-                listasLen: listasDoUsuario.length - 1,
-                ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
-            }
+        var metadadosDasListas = {
+            listasLen: listasDoUsuario.length - 1,
+            ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
         }
+
         //console.log(metadadosDasListas)
 
 
@@ -147,8 +140,8 @@ function deleteLista(confirm){
             O For que vem logo abaixo deste comentário busca a lista no banco e apaga
             ela com a função slice() de arrays, em seguida os dados modificados são gravados
         */
-        for(let i = 0 ; i < listasDoUsuario.length ; i++){
-            if(listasDoUsuario[i].lista_id == lista_id){
+        for (let i = 0; i < listasDoUsuario.length; i++) {
+            if (listasDoUsuario[i].lista_id == lista_id) {
                 db.listasUsuarios[indexListas].listas.splice(i, 1)
                 localStorage.setItem('db', JSON.stringify(db));
                 console.log('Elemento apagado do localStorage com sucesso');
@@ -157,13 +150,70 @@ function deleteLista(confirm){
         //===================================================================
         document.querySelector(`div#my-list-id${lista_id}`).remove()
         fecharModalDeletarLista();
-    }else{
+    } else {
         //Se a operação de exclusão for cancelada o modal simplismente é fechado
         fecharModalDeletarLista();
     }
 }
 
+function editarLista(confirm) {
+    if (confirm) {
 
+        //Essas duas linhas de código buscam no local storage qual lista deve ser apagada
+        let preEdit = localStorage.getItem('editId');
+        let lista_id = JSON.parse(preEdit);
+
+
+        /*==============================================================
+        Recuperando o local Storage inteiro para manipulação
+        ================================================================*/
+        var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+        var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
+        //console.log(db)
+        /*==============================================================*/
+
+        /*
+        A 3 variáveis declaradas logo abaixo 
+        servem para localizar o conjunto de listas pertencentes
+        o usuário logado
+        */
+        var indexListas = Number(localStorage.getItem('indexDaListaDoUsuario'));
+        //console.log(indexListas);
+        var listasDoUsuario = db.listasUsuarios[indexListas].listas;
+        //console.log(listasDoUsuario)
+        var metadadosDasListas = {
+            listasLen: listasDoUsuario.length - 1,
+            ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
+        }
+        var novaCor;
+        var corRadio = document.querySelectorAll('input.color-editor-selector');
+        for (let i = 0, length = corRadio.length; i < length; i++) {
+            if (corRadio[i].checked) {
+                // encontra a cor slecionada
+                novaCor = corRadio[i].value
+
+                // Para o loop ao encontrar a cor selecionada
+                break;
+            }
+        }
+        var novoNome = document.querySelector('input.novo-nome-da-lista').value
+        for (let i = 0; i < listasDoUsuario.length; i++) {
+            if (listasDoUsuario[i].lista_id == lista_id) {
+                db.listasUsuarios[indexListas].listas[i].lista_nome = novoNome;
+                db.listasUsuarios[indexListas].listas[i].lista_cor = novaCor;
+                let listaNaPagina = document.querySelector(`div#my-list-id${lista_id}`);
+                let listaTitulo = listaNaPagina.querySelector('h2.listTitle');
+                listaTitulo.innerText = db.listasUsuarios[indexListas].listas[i].lista_nome;
+                listaNaPagina.style.backgroundColor = db.listasUsuarios[indexListas].listas[i].lista_cor;
+                localStorage.setItem('db', JSON.stringify(db));
+                console.log('Elemento apagado do localStorage com sucesso');
+            }
+        }
+        fecharModalEditarLista()
+    }else{
+        fecharModalEditarLista() 
+    }
+}
 
 
 
@@ -236,4 +286,24 @@ function fecharModalDeletarLista() {
     modal.classList.remove('active')
     overlay.classList.remove('active')
     localStorage.removeItem('deleteId')
+}
+
+function abrirModalEditarLista(editId) {
+    let modal = document.querySelector('div.modal-editor');
+    let overlay = document.querySelector('div#overlay')
+    modal.classList.add('active')
+    overlay.classList.add('active')
+    /*
+        Selecionando lista a ser deletada, e gravando dados no local
+        Storage
+    */
+    localStorage.setItem('editId', JSON.stringify(editId));
+}
+
+function fecharModalEditarLista() {
+    let modal = document.querySelector('div.modal-editor');
+    let overlay = document.querySelector('div#overlay')
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+    localStorage.removeItem('editId')
 }

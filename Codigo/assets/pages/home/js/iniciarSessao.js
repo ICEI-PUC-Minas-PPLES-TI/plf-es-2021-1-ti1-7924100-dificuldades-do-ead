@@ -45,7 +45,7 @@ function renderizarConteudo(){
                     <div class="list-trash" onclick="abrirModalDeletarLista(${dadosDasListas.listas[j].lista_id})">
                         <i class='bx bxs-trash'></i>
                     </div>
-                    <div class="list-edit">
+                    <div class="list-edit" onclick="abrirModalEditarLista(${dadosDasListas.listas[j].lista_id})">
                         <i class='bx bxs-pencil'></i>
                     </div>
                 </div>
