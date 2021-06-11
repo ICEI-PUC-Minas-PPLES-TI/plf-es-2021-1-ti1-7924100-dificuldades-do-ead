@@ -98,6 +98,33 @@ function deleteLista(confirm){
     if(confirm){
         let preDelete = localStorage.getItem('deleteId'); // Recuperando o banco de dados inteiro do localStorage
         let lista_id = JSON.parse(preDelete) // Tornando os dados recuperados em um objeto
+        //===================Apagando lista do local storage============
+
+        var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+        var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
+        console.log(db)
+
+        var indexListas = Number(localStorage.getItem('indexDaListaDoUsuario'));
+        console.log(indexListas);
+
+        var listasDoUsuario = db.listasUsuarios[indexListas].listas;
+        console.log(listasDoUsuario)
+
+        var metadadosDasListas = {
+            listasLen: listasDoUsuario.length - 1,
+            ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
+        }
+        console.log(metadadosDasListas)
+
+        for(let i = 0 ; i < listasDoUsuario.length ; i++){
+            if(listasDoUsuario[i].lista_id == lista_id){
+                db.listasUsuarios[indexListas].listas.splice(i, 1)
+                localStorage.setItem('db', JSON.stringify(db));
+                console.log('Elemento apagado do localStorage com sucesso');
+            }
+        }
+
+        //===================================================================
         document.querySelector(`div#my-list-id${lista_id}`).remove()
         fecharModalDeletarLista();
     }else{
