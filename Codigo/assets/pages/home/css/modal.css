@@ -1,0 +1,185 @@
+:root {
+    --tomato-red: #db2727;
+    --juice-red: #F59C9C;
+    --white: #EBEBEB;
+    --grey: #d1d1d1;
+    --dark-grey: #333;
+    --sun-yellow: #FFBE0B;
+    --orange: #FB5607;
+    --shok-pink: #FF006E;
+    --shallow-purple: #8338EC;
+    --blue-sky: #3A86FF;
+    --deep-blue: #081732;
+    --dark-blue: #000714;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 20px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.section-nome-da-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.nome-da-lista {
+    background-color: var(--grey);
+    border: none;
+    border-radius: 10px;
+    width: 70%;
+    font-family: 'Roboto', sans-serif;
+    height: 3rem;
+    resize: none;
+    margin: 10px;
+    color: var(--dark-grey);
+    font-size: 1.3rem;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.radio-buttons {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.custom-radio input {
+    display: none;
+}
+
+.radio-btn {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid transparent;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 20px #c3c3c367;
+    cursor: pointer;
+}
+
+.radio-btn>i {
+    color: #ffffff;
+    background-color: #8373e6;
+    font-size: 20px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(4);
+    border-radius: 50px;
+    padding: 3px;
+    transition: 0.2s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.radio-btn .hobbies-icon h3 {
+    color: #8373e6;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.custom-radio input:checked+.radio-btn {
+    border: 5px solid #fff;
+    box-shadow: 0 0 2px #000;
+}
+
+.options-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 70px;
+}
+
+.options-buttons button {
+    width: 40%;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-closer {
+    color: var(--tomato-red);
+    background-color: var(--juice-red);
+}
+
+.list-creator {
+    color: #0e7432;
+    background-color: #74d897;
+}
+
+.modal-closer:hover {
+    background-color: var(--tomato-red);
+    color: var(--juice-red);
+}
+
+.list-creator:hover {
+    background-color: #0e7432;
+    color: #74d897;
+}
