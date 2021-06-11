@@ -90,4 +90,21 @@ function mostrarMenu(listaId){
 }
 
 
-
+/*
+    =======================================
+    FUNÇÕES RELACIONADAS AOS MODAIS
+    =======================================
+*/
+function openModal() {
+    let modal = document.querySelector('div.modal');
+    let overlay = document.querySelector('div#overlay')
+    modal.classList.add('active')
+    overlay.classList.add('active')
+  }
+  
+  function closeModal() {
+    let modal = document.querySelector('div.modal');
+    let overlay = document.querySelector('div#overlay')
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+  }

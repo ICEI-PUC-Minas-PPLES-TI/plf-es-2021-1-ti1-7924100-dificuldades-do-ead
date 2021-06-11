@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/sidebar.css" />
     <link rel="stylesheet" href="css/template.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/modal.css">
     <!--==============================================-->
     <title>Listfy</title>
 </head>
@@ -110,6 +111,56 @@
 
 
     </main>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+          <h1>Nova Lista</h1>
+        </div>
+        <div class="modal-body">
+          <div class="section-nome-da-lista">
+            <input type="text" class="nome-da-lista" placeholder="Nome da lista">
+          </div>
+          <div class="radio-buttons">
+            <label class="custom-radio">
+              <input type="radio" name="radio" checked />
+              <span class="radio-btn" style="background-color: #FFBE0B">
+              </span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="radio" />
+              <span class="radio-btn" style="background-color: #FF006E">
+              </span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="radio" />
+              <span class="radio-btn" style="background-color: #8338EC">
+              </span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="radio" />
+              <span class="radio-btn" style="background-color: #3A86FF">
+              </span>
+            </label>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="radio" />
+            <span class="radio-btn" style="background-color: #1Db954">
+            </span>
+          </label>
+          </div>
+        </div>
+    
+        <div class="options-buttons">
+          <button class="modal-closer" onclick="closeModal()">
+            <i class='bx bx-x-circle' ></i>
+            Cancelar
+          </button>
+          <button class="list-creator">
+            <i class='bx bx-plus-circle' ></i>
+            Criar lista
+          </button>
+        </div>
+      </div>
+      <div id="overlay"></div>
     <script src="js/iniciarSessao.js"></script>
     <script src="js/sidebar.js"></script>
     <script src="js/controleDeListas.js"></script>
