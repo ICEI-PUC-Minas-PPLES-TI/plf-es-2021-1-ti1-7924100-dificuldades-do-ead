@@ -41,8 +41,16 @@ function renderizarConteudo(){
         
         preRenderListas.push(`
             <div class="list" style="background-color:${cor} !important;">
+                <div class="hidded-options" id="lista-${dadosDasListas.listas[j].lista_id}">
+                    <div class="list-trash">
+                        <i class='bx bxs-trash'></i>
+                    </div>
+                    <div class="list-edit">
+                        <i class='bx bxs-pencil'></i>
+                    </div>
+                </div>
                 <h2 class="listTitle">${dadosDasListas.listas[j].lista_nome}</h2>
-                <i class='bx bx-dots-vertical-rounded menuList'></i>
+                <i onclick="mostrarMenu(${dadosDasListas.listas[j].lista_id})" class='bx bx-dots-vertical-rounded menuList'></i>
             </div>
             `);
     }

@@ -29,6 +29,9 @@
     border-radius: 20px;
     margin: 10px;
 }
+.hidded-options{
+    display:none;
+}
 .list-options{
     grid-row: 1;
     grid-column: 1;
