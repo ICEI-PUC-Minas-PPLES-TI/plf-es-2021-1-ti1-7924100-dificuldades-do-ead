@@ -104,7 +104,7 @@
                     <i onclick="mostrarMenu(10)" class='bx bx-dots-vertical-rounded menuList'></i>
                 </div>
             </div>
-            <div class="add-list-button" onclick="novaLista()">
+            <div class="add-list-button" onclick="openModal()">
                 <i class='bx bx-plus-circle'></i>
             </div>
         </div>
@@ -121,44 +121,44 @@
           </div>
           <div class="radio-buttons">
             <label class="custom-radio">
-              <input type="radio" name="radio" checked />
+              <input type="radio" name="radio" value="#FFBE0B" class="color-selector" checked />
               <span class="radio-btn" style="background-color: #FFBE0B">
               </span>
             </label>
             <label class="custom-radio">
-              <input type="radio" name="radio" />
+              <input type="radio" name="radio" value="#FF006E" class="color-selector"/>
               <span class="radio-btn" style="background-color: #FF006E">
               </span>
             </label>
             <label class="custom-radio">
-              <input type="radio" name="radio" />
+              <input type="radio" name="radio" value="#8338EC" class="color-selector"/>
               <span class="radio-btn" style="background-color: #8338EC">
               </span>
             </label>
             <label class="custom-radio">
-              <input type="radio" name="radio" />
+              <input type="radio" name="radio" value="#3A86FF" class="color-selector"/>
               <span class="radio-btn" style="background-color: #3A86FF">
               </span>
             </label>
           </label>
           <label class="custom-radio">
-            <input type="radio" name="radio" />
+            <input type="radio" name="radio" value="#1Db954" class="color-selector"/>
             <span class="radio-btn" style="background-color: #1Db954">
             </span>
           </label>
           </div>
+          <div class="options-buttons">
+            <button class="modal-closer" onclick="novaLista(false)">
+              <i class='bx bx-x-circle' ></i>
+              Cancelar
+            </button>
+            <button class="list-creator" onclick="novaLista(true)">
+              <i class='bx bx-plus-circle' ></i>
+              Criar lista
+            </button>
+          </div>
         </div>
     
-        <div class="options-buttons">
-          <button class="modal-closer" onclick="closeModal()">
-            <i class='bx bx-x-circle' ></i>
-            Cancelar
-          </button>
-          <button class="list-creator">
-            <i class='bx bx-plus-circle' ></i>
-            Criar lista
-          </button>
-        </div>
       </div>
       <div id="overlay"></div>
     <script src="js/iniciarSessao.js"></script>

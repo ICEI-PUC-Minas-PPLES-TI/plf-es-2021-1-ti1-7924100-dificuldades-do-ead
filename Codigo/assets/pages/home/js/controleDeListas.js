@@ -1,47 +1,66 @@
-function novaLista() {
-var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
-var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
-console.log(db)
-
-var indexListas = Number(localStorage.getItem('indexDaListaDoUsuario'));
-console.log(indexListas);
-
-var listasDoUsuario = db.listasUsuarios[indexListas].listas;
-console.log(listasDoUsuario)
-
-var metadadosDasListas = {
-    listasLen: listasDoUsuario.length - 1,
-    ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
-}
-console.log(metadadosDasListas)
-
-var corNovaLista = '#8338EC'
-
-
-
-    var listas = document.querySelector('div.main-content-lists');
-
-
-    var nomeNovaLista = window.prompt("Digite um nome para a nova lista: ").toString();
-
-    console.log(nomeNovaLista)
-    if (nomeNovaLista == null || nomeNovaLista == '') {
-        nomeNovaLista = 'Lista sem nome';
+function novaLista(control) {
+    /*
+    dadosNovaLista = {
+        canceled: 1,
+        nomeLista: 'nome',
+        cor: 'cor'
     }
-    //Objeto para armazenamento da lista
+    */
+    //var dadosNovaLista = window.prompt("Digite um nome para a nova lista: ").toString();
+    var dadosNovaLista;
+    if (control) {
+        dadosNovaLista = {
+            ok: true,
+            nomeLista: '',
+            cor: ''
+        }
+        dadosNovaLista.nome = document.querySelector('input.nome-da-lista').value;
+        var corRadio = document.querySelectorAll('input.color-selector');
+        for (let i = 0, length = corRadio.length; i < length; i++) {
+            if (corRadio[i].checked) {
+                // encontra a cor slecionada
+                dadosNovaLista.cor = corRadio[i].value
 
-    var lista = {
+                // Para o loop ao encontrar a cor selecionada
+                break;
+            }
+        }
+        dadosNovaLista;
+
+        var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+        var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
+        console.log(db)
+
+        var indexListas = Number(localStorage.getItem('indexDaListaDoUsuario'));
+        console.log(indexListas);
+
+        var listasDoUsuario = db.listasUsuarios[indexListas].listas;
+        console.log(listasDoUsuario)
+
+        var metadadosDasListas = {
+            listasLen: listasDoUsuario.length - 1,
+            ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
+        }
+        console.log(metadadosDasListas)
+        var listas = document.querySelector('div.main-content-lists');
+        var lista = {
             lista_id: metadadosDasListas.ultimoIdLista + 1,
             lista_nome: nomeNovaLista,
             lista_cor: corNovaLista,
             lista_itens: []
         }
+        console.log(nomeNovaLista)
+        if (nomeNovaLista == null || nomeNovaLista == '') {
+            nomeNovaLista = 'Lista sem nome';
+        }
+        //Objeto para armazenamento da lista
+
 
         //Armazenamento da nova lista no storage
-    db.listasUsuarios[indexListas].listas.push(lista)
-    localStorage.setItem('db', JSON.stringify(db));
+        db.listasUsuarios[indexListas].listas.push(lista)
+        localStorage.setItem('db', JSON.stringify(db));
 
-    listas.innerHTML += `
+        listas.innerHTML += `
         <div class="list" style="background-color:${corNovaLista} !important;">
             <div class="hidded-options" id="lista-${lista.lista_id}">
                 <div class="list-trash">
@@ -55,9 +74,13 @@ var corNovaLista = '#8338EC'
             <i onclick="mostrarMenu(${lista.lista_id})" class='bx bx-dots-vertical-rounded menuList'></i>
         </div>
     `;
-    console.log("Lista adicionanda ao storage");
-    console.log('Resumo das alterações');
-    console.log(db)
+        console.log("Lista adicionanda ao storage");
+        console.log('Resumo das alterações');
+        console.log(db)
+    } else {
+        console.log('Criação de lista CANCELADA');
+        closeModal();
+    }
 }
 
 /*
@@ -70,9 +93,9 @@ var corNovaLista = '#8338EC'
 
     Assim não precisa desativar um menu em específico
 */
-function esconderTodosOsMenusDeLista(){
+function esconderTodosOsMenusDeLista() {
     var menus = document.querySelectorAll('div.list-options');
-    for(let i = 0 ; i < menus.length ; i++){
+    for (let i = 0; i < menus.length; i++) {
         menus[i].classList.remove('list-options');
         menus[i].classList.add('hidded-options');
     }
@@ -82,7 +105,7 @@ function esconderTodosOsMenusDeLista(){
     durante a chamada ocorre uma passagem de parâmetro que é o id da lista em especifico 
     da qual o menu será mostrado
 */
-function mostrarMenu(listaId){
+function mostrarMenu(listaId) {
     esconderTodosOsMenusDeLista();
     var menu = document.querySelector(`div#lista-${listaId}`);
     menu.classList.remove('hidded-options');
@@ -100,11 +123,11 @@ function openModal() {
     let overlay = document.querySelector('div#overlay')
     modal.classList.add('active')
     overlay.classList.add('active')
-  }
-  
-  function closeModal() {
+}
+
+function closeModal() {
     let modal = document.querySelector('div.modal');
     let overlay = document.querySelector('div#overlay')
     modal.classList.remove('active')
     overlay.classList.remove('active')
-  }
+}

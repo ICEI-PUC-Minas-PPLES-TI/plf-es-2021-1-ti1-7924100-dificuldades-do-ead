@@ -20,7 +20,7 @@
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     border-radius: 20px;
-    z-index: 10;
+    display: none;
     background-color: white;
     width: 500px;
     max-width: 80%;
@@ -28,6 +28,11 @@
 
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
+    z-index: 1100;
+    display: flex;
+    max-height: 30%;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .modal-header {
@@ -35,6 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--dark-blue);
 }
 
 .modal-header .title {
@@ -87,11 +93,13 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, .5);
     pointer-events: none;
+    
 }
 
 #overlay.active {
     opacity: 1;
     pointer-events: all;
+    z-index: 999;
 }
 
 .radio-buttons {
@@ -149,7 +157,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 20px 70px;
+    padding: 0px 50px;
 }
 
 .options-buttons button {
@@ -162,6 +170,7 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    border: none;
 }
 
 .modal-closer {
