@@ -160,7 +160,6 @@ function deleteLista(confirm){
 /*
     Ao ser chamada a seguinte função troca as classes de todos os menus da pagina para
     um que possui o display none;
-
     Assim não precisa desativar um menu em específico
 */
 function esconderTodosOsMenusDeLista() {
@@ -207,7 +206,10 @@ function abrirModalDeletarLista(deleteId) {
     let overlay = document.querySelector('div#overlay')
     modal.classList.add('active')
     overlay.classList.add('active')
-    //Selecionando lista a ser deletada
+    /*
+        Selecionando lista a ser deletada, e gravando dados no local
+        Storage
+    */
     localStorage.setItem('deleteId', JSON.stringify(deleteId));
 }
 
