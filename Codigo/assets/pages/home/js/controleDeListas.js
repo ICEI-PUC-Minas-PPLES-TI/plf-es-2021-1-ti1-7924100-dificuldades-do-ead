@@ -35,10 +35,19 @@ function novaLista(control) {
 
         var listasDoUsuario = db.listasUsuarios[indexListas].listas;
         console.log(listasDoUsuario)
-
-        var metadadosDasListas = {
-            listasLen: listasDoUsuario.length - 1,
-            ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
+        var metadadosDasListas;
+        if(listasDoUsuario.length == null || listasDoUsuario.length == 0 || listasDoUsuario.length == ''){
+            metadadosDasListas = {
+                listasLen: 0,
+                ultimoIdLista: 999
+            }
+            localStorage.setItem('ultimoIdLista', metadadosDasListas.ultimoIdLista)
+        }else{
+            metadadosDasListas = {
+                listasLen: listasDoUsuario.length - 1,
+                ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
+            }
+            localStorage.setItem('ultimoIdLista', metadadosDasListas.ultimoIdLista)
         }
         console.log(metadadosDasListas)
         var listas = document.querySelector('div.main-content-lists');
@@ -119,9 +128,17 @@ function deleteLista(confirm){
         //console.log(indexListas);
         var listasDoUsuario = db.listasUsuarios[indexListas].listas;
         //console.log(listasDoUsuario)
-        var metadadosDasListas = {
-            listasLen: listasDoUsuario.length - 1,
-            ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
+        var metadadosDasListas
+        if(listasDoUsuario.length == null || listasDoUsuario.length == 0 || listasDoUsuario.length == ''){
+            metadadosDasListas = {
+                listasLen: 0,
+                ultimoIdLista: listasDoUsuario[0].lista_id
+            }
+        }else{
+            metadadosDasListas = {
+                listasLen: listasDoUsuario.length - 1,
+                ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
+            }
         }
         //console.log(metadadosDasListas)
 

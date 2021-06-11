@@ -123,24 +123,24 @@
     border: none;
 }
 
-.modal-delete-closer {
+.modal-cancel {
+    color: var(--dark-grey);
+    background-color: var(--grey);
+}
+
+.list-deleter {
     color: var(--tomato-red);
     background-color: var(--juice-red);
 }
 
-.list-creator {
-    color: #0e7432;
-    background-color: #74d897;
+.modal-cancel:hover {
+    background-color: var(--dark-grey);
+    color: var(--grey);
 }
 
-.modal-delete-closer:hover {
+.list-deleter:hover {
     background-color: var(--tomato-red);
     color: var(--juice-red);
-}
-
-.list-creator:hover {
-    background-color: #0e7432;
-    color: #74d897;
 }
 
 @media screen and (max-width: 641px) {

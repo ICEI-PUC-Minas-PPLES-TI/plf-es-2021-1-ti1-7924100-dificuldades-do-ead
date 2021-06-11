@@ -93,7 +93,7 @@
         <div class="main-content">
             <div class="main-content-lists">
 
-
+                <!--LISTA EXPERIMENTAL
                 <div class="list" id="my-list-id99" style="background-color:#1dB954 !important;">
                     <div class="hidded-options" id="lista-99">
                         <div class="list-trash" onclick="abrirModalDeletarLista(99)">
@@ -106,7 +106,7 @@
                     <h2 class="listTitle">Lista Experimental</h2>
                     <i onclick="mostrarMenu(99)" class='bx bx-dots-vertical-rounded menuList'></i>
                 </div>
-
+                -->
 
             </div>
             <div class="add-list-button" onclick="abrirModalNovaLista()">
@@ -165,23 +165,25 @@
       </div>
       <!--FIM DO MODAL PARA CRIAÇÃO DE LISTAS-->
 
-
+      <!--MODAL PARA EXCLUSÃO DE LISTAS-->
       <div class="modal-delete" id="modal-delete">
         <div class="modal-header">
           <h1>Quer mesmo apagar essa lista?</h1>
         </div>
         <div class="modal-body">
           <div class="options-buttons">
-            <button class="modal-closer" onclick="deleteLista(false)">
-              <i class='bx bx-x-circle' ></i>
+            <button class="modal-cancel" onclick="deleteLista(false)">
+                <i class='bx bx-arrow-back' ></i>
+                <d>Não</d>
             </button>
             <button class="list-deleter" onclick="deleteLista(true)">
-              <i class='bx bx-plus-circle' ></i>
+                <i class='bx bxs-trash' ></i>
+                <b>Sim</b>
             </button>
           </div>
         </div>
       </div>
-
+      <!--FIM DO MODAL PARA EXCLUSÃO DE LISTAS-->
 
 
 
