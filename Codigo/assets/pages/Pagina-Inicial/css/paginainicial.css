@@ -1104,3 +1104,201 @@ header.masthead .bg-circle-6 {
     font-size: 4rem;
   }
 }
+/*Media Query IPhone 6,7,8 Plus*/
+@media (max-width: 414px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 4rem!important;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 3rem!important;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2.5rem!important;
+  }
+  .button-neon{
+    width: 10rem;
+    font-size: 1.5rem!important;
+  }
+  .header__img{
+    width: 150px;
+    height: 50px;
+  }
+  .navbar-custom .navbar-nav .nav-item .nav-link{
+    font-size: 0.9rem;
+  }
+  header.masthead .bg-circle-1{
+    display: none;
+  }
+  header.masthead .bg-circle-2 {
+    height: 10rem;
+    width: 10rem;
+    top: -1rem;
+    right: -2rem;
+    background: linear-gradient(250deg, #081732 10%, #fffC 80%);
+  }
+  header.masthead .bg-circle-3 {
+    height: 20rem;
+    width: 20rem;
+    top: 25rem;
+    left: -5rem;
+    background: linear-gradient(30deg, #081732 30%, #ee0979 80%);
+  }
+  header.masthead .bg-circle-4{
+    height: 15rem;
+    width: 15rem;
+    top: -2rem;
+    right: 60%;
+    background: linear-gradient(170deg, #8338EC 10%, #081732 80%);
+  }
+}
+/*Media Query IPhone 6,7,8*/
+@media (max-width: 375px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 2.5rem!important;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 2.5rem!important;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem!important;
+  }
+  .button-neon{
+    width: 10rem;
+    font-size: 1.3rem!important;
+  }
+  .header__img{
+    width: 130px;
+    height: 40px;
+  }
+  header.masthead .bg-circle-1{
+    height: 10rem;
+    width: 10rem;
+    top: 32rem;
+  }
+  header.masthead .bg-circle-2 {
+    height: 10rem;
+    width: 10rem;
+    top: -1rem;
+    right: -2rem;
+    background: linear-gradient(40deg, #081732 30%, #8338EC 80%);
+  }
+  header.masthead .bg-circle-3 {
+    height: 20rem;
+    width: 20rem;
+    top: 20rem;
+    left: 5rem;
+    background: linear-gradient(300deg, #081732 25%, #ee0979 70%);
+  }
+  header.masthead .bg-circle-4{
+    background: linear-gradient(45deg, #fffC 10%, #081732 100%);
+  }
+}
+/*Media Query IPhone 5,SE*/
+@media (max-width: 320px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 0.5rem!important;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 2.2rem!important;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 1.8rem!important;
+  }
+  .button-neon{
+    width: 9rem;
+    font-size: 1.2rem!important;
+  }
+  .navbar-custom .navbar-nav .nav-item .nav-link{
+    font-size: 0.8rem;
+  }
+  .header__img{
+    width: 120px;
+    height: 35px;
+  }
+  header.masthead .bg-circle-1{
+    display: none;
+  }
+  header.masthead .bg-circle-2 {
+    height: 10rem;
+    width: 10rem;
+    top: -1rem;
+    right: -2rem;
+    background: linear-gradient(250deg, #081732 10%, #fffC 80%);
+  }
+  header.masthead .bg-circle-3 {
+    height: 15rem;
+    width: 15rem;
+    top: 15rem;
+    left: 5rem;
+  }
+  header.masthead .bg-circle-4{
+    height: 13rem;
+    width: 13rem;
+    top: -2rem;
+    right: 50%;
+    background: linear-gradient(130deg, #8338EC 20%, #081732 80%);
+  }
+}
+/*Media Query Surface Duo*/
+@media (max-width: 540px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 3rem!important;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 4rem!important;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 3rem!important;
+  }
+  .button-neon{
+    width: 13rem;
+    font-size: 1.6rem!important;
+  }
+  .navbar-custom .navbar-nav .nav-item .nav-link{
+    font-size: 0.8rem;
+  }
+  .header__img{
+    width: 130px;
+    height: 45px;
+  }
+  header.masthead .bg-circle-1{
+    display: none;
+  }
+  header.masthead .bg-circle-2 {
+    height: 10rem;
+    width: 10rem;
+    top: 0.5rem;
+    right: -1rem;
+    background: linear-gradient(250deg, #081732 10%, #fffC 80%);
+  }
+  header.masthead .bg-circle-3 {
+    height: 35rem;
+    width: 35rem;
+    top: 20rem;
+    left: 3rem;
+  }
+  header.masthead .bg-circle-4{
+    height: 13rem;
+    width: 13rem;
+    top: -2rem;
+    right: 20rem;
+    background: linear-gradient(130deg, #8338EC 20%, #081732 80%);
+  }
+}
+
+
+@media (max-width: 992px){
+  header.masthead {
+    padding-top: calc(10rem + 55px);
+    padding-bottom: 10rem;
+  }
+  header.masthead .masthead-content .margintop{
+    margin-top: 8rem;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 6rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 4rem;
+  }
+}
