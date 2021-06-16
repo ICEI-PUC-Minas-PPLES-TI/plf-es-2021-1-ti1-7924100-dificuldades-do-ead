@@ -946,93 +946,94 @@ header.masthead .bg-circle-6 {
     padding-bottom: 10rem;
   }
   header.masthead .masthead-content .margintop{
-    margin-top: 8rem;
+    margin-top: 8rem!important;
   }
   header.masthead .masthead-content .masthead-heading {
-    font-size: 7rem;
+    font-size: 8rem!important;
   }
   header.masthead .masthead-content .masthead-subheading {
-    font-size: 4rem;
+    font-size: 5rem!important;
   }
   .button-neon{
-    width: 20rem;
-    font-size: 3rem;
+    width: 25rem!important;
+    font-size: 3.4rem!important;
   }
   .header__img{
-    width: 350px;
-    height: 100px;
+    width: 300px;
+    height: 90px;
     margin-top: 1rem;
   }
   .navbar-custom .navbar-nav .nav-item .nav-link{
-    font-size: 1.6rem;
+    font-size: 1.7rem!important;
     margin-left: 10px;
   }
   header.masthead .bg-circle-1{
-    height: 85rem;
-    width: 85rem;
-    bottom: -55rem;
-    left: -55rem;
-    background: linear-gradient(120deg, #081732 10%, #ee0979 90%);
+    display: none;
   }
   header.masthead .bg-circle-2 {
     height: 35rem;
     width: 35rem;
     top: -10rem;
     right: -15rem;
-    background: linear-gradient(150deg, #8338EC 10%, #081732 70%);
+    background: linear-gradient(190deg, #081732 20%, #fffC 90%);
   }
   header.masthead .bg-circle-3 {
-    height: 20rem;
-    width: 20rem;
-    right: 5%;
-    top: 63rem;
-    background: linear-gradient(60deg, #081732 25%, #ee0979 80%);
+    height: 60rem;
+    width: 60rem;
+    right: -5rem;
+    top: 40rem;
+    background: linear-gradient(60deg, #081732 20%, #ee0979 70%);
   }
   header.masthead .bg-circle-4{
-    height: 40rem;
-    width: 40rem;
-    top: -10rem;
-    right: 55%;
+    height: 30rem;
+    width: 30rem;
+    top: -5rem;
+    right: 40rem;
     background: linear-gradient(120deg, #8338EC 10%, #081732 80%);
   }
 }
 /*Media Query IPAD*/
 @media (max-width: 768px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 9rem!important;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 5rem!important;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 4rem!important;
+  }
   .button-neon{
-    width: 15rem;
-    font-size: 2rem;
+    width: 15rem!important;
+    font-size: 2rem!important;
   }
   .header__img{
-    width: 250px;
-    height: 70px;
+    width: 250px!important;
+    height: 70px!important;
   }
   .navbar-custom .navbar-nav .nav-item .nav-link{
     font-size: 1.3rem;
   }
   header.masthead .bg-circle-1{
-    height: 65rem;
-    width: 65rem;
-    top: 35rem;
-    left: -40rem;
-    background: linear-gradient(120deg, #081732 30%, #ee0979 80%);
+    display: none;
   }
   header.masthead .bg-circle-2 {
-    height: 30rem;
-    width: 30rem;
-    top: -10rem;
-    right: -15rem;
-    background: linear-gradient(180deg, #8338EC 10%, #081732 80%);
+    height: 25rem;
+    width: 25rem;
+    top: -5rem;
+    right: -10rem;
+    background: linear-gradient(180deg, #081732 20%, #fffC 90%);
   }
   header.masthead .bg-circle-3 {
-    height: 20rem;
-    width: 20rem;
-    left: 30rem;
-    top: 40rem;
-    background: linear-gradient(50deg, #081732 30%, #ee0979 90%);
+    height: 40rem;
+    width: 40rem;
+    left: 10rem;
+    top: 30rem;
+    background: linear-gradient(45deg, #081732 30%, #ee0979 90%);
   }
   header.masthead .bg-circle-4{
-    height: 35rem;
-    width: 35rem;
+    height: 30rem;
+    width: 30rem;
     top: -10rem;
     right: 50%;
     background: linear-gradient(150deg, #8338EC 20%, #081732 80%);
@@ -1044,28 +1045,20 @@ header.masthead .bg-circle-6 {
     margin-top: 6rem!important;
   }
   header.masthead .masthead-content .masthead-heading {
-    font-size: 3rem!important;
+    font-size: 1rem!important;
   }
   header.masthead .masthead-content .masthead-subheading {
     font-size: 2.5rem!important;
   }
   .button-neon{
-    width: 10rem;
-    font-size: 1.5rem!important;
+    width: 12rem!important;
   }
   .header__img{
-    width: 200px;
-    height: 50px;
+    width: 200px!important;
+    height: 50px!important;
   }
   .navbar-custom .navbar-nav .nav-item .nav-link{
     font-size: 0.9rem;
-  }
-  header.masthead .bg-circle-1{
-    height: 10rem;
-    width: 10rem;
-    top: 40rem;
-    left: -2rem;
-    background: linear-gradient(45deg, #081732 30%, #ee0979 90%);
   }
   header.masthead .bg-circle-2 {
     height: 10rem;
@@ -1107,24 +1100,24 @@ header.masthead .bg-circle-6 {
 /*Media Query IPhone 6,7,8 Plus*/
 @media (max-width: 414px){
   header.masthead .masthead-content .margintop{
-    margin-top: 4rem!important;
+    margin-top: 4rem!important;/*Não esta funcionando*/
   }
   header.masthead .masthead-content .masthead-heading {
-    font-size: 3rem!important;
+    font-size: 2rem!important;/*Não esta funcionando*/
   }
   header.masthead .masthead-content .masthead-subheading {
-    font-size: 2.5rem!important;
+    font-size: 2.5rem!important;/*Não esta funcionando*/
   }
   .button-neon{
-    width: 10rem;
+    width: 12rem!important;
     font-size: 1.5rem!important;
   }
   .header__img{
-    width: 150px;
-    height: 50px;
+    width: 150px!important;
+    height: 50px!important;
   }
   .navbar-custom .navbar-nav .nav-item .nav-link{
-    font-size: 0.9rem;
+    font-size: 0.9rem!important;
   }
   header.masthead .bg-circle-1{
     display: none;
@@ -1199,13 +1192,13 @@ header.masthead .bg-circle-6 {
     margin-top: 0.5rem!important;
   }
   header.masthead .masthead-content .masthead-heading {
-    font-size: 2.2rem!important;
+    font-size: 2.2rem!important;/*Não esta funcionando*/
   }
   header.masthead .masthead-content .masthead-subheading {
-    font-size: 1.8rem!important;
+    font-size: 1.8rem!important;/*Não esta funcionando*/
   }
   .button-neon{
-    width: 9rem;
+    width: 12rem!important;
     font-size: 1.2rem!important;
   }
   .navbar-custom .navbar-nav .nav-item .nav-link{
