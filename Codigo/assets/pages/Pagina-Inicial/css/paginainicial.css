@@ -920,7 +920,7 @@ header.masthead .bg-circle-6 {
   }
 }
 
-@media (max-width: 550px){
+/*@media (max-width: 550px){
   header.masthead{
     background: linear-gradient(0deg, #8338EC 20%, #081732 100%);
   }
@@ -936,7 +936,7 @@ header.masthead .bg-circle-6 {
   header.masthead .bg-circle-4{
     display: none;
   }
-}
+}*/
 
 
 /*Media query do Ipad Pro*/
@@ -972,35 +972,32 @@ header.masthead .bg-circle-6 {
     width: 85rem;
     bottom: -55rem;
     left: -55rem;
-    background: linear-gradient(120deg, #081732 10%, #ee0979 110%);
+    background: linear-gradient(120deg, #081732 10%, #ee0979 90%);
   }
   header.masthead .bg-circle-2 {
-    height: 40rem;
-    width: 40rem;
+    height: 35rem;
+    width: 35rem;
     top: -10rem;
     right: -15rem;
-    background: linear-gradient(150deg, #8338EC 10%, #081732 100%);
+    background: linear-gradient(150deg, #8338EC 10%, #081732 70%);
   }
   header.masthead .bg-circle-3 {
     height: 20rem;
     width: 20rem;
     right: 5%;
     top: 63rem;
-    background: linear-gradient(60deg, #081732 25%, #ee0979 100%);
+    background: linear-gradient(60deg, #081732 25%, #ee0979 80%);
   }
   header.masthead .bg-circle-4{
     height: 40rem;
     width: 40rem;
     top: -10rem;
-    right: 50%;
-    background: linear-gradient(120deg, #8338EC 10%, #081732 100%);
+    right: 55%;
+    background: linear-gradient(120deg, #8338EC 10%, #081732 80%);
   }
 }
 /*Media Query IPAD*/
 @media (max-width: 768px){
-  header.masthead .masthead-content .margintop{
-    margin-top: 8rem;
-  }
   .button-neon{
     width: 15rem;
     font-size: 2rem;
@@ -1017,28 +1014,79 @@ header.masthead .bg-circle-6 {
     width: 65rem;
     top: 35rem;
     left: -40rem;
-    background: linear-gradient(120deg, #081732 30%, #ee0979 110%);
+    background: linear-gradient(120deg, #081732 30%, #ee0979 80%);
   }
   header.masthead .bg-circle-2 {
     height: 30rem;
     width: 30rem;
     top: -10rem;
     right: -15rem;
-    background: linear-gradient(180deg, #8338EC 10%, #081732 100%);
+    background: linear-gradient(180deg, #8338EC 10%, #081732 80%);
   }
   header.masthead .bg-circle-3 {
     height: 20rem;
     width: 20rem;
     left: 30rem;
     top: 40rem;
-    background: linear-gradient(50deg, #081732 30%, #ee0979 100%);
+    background: linear-gradient(50deg, #081732 30%, #ee0979 90%);
   }
   header.masthead .bg-circle-4{
     height: 35rem;
     width: 35rem;
     top: -10rem;
     right: 50%;
-    background: linear-gradient(150deg, #8338EC 20%, #081732 100%);
+    background: linear-gradient(150deg, #8338EC 20%, #081732 80%);
+  }
+}
+/*Media Query IPhone X*/
+@media (max-width: 375px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 6rem!important;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 3rem!important;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2.5rem!important;
+  }
+  .button-neon{
+    width: 10rem;
+    font-size: 1.5rem!important;
+  }
+  .header__img{
+    width: 200px;
+    height: 50px;
+  }
+  .navbar-custom .navbar-nav .nav-item .nav-link{
+    font-size: 0.9rem;
+  }
+  header.masthead .bg-circle-1{
+    height: 10rem;
+    width: 10rem;
+    top: 40rem;
+    left: -2rem;
+    background: linear-gradient(45deg, #081732 30%, #ee0979 90%);
+  }
+  header.masthead .bg-circle-2 {
+    height: 10rem;
+    width: 10rem;
+    top: -1rem;
+    right: -2rem;
+    background: linear-gradient(250deg, #8338EC 10%, #081732 80%);
+  }
+  header.masthead .bg-circle-3 {
+    height: 15rem;
+    width: 15rem;
+    top: 37rem;
+    left: 15rem;
+    background: linear-gradient(-15deg, #081732 30%, #ee0979 80%);
+  }
+  header.masthead .bg-circle-4{
+    height: 15rem;
+    width: 15rem;
+    top: -2rem;
+    right: 50%;
+    background: linear-gradient(170deg, #8338EC 10%, #081732 80%);
   }
 }
 @media (max-width: 992px){
