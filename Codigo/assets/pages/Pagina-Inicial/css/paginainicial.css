@@ -57,7 +57,8 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background: linear-gradient(20deg, #081732 10%, #8338EC 100%);
+  background: #343a40;
+  /*background: linear-gradient(20deg, #081732 10%, #8338EC 100%);/*Mudei*/
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -89,7 +90,8 @@ body {
               -5px -5px 15px rgba(255,255,255,0.1);
   border-radius: 15px;
   margin: 60px;
-  background: linear-gradient(to right,#8338EC 50%, #081732);
+  background: #343a40;
+  /*background: linear-gradient(to right,#8338EC 50%, #081732);*/
 }
 .container .card .box{
   position: absolute;
@@ -97,7 +99,8 @@ body {
   left: 20px;
   right: 20px;
   bottom: 20px;
-  background: linear-gradient(to left, #081732 10% , #8338EC 100%);
+  background: #343a40;
+  /*background: linear-gradient(to left, #081732 10% , #8338EC 100%);*/
   border: 2px solid #1e1f23;
   border-radius: 15px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0).5;
@@ -147,7 +150,8 @@ body {
   margin-left: 1rem;
   cursor: pointer;
 }
-.container .card:nth-child(1){
+/*Mudar depois o background de cada um*/
+/*.container .card:nth-child(1){
   background: linear-gradient(to right,#8338EC 50%, #081732);
 }
 .container .card:nth-child(2){
@@ -158,7 +162,7 @@ body {
 }
 .container .card:nth-child(4){
   background: linear-gradient(to left,#8338EC 50%, #081732);
-}
+}*/
 /*Circulos no background*/
 .container .bg-circle {
   z-index: -1;
@@ -203,9 +207,24 @@ body {
 }
 /*background media*/
 @media (max-width:990px){
-  body{
+  /*body{
     background: linear-gradient(0deg, #8338EC 30%, #081732 70%);
-  }
+  }*/
+}
+/*Titulo Bem vindo margin top*/
+header.masthead .masthead-content .margintop{
+  margin-top: 4rem;
+}
+.text-integrantes{
+  margin-top: 4rem;
+}
+/*Lista exemplo*/
+.lista_area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50vh;
 }
 
 /*Fim Cards*/
@@ -548,6 +567,7 @@ button:not(:disabled),
   }
 }
 .footer_area{
+  background: linear-gradient(to left, #8338EC 40%, #081732 70%);
   padding-top: 1.2rem;
   height: 60px;
 }
@@ -804,7 +824,8 @@ header.masthead {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
-  background-size: cover;
+  /*background-size: cover;*/
+  min-height: 100vh;/*Mudei*/
 }
 header.masthead .masthead-content {
   z-index: 1;
@@ -846,6 +867,77 @@ header.masthead .bg-circle-4 {
   top: -5rem;
   right: 35%;
 }
+header.masthead .bg-circle-5 {
+  background: linear-gradient(45deg, #081732 10%, #ee0979 100%);
+  height: 20rem;
+  width: 20rem;
+  top: 3rem;
+  left: 5%;
+}
+header.masthead .bg-circle-6 {
+  background: linear-gradient(120deg, #081732 20%, #ee0979 100%);
+  height: 20rem;
+  width: 20rem;
+  top: 40rem;
+  right: 35%;
+}
+@media (max-width: 1500px){
+  header.masthead .bg-circle-1{
+    height: 80rem;
+    width: 80rem;
+  }
+}
+@media (max-width: 1200px){
+  
+  header.masthead .bg-circle-5{
+    display: none;
+  }
+  header.masthead .bg-circle-6{
+    display: none;
+  }
+}
+@media (max-width: 992px){
+  header.masthead .bg-circle-1{
+    height: 80rem;
+    width: 80rem;
+  }
+  header.masthead .bg-circle-2{
+    height: 45rem;
+    width: 45rem;
+  }
+  
+}
+@media (max-width: 800px){
+  header.masthead .bg-circle-4{
+    height: 25rem;
+    width: 25rem;
+    bottom: -55rem;
+  }
+  header.masthead .bg-circle-3{
+    height: 20rem;
+    width: 20rem;
+    left: 20rem;
+  }
+}
+
+@media (max-width: 550px){
+  header.masthead{
+    background: linear-gradient(0deg, #8338EC 20%, #081732 100%);
+  }
+  header.masthead .bg-circle-1{
+    display: none;
+  }
+  header.masthead .bg-circle-2{
+    display: none;
+  }
+  header.masthead .bg-circle-3{
+    display: none;
+  }
+  header.masthead .bg-circle-4{
+    display: none;
+  }
+}
+
 
 @media (min-width: 992px) {
   header.masthead {
@@ -857,5 +949,10 @@ header.masthead .bg-circle-4 {
   }
   header.masthead .masthead-content .masthead-subheading {
     font-size: 4rem;
+  }
+}
+@media (max-width: 992px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 8rem;
   }
 }
