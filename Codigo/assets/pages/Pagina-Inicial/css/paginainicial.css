@@ -538,23 +538,23 @@ button:not(:disabled),
 }
 @media (max-width: 992px){
   .button-neon{
-    color: var(--clr-bg);
-    border: var(--clr-bg) 0.125em solid;
+    color: #fff;
+    border: #fff 0.125em solid;
     text-shadow: 
     0 0 0.125em hsl(0 0% 100% / 0.3),
-    0 0 0.5em var(--clr-bg);
-    box-shadow: inset 0 0 1em 0 var(--clr-bg), 0 0 1em 0 var(--clr-bg);
+    0 0 0.5em #fff;
+    box-shadow: inset 0 0 1em 0 #fff, 0 0 1em 0 #fff;
   }
   .button-neon::before{
-    background: var(--clr-bg);
+    background: #fff;
     
   }
   .button-neon::after{
-    background-color: var(--clr-bg);
+    background-color: #fff;
   }
   .button-neon:hover,
   .button-neon:focus{
-    color: white;
+    color: black;
   }
   .footer_area{
     padding-top: 1rem;
@@ -939,20 +939,120 @@ header.masthead .bg-circle-6 {
 }
 
 
-@media (min-width: 992px) {
+/*Media query do Ipad Pro*/
+@media (max-width: 1024px){
+  header.masthead {
+    padding-top: 22rem;
+    padding-bottom: 10rem;
+  }
+  header.masthead .masthead-content .margintop{
+    margin-top: 8rem;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 7rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 4rem;
+  }
+  .button-neon{
+    width: 20rem;
+    font-size: 3rem;
+  }
+  .header__img{
+    width: 350px;
+    height: 100px;
+    margin-top: 1rem;
+  }
+  .navbar-custom .navbar-nav .nav-item .nav-link{
+    font-size: 1.6rem;
+    margin-left: 10px;
+  }
+  header.masthead .bg-circle-1{
+    height: 85rem;
+    width: 85rem;
+    bottom: -55rem;
+    left: -55rem;
+    background: linear-gradient(120deg, #081732 10%, #ee0979 110%);
+  }
+  header.masthead .bg-circle-2 {
+    height: 40rem;
+    width: 40rem;
+    top: -10rem;
+    right: -15rem;
+    background: linear-gradient(150deg, #8338EC 10%, #081732 100%);
+  }
+  header.masthead .bg-circle-3 {
+    height: 20rem;
+    width: 20rem;
+    right: 5%;
+    top: 63rem;
+    background: linear-gradient(60deg, #081732 25%, #ee0979 100%);
+  }
+  header.masthead .bg-circle-4{
+    height: 40rem;
+    width: 40rem;
+    top: -10rem;
+    right: 50%;
+    background: linear-gradient(120deg, #8338EC 10%, #081732 100%);
+  }
+}
+/*Media Query IPAD*/
+@media (max-width: 768px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 8rem;
+  }
+  .button-neon{
+    width: 15rem;
+    font-size: 2rem;
+  }
+  .header__img{
+    width: 250px;
+    height: 70px;
+  }
+  .navbar-custom .navbar-nav .nav-item .nav-link{
+    font-size: 1.3rem;
+  }
+  header.masthead .bg-circle-1{
+    height: 65rem;
+    width: 65rem;
+    top: 35rem;
+    left: -40rem;
+    background: linear-gradient(120deg, #081732 30%, #ee0979 110%);
+  }
+  header.masthead .bg-circle-2 {
+    height: 30rem;
+    width: 30rem;
+    top: -10rem;
+    right: -15rem;
+    background: linear-gradient(180deg, #8338EC 10%, #081732 100%);
+  }
+  header.masthead .bg-circle-3 {
+    height: 20rem;
+    width: 20rem;
+    left: 30rem;
+    top: 40rem;
+    background: linear-gradient(50deg, #081732 30%, #ee0979 100%);
+  }
+  header.masthead .bg-circle-4{
+    height: 35rem;
+    width: 35rem;
+    top: -10rem;
+    right: 50%;
+    background: linear-gradient(150deg, #8338EC 20%, #081732 100%);
+  }
+}
+@media (max-width: 992px){
   header.masthead {
     padding-top: calc(10rem + 55px);
     padding-bottom: 10rem;
+  }
+  header.masthead .masthead-content .margintop{
+    margin-top: 8rem;
   }
   header.masthead .masthead-content .masthead-heading {
     font-size: 6rem;
   }
   header.masthead .masthead-content .masthead-subheading {
     font-size: 4rem;
-  }
-}
-@media (max-width: 992px){
-  header.masthead .masthead-content .margintop{
-    margin-top: 8rem;
   }
 }
