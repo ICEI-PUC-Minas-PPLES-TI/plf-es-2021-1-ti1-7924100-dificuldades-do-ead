@@ -1,0 +1,212 @@
+:root {
+    --tomato-red: #db2727;
+    --juice-red: #F59C9C;
+    --white: #EBEBEB;
+    --grey: #d1d1d1;
+    --dark-grey: #333;
+    --sun-yellow: #FFBE0B;
+    --orange: #FB5607;
+    --shok-pink: #FF006E;
+    --shallow-purple: #8338EC;
+    --blue-sky: #3A86FF;
+    --deep-blue: #081732;
+    --dark-blue: #000714;
+}
+
+.modal-delete {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 20px;
+    display: none;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal-delete.active {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1100;
+    display: flex;
+    max-height: 30%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.modal-delete-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-blue);
+    border: none;
+}
+
+.modal-delete-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-delete-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.section-nome-da-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.nome-da-lista {
+    background-color: var(--grey);
+    border: none;
+    border-radius: 10px;
+    width: 70%;
+    font-family: 'Roboto', sans-serif;
+    height: 3rem;
+    resize: none;
+    margin: 10px;
+    color: var(--dark-grey);
+    font-size: 1.3rem;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+.modal-delete-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 999;
+}
+
+.options-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 50px;
+}
+
+.options-buttons button {
+    width: 40%;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+
+.modal-cancel {
+    color: var(--dark-grey);
+    background-color: var(--grey);
+}
+
+.list-deleter {
+    color: var(--tomato-red);
+    background-color: var(--juice-red);
+}
+
+.modal-cancel:hover {
+    background-color: var(--dark-grey);
+    color: var(--grey);
+}
+
+.list-deleter:hover {
+    background-color: var(--tomato-red);
+    color: var(--juice-red);
+}
+
+@media screen and (max-width: 641px) {
+    .modal-delete {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out;
+        display: none;
+        background-color: white;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    .modal-delete.active {
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 1100;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        max-height: 100%;
+        border-radius: 0;
+        padding-top: 50%;
+    }
+    #overlay.active {
+        opacity: 1;
+        pointer-events: all;
+        z-index: 999;
+        
+    }
+    .options-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .options-buttons button {
+        width: 40%;
+        max-width:8rem;
+        height: 60px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        border: none;
+    }
+    .nome-da-lista {
+        background-color: var(--grey);
+        border: none;
+        border-radius: 10px;
+        width: 90%;
+        font-family: 'Roboto', sans-serif;
+        height: 3rem;
+        resize: none;
+        margin: 10px;
+        color: var(--dark-grey);
+        font-size: 1.3rem;
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+}

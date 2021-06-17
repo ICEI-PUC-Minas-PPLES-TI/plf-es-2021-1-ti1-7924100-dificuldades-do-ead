@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--=========BOXICONS===========-->
+      <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <!--============================-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+      <!--==================STYLES======================-->
+    <link rel="stylesheet" href="styles.css" />
+    <!--==============================================-->
+</head>
+<body>
+
+  <main class="main">
+    <h1 class="pageTitle">Listas</h1>
+
+    <div class="main-content">
+        <div class="main-content-lists">
+
+            <!--LISTA EXPERIMENTAL-->
+            <div class="list" id="my-list-id99" style="background-color:#1dB954 !important;">
+                <div class="hidded-options" id="lista-99">
+                    <div class="list-trash" onclick="abrirModalDeletarLista(99)">
+                        <i class='bx bxs-trash'></i>
+                    </div>
+                    <div class="list-edit" onclick="abrirModalEditarLista(99)">
+                        <i class='bx bxs-pencil'></i>
+                    </div>
+                </div>
+                <h2 class="listTitle" id="listTitle">Lista Experimental</h2>
+                <i onclick="mostrarMenu(99)" class='bx bx-dots-vertical-rounded menuList'></i>
+            </div>
+            
+
+        </div>
+        <div class="add-list-button" onclick="abrirModalNovaLista()">
+            <i class='bx bx-plus-circle'></i>
+        </div>
+    </div>
+
+
+</main>
+<!-- Modal tarefas -->  
+<div id="modal-items" class="modal-items"> 
+    <div class="modal-items-dialog" > 
+        <div class="modal-items-content"> 
+           <!-- Modal header -->
+            <div class="modal-items-header"> 
+             <span class="close">&times;</span>
+    <span class="add"><i class='bx bx-plus-circle'></i></span>
+                <h1 class="modal-title">Nome da Lista</h1> 
+            </div> 
+            <!-- Modal body -->
+            <div class="modal-items-body">
+              
+            <!--tarefas EXPERIMENTAIS-->
+                <div class="item" id="item" style="background-color:#1dB954 !important;">
+                <div class="item-trash"><i class='bx bxs-trash'></i></div>
+                <h2 class="itemTitle">Nome da tarefa </h2> 
+                <h3 class="itemDate"> <i class='bx bxs-calendar-event'></i>29 de Julho</h3>
+                <input class="itemCheck" type="checkbox">
+                <p class="itemDescricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+              </div>    
+              <div class="item" id="" style="background-color:#1dB954 !important;">
+                <div class="item-trash"><i class='bx bxs-trash'></i></div>
+                <h2 class="itemTitle">Nome da tarefa </h2> 
+                <h3 class="itemDate"> <i class='bx bxs-calendar-event'></i>29 de Julho</h3>
+                <input class="itemCheck" type="checkbox">
+                <p class="itemDescricao"> Ratione voluptatum molestiae adipisci, beatae obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+              </div>    
+    </div> 
+        </div> 
+    </div> 
+</div> 
+
+  <!--MODAL PARA CRIAÇÃO DE TAREFAS-->
+  <div id="modal-add-items" class="modal-add-items"> 
+    <div class="modal-add-items-dialog" > 
+        <div class="modal-add-items-content"> 
+           <!-- Modal header -->
+            <div class="modal-add-items-header"> 
+             <span class="close2">&times;</span>
+    <span class="back"><i class='bx bx-arrow-back' ></i></span>
+                <h1 class="modal-title">Nome da Lista</h1> 
+            </div> 
+            <!-- Modal body -->
+            <div class="modal-add-body">  
+              <h2 class="itemTitle">Nome da tarefa </h2> 
+                 <input type="text" class="form-item-input" id='titulo' placeholder="Títiulo" required />  
+                 <input  type="date" class="form-item-input"  id='data'  required />  
+                 <textarea class="form-item-textarea" id='descricao'  placeholder="Descrição" required></textarea>  
+                 <button id="save_tarefa" type="submit" class="form-item-button">Adicionar</button>  
+            </div>  
+    </div>  
+        </div> 
+    </div> 
+</div> 
+  <!--FIM DO MODAL PARA CRIAÇÃO DE LISTAS-->
+<script src="script.js"></script>
+  </body>
+
+  </html>
+  

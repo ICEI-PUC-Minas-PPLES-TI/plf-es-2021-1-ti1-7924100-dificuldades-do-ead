@@ -3,29 +3,29 @@
 var listas = document.querySelector("div.main-content-lists");
 
 
-var dadosDasListas = {}; // variavel que armazena somente a lista de listas
-var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
-var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
-
 /*
     Essa função busca e apresenta na tela as listas do usuário
     que acabou de fazer login
 */
 function renderizarConteudo(){
+    var dadosDasListas; // variavel que armazena somente a lista de listas
+    var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
+    var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
     console.log("Iniciando sessão");
     arrayDasListas = db.listasUsuarios // Array de listas
     
     //busca pelas listas no array
     for(let i = 0 ; i < arrayDasListas.length ; i++){
-        let numero = Number(arrayDasListas[i].id);
-        let userNumero = localStorage.getItem('usuarioLogadoAtualmente');
+        let numero = arrayDasListas[i].id;
+        let userNumero = db.usuarioLogadoAtualmente;
+        console.log('Id: ' + numero +'\n'+'UserNumero: '+userNumero);
         if(numero == userNumero){
             //listas encontradas
             dadosDasListas = arrayDasListas[i]
             localStorage.setItem('indexDaListaDoUsuario', i)
         }else{
-            console.log('Nope!')
+            console.log('Procurando...')
         }
     }
     var preRenderListas = []
@@ -40,9 +40,17 @@ function renderizarConteudo(){
         var cor = dadosDasListas.listas[j].lista_cor;
         
         preRenderListas.push(`
-            <div class="list" style="background-color:${cor} !important;">
+            <div class="list" id="my-list-id${dadosDasListas.listas[j].lista_id}" style="background-color:${cor} !important;">
+                <div class="hidded-options" id="lista-${dadosDasListas.listas[j].lista_id}">
+                    <div class="list-trash" onclick="abrirModalDeletarLista(${dadosDasListas.listas[j].lista_id})">
+                        <i class='bx bxs-trash'></i>
+                    </div>
+                    <div class="list-edit" onclick="abrirModalEditarLista(${dadosDasListas.listas[j].lista_id})">
+                        <i class='bx bxs-pencil'></i>
+                    </div>
+                </div>
                 <h2 class="listTitle">${dadosDasListas.listas[j].lista_nome}</h2>
-                <i class='bx bx-dots-vertical-rounded menuList'></i>
+                <i onclick="mostrarMenu(${dadosDasListas.listas[j].lista_id})" class='bx bx-dots-vertical-rounded menuList'></i>
             </div>
             `);
     }
@@ -51,7 +59,7 @@ function renderizarConteudo(){
     preRenderListas = preRenderListas.join("");
 
     // Todas as listas são inseridas no documento
-    listas.innerHTML = preRenderListas.toString();
+    listas.innerHTML += preRenderListas.toString();
     
     //salva dados no local storage
     localStorage.setItem('db', JSON.stringify(db))

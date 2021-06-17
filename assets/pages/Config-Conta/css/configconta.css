@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    font-weight: bold;
+    display: flex;
+    min-height: 50vh;
+    align-items: flex-start;
+    justify-content: center;
+}
+main{
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3rem;
+}
+main form{
+    display: flex;
+    flex-direction: column;
+}
+main form label{
+    margin-top: 1rem;
+}
+main form input{
+    background: transparent;
+    width: 300px;
+    padding: 0 0.5rem;
+    outline: none;
+    font-size: 1.3rem;
+}
+.btn-log-out{
+    display: flex;
+    background: #c4c1c1;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.icon-log-out{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.3rem;
+}
+.btn-delete-account{
+    display: flex;
+    background: tomato;
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.icon-delete-account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.edit{
+    cursor: pointer;
+}
+
+.img_user,.img_arrow{
+    font-size: 40px;
+}
+
+
+@media only screen and (max-width: 900px){
+    h1{
+        font-size: 3rem;
+    }
+    main form label{
+        font-size: 2rem;
+    }
+    main form input{
+        font-size: 2rem;
+    }
+    
+    main form input:last-child{
+        font-size: 1.5rem;
+    }
+    .img_user{
+        font-size: 50px;
+    }
+    .btn-delete-account{
+        width: 220px;
+    }
+    .icon-delete-account{
+        font-size: 1.9rem;
+    }
+    
+}
+@media only screen and (max-width: 535px){
+    h1{
+        font-size: 2.5rem;
+    }
+    main form label{
+        font-size: 1.5rem;
+    }
+    main form input{
+        font-size: 1.5rem;
+    }
+    main form input:last-child{
+        font-size: 1.5rem;
+    }
+    .img_user{
+        font-size: 35px;
+    }
+    
+}
+
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--=========BOXICONS===========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!--============================-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <!--==================STYLES======================-->
+    <link rel="stylesheet" href="../FeedBack/css/feedback.css">
+    <link rel="stylesheet" href="../home/css/sidebar.css" />
+    <link rel="stylesheet" href="../home/css/styles.css" />
+    <link rel="stylesheet" href="../home/css/template.css" />
+    <!--==============================================-->
+    <title>Listfy</title>
+</head>
+
+<!--
+    No momento em que o body for carregado, será 
+    chamada a função quee fará a busca por todas as 
+    listas relacionadas ao usuário que acabou de logar
+-->
+
+<body id="body-pd">
+
+    <!--BArra lateral-->
+    <header class="header" id="header">
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <div class="header_img">
+            <i class="fas fa-arrow-left img_arrow"></i>
+        </div>
+
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <div class="logo-sidebar">
+                    <a href="#" class="nav__logo">
+                        <img src="../../icons/listfy-logo-white.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="nav__list">
+                    <a href="../home/home.html" class="nav__link">
+                        <i class='bx bx-calendar'></i>
+                        <span class="nav__name">Minhas Listas</span>
+                    </a>
+                      <a href="../../../index.html" class="nav__link">
+                        <i class='bx bxs-home'></i>
+                        <span class="nav__name">Tela Inicial</span>
+                    </a>
+                    <a href="../Config-Conta/configconta.html" class="nav__link">
+                        <i class='bx bxs-user-rectangle' ></i>
+                        <span class="nav__name">Conta</span>
+                    </a>
+                    <a href="../Sobre/sobre.html" class="nav__link ">
+                        <i class='bx bx-question-mark'></i>
+                        <span class="nav__name">Sobre</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bxs-donate-heart'></i>
+                        <span class="nav__name">Fazer uma doação</span>
+                    </a>
+
+                    <a href="../FeedBack/feedback.html" class="nav__link active">
+                        <i class='bx bxs-chat'></i>
+                        <span class="nav__name">Feedback</span>
+                    </a>
+
+                    <a href="" class="nav__link">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="nav__name">Repositório</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="../login/login.html" class="nav__link">
+                <i class='bx bx-log-out nav__icon'></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
+    </div>
+    <!--fim da barra lateral-->
+    <main>
+        <div class="container">
+            <h1>Avalições e Feeback</h1>
+            
+            <div class="row feedback_area">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 conteudo_feedback">
+                    <i class='bx bxs-user-circle img_user texto_feedback'></i>
+                    <p><b>Nome:</b> Irineu<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur autem vitae cupiditate voluptates voluptatem eos nisi consectetur ipsam, ad iusto aliquam atque placeat odit distinctio repellendus error soluta nesciunt numquam?</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 conteudo_feedback">
+                    <i class='bx bxs-user-circle img_user texto_feedback'></i>
+                    <p><b>Nome:</b> Irineu<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur autem vitae cupiditate voluptates voluptatem eos nisi consectetur ipsam, ad iusto aliquam atque placeat odit distinctio repellendus error soluta nesciunt numquam?</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 conteudo_feedback">
+                    <i class='bx bxs-user-circle img_user texto_feedback'></i>
+                    <p><b>Nome:</b> Irineu<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur autem vitae cupiditate voluptates voluptatem eos nisi consectetur ipsam, ad iusto aliquam atque placeat odit distinctio repellendus error soluta nesciunt numquam?</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="js/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+</html>

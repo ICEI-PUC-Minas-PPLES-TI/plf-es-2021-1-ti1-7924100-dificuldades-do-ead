@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.img_arrow{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+section.images{
+    width: 85vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+}
+section.images img{
+    width: 30%;
+}
+section.images .circle{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #fffC, #081732);
+    clip-path: circle(45% at right 90%);
+    z-index: -1;
+}
+@media only screen and (max-width: 1100px){
+    section.images{
+        display: none;
+        visibility: hidden;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: medium;
+    }
+    
+}
+@media only screen and (max-width: 800px){
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        font-size: large;
+    }
+}
