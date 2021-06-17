@@ -76,6 +76,9 @@ function loginDados() {
             salvaDados(db)
             console.log(usuario);
         }
+        else{
+            alert("Usuário ou Senha Inválido");
+        }
 
 
     }
