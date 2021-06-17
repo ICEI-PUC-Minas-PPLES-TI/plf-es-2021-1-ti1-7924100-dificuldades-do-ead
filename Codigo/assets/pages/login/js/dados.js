@@ -78,6 +78,7 @@ function loginDados() {
         }
         else{
             alert("Usuário ou Senha Inválido");
+            break;
         }
 
 
