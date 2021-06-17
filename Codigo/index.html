@@ -126,12 +126,17 @@
     <script>
         var bancogravado;
         bancogravado = localStorage.getItem('bancogravado');
-        console.log(bancogravado);
-        if (bancogravado) {
-            console.log("O banco esta gravado");
-        } else {
+        var isbanco = JSON.parse(bancogravado)
+        console.log(typeof(bancogravado));
+        console.log(typeof(isbanco));
+        console.log(isbanco)
+        if (isbanco == null) {
             localStorage.setItem('db', JSON.stringify(db));
+            bancogravado = 1;
             localStorage.setItem('bancogravado', JSON.stringify(bancogravado));
+            console.log(db);
+        } else {
+            console.log("O banco esta gravado");
         }
     </script>
 </body>
