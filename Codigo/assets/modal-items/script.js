@@ -1,5 +1,37 @@
-  
-  // Get the modal
+var modalitems = document.querySelector('div.modal-items, modal-items-dialog');
+var modaladditems = document.querySelector("div.modal-add-items");
+var span3 = document.getElementsByClassName("back")[0];
+
+function abrirModalItensLista() {
+  modalitems.style.display = "block";
+}  
+function fecharModalItensLista() {
+  modalitems.style.display = "none";
+}  
+
+function abrirModalAddItensLista() {
+  modalitems.style.display = "none";
+  modaladditems.style.display = "block";
+}  
+function fecharModalAddItensLista() {
+  modaladditems.style.display = "none";
+}  
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modalitems ) {
+      modalitems.style.display = "none";
+    }
+    if (event.target == modaladditems ) {
+      modaladditems.style.display = "none";
+    }
+  }
+  span3.onclick = function() {
+    modaladditems.style.display = "none";
+    modalitems.style.display = "block";
+  }
+ 
+ /*  // Get the modal
   var modalitems = document.getElementById("modal-items");
   var modaladditems = document.getElementById("modal-add-items");
   // Get the button that opens the modal
@@ -67,3 +99,4 @@
     }
 }
   
+ */

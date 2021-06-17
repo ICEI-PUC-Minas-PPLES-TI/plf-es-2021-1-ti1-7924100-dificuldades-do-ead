@@ -47,37 +47,31 @@ function loginDados() {
     var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
 
     //Ler os dados do Banco de Dados(db)
+    var usuarioEncontrado = false;
     for (let i = 0; i < db.usuarios.length; i++) {
         var usuario = db.usuarios[i];
-
-        //Consoles caso queira testar
-        /*console.log(usuarios);
-        console.log(Email);
-        console.log(Senha);
-        console.log(usuario.Email);
-        console.log(usuario.Senha);
-        console.log(typeof (Email));
-        console.log(typeof (Senha));
-        console.log(typeof (usuario.Email));
-        console.log(typeof (usuario.Senha));*/
 
         //Verifica se o Usuário é Valido 
 
         if (Email == usuario.Email && Senha == usuario.Senha) {
             //Aqui vai entrar na página do Aplicativo,mas por enquanto esta como só um alerta mesmo
-            alert("Entrou");
             localStorage.setItem("acesso", true);
 
-            window.alert("Login Sucedido");
+            window.alert("Login Efetuado com Sucesso");
             console.log("Redirecionano......."); //log de redirecionamento
-            window.location.href = "../home/home.html"; // redicionamento de usuário
-
+            
             db.usuarioLogadoAtualmente = usuario.id; //setando o id de sessão
             console.log("Id de Login: " + db.usuarioLogadoAtualmente); //mais logs com informação
             salvaDados(db)
             console.log(usuario);
+            usuarioEncontrado = true
         }
-
-
+        
+        
+    }
+    if(usuarioEncontrado){
+        window.location.href = "../home/home.html"; // redicionamento de usuário
+    }else{
+        alert("Usuário ou Senha Inválido");
     }
 }
