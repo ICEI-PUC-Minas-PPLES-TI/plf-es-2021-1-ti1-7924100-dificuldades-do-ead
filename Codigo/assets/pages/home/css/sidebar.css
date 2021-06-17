@@ -76,6 +76,15 @@ a {
 .header__img img {
     width: 40px;
 }
+@media (max-width: 768px){
+    .nav__logo{
+        margin-top: 5rem;
+        width: 250px!important;
+    }
+    .nav__name{
+        font-size: 1.5rem;
+    }
+}
 
 
 /*===== NAV =====*/
