@@ -32,7 +32,7 @@ function incluirDados() {
     salvaDados(db);
     //Console dos cadastros depois de ter criado algum novoCadastro
     console.log(db);
-    alert("Cadastro Bem-Sucedido");
+    alert("Cadastro Efetuado com Sucesso");
     console.log("Redirecionano.......");
     window.location.href = "../login/login.html";
 }
@@ -68,7 +68,7 @@ function loginDados() {
             //Aqui vai entrar na página do Aplicativo,mas por enquanto esta como só um alerta mesmo
             localStorage.setItem("acesso", true);
 
-            window.alert("Login Sucedido");
+            window.alert("Login Efetuado com Sucesso");
             console.log("Redirecionano......."); //log de redirecionamento
             window.location.href = "../home/home.html"; // redicionamento de usuário
 
@@ -78,14 +78,5 @@ function loginDados() {
             console.log(usuario);
         }
 
-        //Tentando fazer uma função para quando o usuário e senha forem inválidos Emitir um alerta de erro
-        /*if (Email != usuario.Email && Senha != usuario.Senha){
-            localStorage.setItem("acesso", false);
-        }
-        
-        if(logado != true){
-            alert("Você não esta autenticado!");
-            window.location.href="cadastro.html";
-        }*/
     }
 }
