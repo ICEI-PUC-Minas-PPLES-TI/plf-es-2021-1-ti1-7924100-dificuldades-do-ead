@@ -413,14 +413,10 @@ button:not(:disabled),
     max-width: 540px;
   }
 }
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
+
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 860px;
   }
 }
 @media (min-width: 1200px) {
@@ -481,7 +477,7 @@ button:not(:disabled),
   border-color: #081732;
 }
 .button-neon{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
@@ -496,6 +492,8 @@ button:not(:disabled),
   box-shadow: inset 0 0 1em 0 var(--clr-neon), 0 0 1em 0 var(--clr-neon);
   position: relative;
   transition: background-color 100ms linear;
+  width: 15rem;
+  
 }
 .button-neon::before{
   pointer-events: none;
@@ -525,8 +523,9 @@ button:not(:disabled),
 }
 .button-neon:hover,
 .button-neon:focus {
-  color: var(--clr-bg);
+  color: white;
   text-shadow: none;
+  border: #fff 0.125em solid;
 }
 .button-neon:hover::before,
 .button-neon:focus::before{
@@ -536,6 +535,7 @@ button:not(:disabled),
 .button-neon:focus::before{
   opacity: 1;
 }
+/*Media Query 992px*/
 @media (max-width: 992px){
   .button-neon{
     color: #fff;
@@ -547,10 +547,10 @@ button:not(:disabled),
   }
   .button-neon::before{
     background: #fff;
-    
   }
   .button-neon::after{
     background-color: #fff;
+    box-shadow: 0 0 2em 0.5em #fff;
   }
   .button-neon:hover,
   .button-neon:focus{
@@ -559,6 +559,12 @@ button:not(:disabled),
   .footer_area{
     padding-top: 1rem;
     font-size: 0.9rem;
+  }
+  header.masthead .bg-circle-1{
+    height: 35rem;
+    width: 35rem;
+    left: 20rem!important;
+    background: linear-gradient(300deg, #081732 20%, #ee0979 70%);
   }
 }
 @media (max-width: 550px){
@@ -815,6 +821,7 @@ html {
   font-weight: 700;
   letter-spacing: 0.1rem;
 }
+/*Header do Site*/
 header.masthead {
   position: relative;
   overflow: hidden;
@@ -832,10 +839,10 @@ header.masthead .masthead-content {
   position: relative;
 }
 header.masthead .masthead-content .masthead-heading {
-  font-size: 4rem;
+  font-size: 7rem;
 }
 header.masthead .masthead-content .masthead-subheading {
-  font-size: 2rem;
+  font-size: 6rem;
 }
 header.masthead .bg-circle {
   z-index: 0;
@@ -844,408 +851,188 @@ header.masthead .bg-circle {
   background: linear-gradient(0deg, #8338EC 20%, #081732 100%);
 }
 header.masthead .bg-circle-1 {
-  height: 90rem;
-  width: 90rem;
+  height: 50rem;
+  width: 50rem;
   bottom: -55rem;
-  left: -55rem;
+  left: 45rem;
+  top: 25rem;
+  background: linear-gradient(300deg, #081732 25%, #fffC 70%);
 }
 header.masthead .bg-circle-2 {
   height: 50rem;
   width: 50rem;
   top: -25rem;
   right: -25rem;
+  background: linear-gradient(150deg, #ee0979 40%, #081732 80%);
 }
 header.masthead .bg-circle-3 {
-  height: 20rem;
-  width: 20rem;
-  bottom: -10rem;
-  right: 5%;
-}
-header.masthead .bg-circle-4 {
-  height: 30rem;
-  width: 30rem;
-  top: -5rem;
-  right: 35%;
-}
-header.masthead .bg-circle-5 {
-  background: linear-gradient(45deg, #081732 10%, #ee0979 100%);
+  background: linear-gradient(45deg, #8338EC 30%, #fffC 80%);
   height: 20rem;
   width: 20rem;
   top: 3rem;
   left: 5%;
 }
-header.masthead .bg-circle-6 {
-  background: linear-gradient(120deg, #081732 20%, #ee0979 100%);
+header.masthead .bg-circle-4 {
   height: 20rem;
   width: 20rem;
   top: 40rem;
-  right: 35%;
+  left: 3rem;
+  background: linear-gradient(45deg, #081732 20%, #ee0979 100%);
 }
+
 @media (max-width: 1500px){
-  header.masthead .bg-circle-1{
-    height: 80rem;
-    width: 80rem;
-  }
-}
-@media (max-width: 1200px){
-  
-  header.masthead .bg-circle-5{
-    display: none;
-  }
-  header.masthead .bg-circle-6{
-    display: none;
-  }
-}
-@media (max-width: 992px){
-  header.masthead .bg-circle-1{
-    height: 80rem;
-    width: 80rem;
-  }
-  header.masthead .bg-circle-2{
-    height: 45rem;
-    width: 45rem;
-  }
-  
-}
-@media (max-width: 800px){
-  header.masthead .bg-circle-4{
-    height: 25rem;
-    width: 25rem;
-    bottom: -55rem;
-  }
-  header.masthead .bg-circle-3{
-    height: 20rem;
-    width: 20rem;
-    left: 20rem;
-  }
-}
-
-/*@media (max-width: 550px){
-  header.masthead{
-    background: linear-gradient(0deg, #8338EC 20%, #081732 100%);
-  }
-  header.masthead .bg-circle-1{
-    display: none;
-  }
-  header.masthead .bg-circle-2{
-    display: none;
-  }
-  header.masthead .bg-circle-3{
-    display: none;
-  }
-  header.masthead .bg-circle-4{
-    display: none;
-  }
-}*/
-
-
-/*Media query do Ipad Pro*/
-@media (max-width: 1024px){
-  header.masthead {
-    padding-top: 22rem;
-    padding-bottom: 10rem;
-  }
-  header.masthead .masthead-content .margintop{
-    margin-top: 8rem!important;
-  }
   header.masthead .masthead-content .masthead-heading {
-    font-size: 8rem!important;
+    font-size: 5rem;
   }
   header.masthead .masthead-content .masthead-subheading {
-    font-size: 5rem!important;
-  }
-  .button-neon{
-    width: 25rem!important;
-    font-size: 3.4rem!important;
-  }
-  .header__img{
-    width: 300px;
-    height: 90px;
-    margin-top: 1rem;
-  }
-  .navbar-custom .navbar-nav .nav-item .nav-link{
-    font-size: 1.7rem!important;
-    margin-left: 10px;
+    font-size: 4rem;
   }
   header.masthead .bg-circle-1{
-    display: none;
+    height: 40rem;
+    width: 40rem;
+    left: 30rem;
   }
   header.masthead .bg-circle-2 {
-    height: 35rem;
-    width: 35rem;
-    top: -10rem;
-    right: -15rem;
-    background: linear-gradient(190deg, #081732 20%, #fffC 90%);
-  }
-  header.masthead .bg-circle-3 {
-    height: 60rem;
-    width: 60rem;
-    right: -5rem;
-    top: 40rem;
-    background: linear-gradient(60deg, #081732 20%, #ee0979 70%);
-  }
-  header.masthead .bg-circle-4{
     height: 30rem;
     width: 30rem;
     top: -5rem;
-    right: 40rem;
-    background: linear-gradient(120deg, #8338EC 10%, #081732 80%);
+    right: -5rem;
+    background: linear-gradient(150deg, #ee0979 40%, #081732 80%);
   }
 }
-/*Media Query IPAD*/
-@media (max-width: 768px){
+
+/*Media query 1024px*/
+@media (max-width: 1024px){
+  /*header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+  }*/
   header.masthead .masthead-content .margintop{
-    margin-top: 9rem!important;
+    margin-top: 4rem;
   }
   header.masthead .masthead-content .masthead-heading {
-    font-size: 5rem!important;
+    font-size: 5rem;
   }
   header.masthead .masthead-content .masthead-subheading {
-    font-size: 4rem!important;
+    font-size: 4rem;
   }
   .button-neon{
-    width: 15rem!important;
-    font-size: 2rem!important;
+    width: 12rem;
+    font-size: 1.5rem;
   }
   .header__img{
-    width: 250px!important;
-    height: 70px!important;
+    width: 170px;
+    height: 55px;
   }
   .navbar-custom .navbar-nav .nav-item .nav-link{
-    font-size: 1.3rem;
+    font-size: 1rem;
+    margin-left: 10px;
   }
   header.masthead .bg-circle-1{
+    height: 35rem;
+    width: 35rem;
+    left: 28rem;
+    background: linear-gradient(300deg, #081732 20%, #ee0979 70%);
+  }
+  header.masthead .bg-circle-2 {
+    height: 20rem;
+    width: 20rem;
+    top: -5rem;
+    right: -5rem;
+    background: linear-gradient(190deg, #081732 20%, #fffC 90%);
+  }
+  header.masthead .bg-circle-3 {
     display: none;
+  }
+  header.masthead .bg-circle-4{
+    height: 20rem;
+    width: 20rem;
+    top: -5rem;
+    left: 2rem;
+    background: linear-gradient(120deg, #8338EC 10%, #081732 70%);
+  }
+}
+
+/*Media Query 768px*/
+@media (max-width: 768px){
+  .container {
+    max-width: 620px;
+  }
+  header.masthead .masthead-content .margintop{
+    margin-top: 6rem;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 5rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 3.5rem;
+  }
+  .button-neon{
+    width: 12rem;
+    font-size: 1.5rem;
+  }
+  .header__img{
+    width: 150px;
+    height: 50px;
+  }
+  .navbar-custom .navbar-nav .nav-item .nav-link{
+    font-size: 0.9rem;
+  }
+  header.masthead .bg-circle-1{
+    height: 35rem;
+    width: 35rem;
+    left: 10rem!important;
+    background: linear-gradient(135deg, #fffC 20%, #081732 70%);
   }
   header.masthead .bg-circle-2 {
     height: 25rem;
     width: 25rem;
     top: -5rem;
     right: -10rem;
-    background: linear-gradient(180deg, #081732 20%, #fffC 90%);
+    background: linear-gradient(180deg, #081732 20%, #ee0979 70%);
   }
   header.masthead .bg-circle-3 {
-    height: 40rem;
-    width: 40rem;
-    left: 10rem;
-    top: 30rem;
-    background: linear-gradient(45deg, #081732 30%, #ee0979 90%);
-  }
-  header.masthead .bg-circle-4{
-    height: 30rem;
-    width: 30rem;
-    top: -10rem;
-    right: 50%;
-    background: linear-gradient(150deg, #8338EC 20%, #081732 80%);
-  }
-}
-/*Media Query IPhone X*/
-@media (max-width: 375px){
-  header.masthead .masthead-content .margintop{
-    margin-top: 6rem!important;
-  }
-  header.masthead .masthead-content .masthead-heading {
-    font-size: 1rem!important;
-  }
-  header.masthead .masthead-content .masthead-subheading {
-    font-size: 2.5rem!important;
-  }
-  .button-neon{
-    width: 12rem!important;
-  }
-  .header__img{
-    width: 200px!important;
-    height: 50px!important;
-  }
-  .navbar-custom .navbar-nav .nav-item .nav-link{
-    font-size: 0.9rem;
-  }
-  header.masthead .bg-circle-2 {
-    height: 10rem;
-    width: 10rem;
-    top: -1rem;
-    right: -2rem;
-    background: linear-gradient(250deg, #8338EC 10%, #081732 80%);
-  }
-  header.masthead .bg-circle-3 {
-    height: 15rem;
-    width: 15rem;
-    top: 37rem;
-    left: 15rem;
-    background: linear-gradient(-15deg, #081732 30%, #ee0979 80%);
-  }
-  header.masthead .bg-circle-4{
-    height: 15rem;
-    width: 15rem;
-    top: -2rem;
-    right: 50%;
-    background: linear-gradient(170deg, #8338EC 10%, #081732 80%);
-  }
-}
-@media (max-width: 992px){
-  header.masthead {
-    padding-top: calc(10rem + 55px);
-    padding-bottom: 10rem;
-  }
-  header.masthead .masthead-content .margintop{
-    margin-top: 8rem;
-  }
-  header.masthead .masthead-content .masthead-heading {
-    font-size: 6rem;
-  }
-  header.masthead .masthead-content .masthead-subheading {
-    font-size: 4rem;
-  }
-}
-/*Media Query IPhone 6,7,8 Plus*/
-@media (max-width: 414px){
-  header.masthead .masthead-content .margintop{
-    margin-top: 4rem!important;/*Não esta funcionando*/
-  }
-  header.masthead .masthead-content .masthead-heading {
-    font-size: 2rem!important;/*Não esta funcionando*/
-  }
-  header.masthead .masthead-content .masthead-subheading {
-    font-size: 2.5rem!important;/*Não esta funcionando*/
-  }
-  .button-neon{
-    width: 12rem!important;
-    font-size: 1.5rem!important;
-  }
-  .header__img{
-    width: 150px!important;
-    height: 50px!important;
-  }
-  .navbar-custom .navbar-nav .nav-item .nav-link{
-    font-size: 0.9rem!important;
-  }
-  header.masthead .bg-circle-1{
     display: none;
   }
-  header.masthead .bg-circle-2 {
-    height: 10rem;
-    width: 10rem;
-    top: -1rem;
-    right: -2rem;
-    background: linear-gradient(250deg, #081732 10%, #fffC 80%);
-  }
-  header.masthead .bg-circle-3 {
+  header.masthead .bg-circle-4{
     height: 20rem;
     width: 20rem;
+    top: -5rem;
+    left: -3rem;
+    background: linear-gradient(160deg, #8338EC 30%, #081732 70%);
+  }
+}
+/*Media Query 600px*/
+@media (max-width: 600px){
+  header.masthead .bg-circle-1{
+    height: 25rem;
+    width: 25rem;
     top: 25rem;
-    left: -5rem;
-    background: linear-gradient(30deg, #081732 30%, #ee0979 80%);
   }
-  header.masthead .bg-circle-4{
-    height: 15rem;
-    width: 15rem;
-    top: -2rem;
-    right: 60%;
-    background: linear-gradient(170deg, #8338EC 10%, #081732 80%);
-  }
-}
-/*Media Query IPhone 6,7,8*/
-@media (max-width: 375px){
-  header.masthead .masthead-content .margintop{
-    margin-top: 2.5rem!important;
-  }
-  header.masthead .masthead-content .masthead-heading {
-    font-size: 2.5rem!important;
-  }
-  header.masthead .masthead-content .masthead-subheading {
-    font-size: 2rem!important;
-  }
-  .button-neon{
-    width: 10rem;
-    font-size: 1.3rem!important;
-  }
-  .header__img{
-    width: 130px;
-    height: 40px;
-  }
-  header.masthead .bg-circle-1{
-    height: 10rem;
-    width: 10rem;
-    top: 32rem;
-  }
-  header.masthead .bg-circle-2 {
-    height: 10rem;
-    width: 10rem;
-    top: -1rem;
-    right: -2rem;
-    background: linear-gradient(40deg, #081732 30%, #8338EC 80%);
-  }
-  header.masthead .bg-circle-3 {
-    height: 20rem;
-    width: 20rem;
-    top: 20rem;
-    left: 5rem;
-    background: linear-gradient(300deg, #081732 25%, #ee0979 70%);
-  }
-  header.masthead .bg-circle-4{
-    background: linear-gradient(45deg, #fffC 10%, #081732 100%);
-  }
-}
-/*Media Query IPhone 5,SE*/
-@media (max-width: 320px){
-  header.masthead .masthead-content .margintop{
-    margin-top: 0.5rem!important;
-  }
-  header.masthead .masthead-content .masthead-heading {
-    font-size: 2.2rem!important;/*Não esta funcionando*/
-  }
-  header.masthead .masthead-content .masthead-subheading {
-    font-size: 1.8rem!important;/*Não esta funcionando*/
-  }
-  .button-neon{
-    width: 12rem!important;
-    font-size: 1.2rem!important;
-  }
-  .navbar-custom .navbar-nav .nav-item .nav-link{
-    font-size: 0.8rem;
-  }
-  .header__img{
-    width: 120px;
-    height: 35px;
-  }
-  header.masthead .bg-circle-1{
+  header.masthead .bg-circle-2{
     display: none;
   }
-  header.masthead .bg-circle-2 {
-    height: 10rem;
-    width: 10rem;
-    top: -1rem;
-    right: -2rem;
-    background: linear-gradient(250deg, #081732 10%, #fffC 80%);
-  }
-  header.masthead .bg-circle-3 {
-    height: 15rem;
-    width: 15rem;
-    top: 15rem;
-    left: 5rem;
+  header.masthead .bg-circle-3{
+    display: none;
   }
   header.masthead .bg-circle-4{
-    height: 13rem;
-    width: 13rem;
-    top: -2rem;
-    right: 50%;
-    background: linear-gradient(130deg, #8338EC 20%, #081732 80%);
+    display: none;
   }
 }
-/*Media Query Surface Duo*/
+/*Media Query 540px*/
 @media (max-width: 540px){
   header.masthead .masthead-content .margintop{
-    margin-top: 3rem!important;
+    margin-top: 5rem;
   }
   header.masthead .masthead-content .masthead-heading {
-    font-size: 4rem!important;
+    font-size: 4rem;
   }
   header.masthead .masthead-content .masthead-subheading {
-    font-size: 3rem!important;
+    font-size: 3rem;
   }
   .button-neon{
     width: 13rem;
-    font-size: 1.6rem!important;
+    font-size: 1.6rem;
   }
   .navbar-custom .navbar-nav .nav-item .nav-link{
     font-size: 0.8rem;
@@ -1255,43 +1042,50 @@ header.masthead .bg-circle-6 {
     height: 45px;
   }
   header.masthead .bg-circle-1{
-    display: none;
+    height: 20rem;
+    width: 20rem;
+    top: 25rem;
   }
   header.masthead .bg-circle-2 {
-    height: 10rem;
-    width: 10rem;
-    top: 0.5rem;
-    right: -1rem;
-    background: linear-gradient(250deg, #081732 10%, #fffC 80%);
+    display: none;
   }
   header.masthead .bg-circle-3 {
-    height: 35rem;
-    width: 35rem;
-    top: 20rem;
-    left: 3rem;
+    display: none;
   }
   header.masthead .bg-circle-4{
-    height: 13rem;
-    width: 13rem;
-    top: -2rem;
-    right: 20rem;
-    background: linear-gradient(130deg, #8338EC 20%, #081732 80%);
+    display: none;
+  }
+  .footer_area{
+    font-size: 0.7rem;
   }
 }
-
-
-@media (max-width: 992px){
-  header.masthead {
-    padding-top: calc(10rem + 55px);
-    padding-bottom: 10rem;
-  }
+/*Media Query 443px*/
+@media (max-width: 443px){
   header.masthead .masthead-content .margintop{
-    margin-top: 8rem;
+    margin-top: 7rem;
   }
   header.masthead .masthead-content .masthead-heading {
-    font-size: 6rem;
+    font-size: 3.5rem;
   }
   header.masthead .masthead-content .masthead-subheading {
-    font-size: 4rem;
+    font-size: 2.5rem;
+  }
+  .button-neon{
+    width: 11rem;
+    font-size: 1.3rem;
+  }
+}
+/*Media Query 400px*/
+@media (max-width: 400px){
+  header.masthead .masthead-content .margintop{
+    margin-top: 9rem;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 3rem;
+  }
+  
+  .button-neon{
+    width: 9rem;
+    font-size: 1.1rem;
   }
 }
