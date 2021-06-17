@@ -34,7 +34,6 @@
 
 
 /*=========LIST==========*/
-
 .list {
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -119,8 +118,10 @@
   cursor: pointer;
 }
 /*========================*/
-  
-/*  Modal tarefas (background) */
+
+  /*=========MODAL TAREFAS ==========*/
+
+/*  MODAL TAREFAS (background) */
 .modal-items {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -132,6 +133,7 @@
   height: 100%; /* Full height */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
 }
 
 .modal-items-dialog{
@@ -210,14 +212,16 @@
     height: auto; 
     border-radius: 20px;
     margin: 20px;
-    
 }
 
 .item-trash{
   display: flex;
+  flex-direction: row;
     align-items: flex-start;
     font-weight: bold;
+    margin: 25px auto;
     padding: 10px 5px 10px 10px;
+    grid-row: 1 ;
 }
 
 .item-trash:hover{
@@ -230,8 +234,8 @@
     font-weight: bold;
     margin-top: 20px;
     margin-left: 20px;
-    grid-row: 1 ;
-    grid-column: 1;
+    grid-row: 1;
+    grid-column: 1 / 1;
 }
 
 .itemDate {
