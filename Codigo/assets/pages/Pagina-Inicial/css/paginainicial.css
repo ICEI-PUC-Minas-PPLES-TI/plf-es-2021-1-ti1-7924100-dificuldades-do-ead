@@ -21,7 +21,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --clr-neon: #8338EC;
+  --clr-neon: #fff;
   --clr-bg: #081732;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
@@ -150,7 +150,7 @@ body {
   margin-left: 1rem;
   cursor: pointer;
 }
-/*Mudar depois o background de cada um*/
+/*Mudar depois o background de cada um dos cards*/
 /*.container .card:nth-child(1){
   background: linear-gradient(to right,#8338EC 50%, #081732);
 }
@@ -204,12 +204,6 @@ body {
   .container .bg-circle{
     display: none;
   }
-}
-/*background media*/
-@media (max-width:990px){
-  /*body{
-    background: linear-gradient(0deg, #8338EC 30%, #081732 70%);
-  }*/
 }
 /*Titulo Bem vindo margin top*/
 header.masthead .masthead-content .margintop{
@@ -523,9 +517,9 @@ button:not(:disabled),
 }
 .button-neon:hover,
 .button-neon:focus {
-  color: white;
+  color: black;
   text-shadow: none;
-  border: #fff 0.125em solid;
+  border: black 0.125em solid;
 }
 .button-neon:hover::before,
 .button-neon:focus::before{
