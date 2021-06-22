@@ -8,12 +8,17 @@
 }
 
 body{
-    background: #1B2029;
+    /*background: #1B2029;*/
+    background-image: url(../img/bg-cadastro-1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    min-width: 100vw;
     color: white;
     font-weight: 500;
     display: flex;
     min-height: 100vh;
-    min-width: 100vw;
 }
 
 main{
@@ -26,8 +31,11 @@ main{
 
 main h1{/*Título Crie sua Conta*/
     /*Background Gradient*/
-    background: -webkit-linear-gradient(left,#fffC, #253450);
-    background: linear-gradient(to right,#fffC, #253450);
+    /*background: linear-gradient(to right,#fffC 50%, #253450 100%);*/
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+    animation: animate 5s linear infinite;
+    -webkit-background-size: 500%;
+    background-size: 500%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
@@ -38,6 +46,7 @@ main h1{/*Título Crie sua Conta*/
 main .social-media {
     display: flex;
     align-items: center;
+    font-size: 2rem;
 }
 
 main .social-media a{
@@ -86,7 +95,6 @@ main h1{
     font-weight: 600;
     margin-bottom: 2rem;
     position: relative;
-    
 }
 
 main h1::before{
@@ -97,7 +105,23 @@ main h1::before{
     bottom: 2px;
     left: 0;
     border-radius: 8px;
-    background: linear-gradient(120deg,#fffC, #081732);
+    /*background: linear-gradient(120deg,#191970 40%,#87CEEB 100%);*/
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+    box-shadow: inset 0 0 0.1em 0 #2ecc71, 0 0 1em 0 #3498db, 0 0 0.2em 0 #9b59b6,0 0 0.2em 0 #f39c12;
+    animation: animate 5s linear infinite;
+    -webkit-background-size: 500%;
+    background-size: 500%;
+}
+@keyframes animate{
+    0%{
+      background-position: 0 100%;
+    }
+    50%{
+      background-position: 100% 0;
+    }
+    100%{
+      background-position: 0 100%;
+    }
 }
 
 main form{
@@ -136,15 +160,19 @@ main form input[type="button"]{
     margin-top: 2rem;
     border: none;
     border-radius: 32px;
-    background: linear-gradient(to left,#fffC, #081732);
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+    box-shadow: inset 0 0 0.1em 0 #2ecc71, 0 0 1em 0 #3498db, 0 0 0.2em 0 #9b59b6,0 0 0.2em 0 #f39c12;
+    animation: animate 5s linear infinite;
+    -webkit-background-size: 500%;
+    background-size: 500%;
     color: white;
     font-size: 1.1rem;
     transition: all .3s ease-in-out;
     margin-bottom: 2rem;
 }
 
-main form input[type="button"]:hover{/*Botão Inscreva-se*/
-    background: linear-gradient(to right,#fffC, #081732);
+main form input[type="button"]:hover{
+    background: transparent;
 }
 
 section.images{
@@ -157,17 +185,6 @@ section.images{
 
 section.images img{
     width: 100%;
-}
-
-section.images .circle{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, #E8CBC0, #636FA4);
-    clip-path: circle(40% at right 80%);
-    z-index: -1;
 }
 /*botao da pergunta*/
 .pergunta-seg{
@@ -187,19 +204,19 @@ section.images .circle{
 
 
 /*Tirar a Imagem quando estiver nessa largura */
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1300px){
     section.images{
         display: none;
         visibility: hidden;
     }
     main{
-        width: 100vw
+        width: 100vw;
     }
+    
 }
-
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 1050px){
     main h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     main .alternative span{
@@ -211,7 +228,7 @@ section.images .circle{
     }
 
     main h1::before{
-        width: 230px;
+        width: 290px;
     }
 
     main form label span{
