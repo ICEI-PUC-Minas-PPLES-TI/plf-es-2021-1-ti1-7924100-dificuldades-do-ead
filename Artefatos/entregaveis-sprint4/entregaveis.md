@@ -13,7 +13,6 @@
 - Design uniforme das telas
 - Excluir conta de usuário
 - Documentação
-- 
 
 
 ### Video
