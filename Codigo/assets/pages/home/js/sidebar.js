@@ -20,13 +20,13 @@ const showNavbar = (toggleId, navId, bodyId, headerId) => {
 }
 
 showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
-    /*===== LINK ACTIVE  =====*/
+    /*===== LINK active-siderbar  =====*/
 const linkColor = document.querySelectorAll('.nav__link')
 
 function colorLink() {
     if (linkColor) {
-        linkColor.forEach(l => l.classList.remove('active'))
-        this.classList.add('active')
+        linkColor.forEach(l => l.classList.remove('active-siderbar'))
+        this.classList.add('active-siderbar')
     }
 }
 linkColor.forEach(l => l.addEventListener('click', colorLink))
