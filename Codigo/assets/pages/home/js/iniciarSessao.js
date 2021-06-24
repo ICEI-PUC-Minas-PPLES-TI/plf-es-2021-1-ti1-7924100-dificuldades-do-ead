@@ -49,7 +49,7 @@ function renderizarConteudo(){
                         <i class='bx bxs-pencil'></i>
                     </div>
                 </div>
-                <h2 class="listTitle">${dadosDasListas.listas[j].lista_nome}</h2>
+                <h2 class="listTitle" onclick="abrirModalItens(${dadosDasListas.listas[j].lista_id})">${dadosDasListas.listas[j].lista_nome}</h2>
                 <i onclick="mostrarMenu(${dadosDasListas.listas[j].lista_id})" class='bx bx-dots-vertical-rounded menuList'></i>
             </div>
             `);

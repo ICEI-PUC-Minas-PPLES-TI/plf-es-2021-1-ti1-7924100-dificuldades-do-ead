@@ -78,7 +78,7 @@ function novaLista(control) {
                     <i class='bx bxs-pencil'></i>
                 </div>
             </div>
-            <h2 class="listTitle">${lista.lista_nome}</h2>
+            <h2 class="listTitle" onclick="abrirModalItens(${lista.lista_id})">${lista.lista_nome}</h2>
             <i onclick="mostrarMenu(${lista.lista_id})" class='bx bx-dots-vertical-rounded menuList'></i>
         </div>
     `;
