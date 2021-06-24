@@ -30,7 +30,7 @@ function carregarItens(){
               <p>${listaEspecifica.lista_itens[j].descricao}</p>
             </div>
             <div class="item-check">
-              <input  type="checkbox">
+              <input  type="checkbox" checked>
             </div>
           </div>
         </div>
