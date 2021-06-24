@@ -45,12 +45,14 @@ var db = {
             lista_nome: 'Lista exemplo',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:2,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -63,12 +65,14 @@ var db = {
             lista_nome: 'Engenharia de software',
             lista_cor: '#3A86FF',
             lista_itens: [{
+                item_id:3,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:4,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -90,12 +94,14 @@ var db = {
             lista_nome: 'Lista exemplo1234',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Teste Lista',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Fundamentos de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -108,12 +114,14 @@ var db = {
             lista_nome: 'Fundamentos de software',
             lista_cor: '#ff0228',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -130,12 +138,14 @@ var db = {
             lista_nome: 'Bem-Vindo!',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -151,12 +161,14 @@ var db = {
             lista_nome: 'Bem-Vindo!',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -174,12 +186,14 @@ var db = {
             lista_nome: 'Bem-Vindo!',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -195,12 +209,14 @@ var db = {
             lista_nome: 'Bem-Vindo!',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -216,12 +232,14 @@ var db = {
             lista_nome: 'Bem-Vindo!',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -237,12 +255,14 @@ var db = {
             lista_nome: 'Bem-Vindo!',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -258,12 +278,14 @@ var db = {
             lista_nome: 'Bem-Vindo!',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
@@ -279,12 +301,14 @@ var db = {
             lista_nome: 'Bem-Vindo!',
             lista_cor: '#FF006E',
             lista_itens: [{
+                item_id:1,
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
                 is_checked: false,
             },
             {
+                item_id:1,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
