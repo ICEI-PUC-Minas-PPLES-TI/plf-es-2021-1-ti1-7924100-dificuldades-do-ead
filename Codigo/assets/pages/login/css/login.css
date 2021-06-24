@@ -9,8 +9,12 @@
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg,#081732, #fffC);
+    background-image: url(../img/bg-login-1.jpg);
     background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    min-width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -41,7 +45,7 @@ main h2::before{
     bottom: 2px;
     left: 0;
     border-radius: 8px;
-    background: linear-gradient(120deg,#fffC, #081732);
+    background: linear-gradient(to right,#87CEEB 10%,#191970 80%);
 }
 
 .password{
@@ -50,7 +54,9 @@ main h2::before{
     margin: 15px 0;
     text-align: center;
 }
-
+input{
+    width: 100%;
+}
 .input-field{
     position: relative;
 }
@@ -76,7 +82,7 @@ form .input-field:first-child {
     width: 100%;
     bottom: -5px;
     left: 0;
-    background: linear-gradient(120deg,#fffC, #081732);
+    background: linear-gradient(to right,#87CEEB 10%,#191970 80%);
     transform: scaleX(0);
     transition: all .3s ease-in-out;
     transform-origin: left;
@@ -95,20 +101,24 @@ form .input-field:first-child {
     color: rgba(0, 0, 0, 0.2);
 }
 form input[type="button"]{/*Botão Entrar*/
+    color: #fff;
+    background: linear-gradient(160deg,#191970 10%,#87CEEB 80%);
+    border-color: #87CEEB;
+    text-shadow: 
+        0 0 0.125em hsl(0 0% 90% / 0.3),
+        0 0 0.5em currentColor;
+    box-shadow: inset 0 0 0.5em 0 #87CEFA, 0 0 0.5em 0 #87CEFA;
     margin-top: 1rem;
     padding: 0.4rem;
-    background: linear-gradient(to left,rgba(184, 184, 184, 0.8), #081732);
     cursor: pointer;
     color: white;
     font-size: 1.2rem;
     font-weight: 300;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    border-radius: 8px;
     font-weight: bold;
 }
 form input[type="button"]:hover {
-    letter-spacing: 0.5px;
-    background: linear-gradient(to right,rgba(184, 184, 184, 0.8), #081732);
+    background: linear-gradient(160deg,#87CEEB 10%, #191970 80%);
 }
 .footer {
     display: flex;
@@ -129,6 +139,7 @@ form input[type="button"]:hover {
     cursor: pointer;
     margin-top: 1rem;
     font-weight: bold;
+    
 }
 .footer .social-field a i {
     margin: 0 0.5rem;
@@ -140,18 +151,21 @@ form input[type="button"]:hover {
 }
 .footer .social-field .twitter {
     background: linear-gradient(to right, #56a7f2, #468aca);
+    box-shadow: inset 0 0 0.5em 0 #87CEFA, 0 0 0.5em 0 #87CEFA;
 }
 .footer .social-field .twitter:hover {
     background: linear-gradient(to right, #468aca, #56a7f2);
 }
 .footer .social-field .facebook {
     background: linear-gradient(to right, #1e3c72, #2a5298);
+    box-shadow: inset 0 0 0.5em 0 #1e3c72, 0 0 0.5em 0 #1e3c72;
 }
 .footer .social-field .facebook:hover {
     background: linear-gradient(to right, #2a5298, #1e3c72);
 }
 .footer .social-field .google {
     background: linear-gradient(to right, #db4a39, #aa473c);
+    box-shadow: inset 0 0 0.5em 0 #db4a39, 0 0 0.5em 0 #db4a39;
 }
 .footer .social-field .google:hover {
     background: linear-gradient(to right, #aa473c, #db4a39);
