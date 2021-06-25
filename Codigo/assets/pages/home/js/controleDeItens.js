@@ -13,7 +13,11 @@ function carregarItens() {
     }
   }
   var preRenderModalHeader = []
-  var preRenderModalBody = `<div class="modal-itens-body"></div>`;
+  var preRenderModalContent = `
+  <div class="modal-itens-header">
+  </div>
+  <div class="modal-itens-body">
+  </div>`;
   var preRenderItens = []
   var nome = listaEspecifica.lista_nome;
 
@@ -52,9 +56,10 @@ function carregarItens() {
 
   //Esse trecho remove as virgulas do array antes ser transformados em string
   var modal = document.querySelector('div.modal-itens');
+  modal.innerHTML = preRenderModalContent;
+  var modalHeader = document.querySelector('div.modal-itens-header');
   preRenderModalHeader = preRenderModalHeader.join("");
-  modal.innerHTML = preRenderModalHeader.toString();
-  modal.innerHTML += preRenderModalBody;
+  modalHeader.innerHTML = preRenderModalHeader.toString();
   preRenderItens = preRenderItens.join("");
   var itens = document.querySelector('div.modal-itens-body')
   itens.innerHTML = preRenderItens.toString();
