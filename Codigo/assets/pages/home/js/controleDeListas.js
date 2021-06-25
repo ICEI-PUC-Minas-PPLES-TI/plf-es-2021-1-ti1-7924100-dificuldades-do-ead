@@ -36,28 +36,16 @@ function novaLista(control) {
         var listasDoUsuario = db.listasUsuarios[indexListas].listas;
         console.log(listasDoUsuario)
         var metadadosDasListas;
-        if (listasDoUsuario.length == null || listasDoUsuario.length == 0 || listasDoUsuario.length == '') {
-            metadadosDasListas = {
-                listasLen: 0,
-                ultimoIdLista: 999
-            }
-            localStorage.setItem('ultimoIdLista', metadadosDasListas.ultimoIdLista)
-        } else {
-            metadadosDasListas = {
-                listasLen: listasDoUsuario.length - 1,
-                ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
-            }
-            localStorage.setItem('ultimoIdLista', metadadosDasListas.ultimoIdLista)
-        }
         console.log(metadadosDasListas)
         var listas = document.querySelector('div.main-content-lists');
         console.log(dadosNovaLista.nomeLista)
         if (dadosNovaLista.nomeLista == null || dadosNovaLista.nomeLista == '') {
             dadosNovaLista.nomeLista = 'Lista sem nome';
         }
+        let idDelistaGerado = generateListId();
         //Objeto para armazenamento da lista
         var lista = {
-            lista_id: metadadosDasListas.ultimoIdLista + 1,
+            lista_id: idDelistaGerado,
             lista_nome: dadosNovaLista.nomeLista,
             lista_cor: dadosNovaLista.cor,
             lista_itens: []
@@ -130,7 +118,6 @@ function deleteLista(confirm) {
         //console.log(listasDoUsuario)
         var metadadosDasListas = {
             listasLen: listasDoUsuario.length - 1,
-            ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
         }
 
         //console.log(metadadosDasListas)
@@ -183,7 +170,6 @@ function editarLista(confirm) {
         //console.log(listasDoUsuario)
         var metadadosDasListas = {
             listasLen: listasDoUsuario.length - 1,
-            ultimoIdLista: listasDoUsuario[listasDoUsuario.length - 1].lista_id
         }
         var novaCor;
         var corRadio = document.querySelectorAll('input.color-editor-selector');
