@@ -61,6 +61,10 @@
     grid-row: 2 / 2;
     grid-column: 1 / 1;
 }
+.listTitle:hover,
+.listTitle:focus{
+  font-weight: lighter;
+}
 
 .menuList {
     margin: 20px 20px 0 0;
