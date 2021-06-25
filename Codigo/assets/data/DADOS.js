@@ -6,8 +6,7 @@
  *    e possuem um comprimento de 20 caracteres
  * 
  * IDs do conjunto de listas pertencentes ao usuário:
- *  - Gerados da mesma maneira que o Id de usuário
- *    porem com 10 caracteres de comprimento
+ *  - identico ao ido do usuário
  * 
  * Ids de lista:
  *  - Um numero aleatorio entre 1 e 10 milhões
