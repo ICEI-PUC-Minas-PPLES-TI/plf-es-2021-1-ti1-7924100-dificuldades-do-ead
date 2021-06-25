@@ -13,9 +13,19 @@ function carregarItens(){
         }
     }
     var preRenderItens = []
+    var preRenderModalHeader = []
 
     for( let j = 0 ; j < listaEspecifica.lista_itens.length ; j++){
+        var nome = listaEspecifica.lista_nome;
         var cor = listaEspecifica.lista_cor;
+
+        preRenderModalHeader.push(`
+        <h1>${nome}</h1>
+        <div class="modal-itens-icones">
+          <i class='bx bx-plus-circle'></i>
+          <i class='bx bx-x' onclick="fecharModalItens()"></i>
+        </div>
+            `);
 
         preRenderItens.push(`
         <div class="item-do-modal" id="item-do-modal" >
@@ -30,18 +40,22 @@ function carregarItens(){
               <p>${listaEspecifica.lista_itens[j].descricao}</p>
             </div>
             <div class="item-check">
-              <input  type="checkbox" checked>
+              <input  type="checkbox">
             </div>
           </div>
         </div>
       </div>
             `);
+            
     }
    
     //Esse trecho remove as virgulas do array antes ser transformados em string
+    preRenderModalHeader = preRenderModalHeader.join("");
     preRenderItens = preRenderItens.join("");
+    var modalheader = document.querySelector('div.modal-itens-header')
     var itens = document.querySelector('div.modal-itens-body')
     // Todas os itens são inseridas no documento
+    modalheader.innerHTML = preRenderModalHeader.toString();
     itens.innerHTML = preRenderItens.toString();
 
 
