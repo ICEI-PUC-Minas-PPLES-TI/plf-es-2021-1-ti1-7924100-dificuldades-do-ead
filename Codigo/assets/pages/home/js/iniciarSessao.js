@@ -8,6 +8,7 @@ var listas = document.querySelector("div.main-content-lists");
     que acabou de fazer login
 */
 function renderizarConteudo(){
+    console.log('Carregando a pagina')
     var dadosDasListas; // variavel que armazena somente a lista de listas
     var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
     var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto

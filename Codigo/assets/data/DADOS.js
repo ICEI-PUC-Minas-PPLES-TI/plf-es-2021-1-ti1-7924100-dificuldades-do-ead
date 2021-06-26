@@ -68,14 +68,14 @@ var db = {
                 titulo: 'Quiz da palestra',
                 descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
                 data: '07/06/2021',
-                is_checked: false,
+                is_checked: true,
             },
             {
                 item_id: 50035049,
                 titulo: 'Teste de software',
                 descricao: 'Fazer teste de um software',
                 data: '10/06/2021',
-                is_checked: false,
+                is_checked: true,
             }
             ]
         },
