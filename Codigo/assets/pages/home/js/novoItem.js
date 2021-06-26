@@ -25,8 +25,8 @@ function renderizarTelaNovoItem() {
             <textarea name="" id="" cols="30" rows="4" class="descricao-novo-item"></textarea>
         </div>
         <div class="botoes-novo-item">
-            <button class="cancelar-novo-item"><i class='bx bx-x-circle'></i></button>
-            <button class="criar-novo-item"><i class='bx bx-plus-circle'></i></button>
+            <button class="cancelar-novo-item" onclick="cancelarItem()"><i class='bx bx-x-circle'></i></button>
+            <button class="criar-novo-item" onclick="criarItem()"><i class='bx bx-plus-circle'></i></button>
         </div>
     </div>`
 
@@ -39,4 +39,37 @@ function renderizarTelaNovoItem() {
 
     var novoItem = document.querySelector('div.modal-itens-body')
     novoItem.innerHTML = preRenderNovoItem;
+}
+
+
+function criarItem() {
+    var db = JSON.parse(localStorage.getItem('db'));
+    let lista_id = Number(localStorage.getItem('itensRequeridosId'));
+    let indexDoConjuntoDeListas = Number(localStorage.getItem('indexDaListaDoUsuario'));
+    let indexLista = qualOIndexDaLista(lista_id, indexDoConjuntoDeListas);
+
+    let idNovoItem = generateItemId();
+    var dadosNovoItem = {
+        item_id: idNovoItem,
+        titulo: document.querySelector('input.titulo-novo-item').value.toString(),
+        descricao: document.querySelector('textarea.descricao-novo-item').value.toString(),
+        data: document.querySelector('input.data-novo-item').value.toString().substr(0, 10).split('-').reverse().join('/'),
+        is_checked: false,
+    }
+    //console.log(dadosNovoItem);
+    if(dadosNovoItem.titulo == ""){
+        alert('Dê um nome para a sua nova tarefa 😶');
+    }else if(dadosNovoItem.data == ""){
+        alert('Defina uma data para sua tarefa 🗓️')
+    }else{
+        db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens.push(dadosNovoItem);
+        localStorage.setItem('db', JSON.stringify(db));
+        console.log('Item criado com sucesso');
+        console.log(db);
+    }
+    
+
+}
+function cancelarItem() {
+    console.log('Botão de cancelar apertado')
 }
