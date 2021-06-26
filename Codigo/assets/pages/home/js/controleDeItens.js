@@ -1,11 +1,23 @@
+
+/*========== FUNÇÔES RESPONSAVEIS POR ABRIR E FECHAR O MODAL DE ITENS ================ */
+
+/*===============Função que abre o modal de itens*/
 function abrirModalItens(itensRequeridosId) {
-  let modal = document.querySelector('div.modal-itens');
-  let overlay = document.querySelector('div#overlay');
+  let modal = document.querySelector('div.modal-itens'); // Selecionando o modal de itens escondido no HTML
+  let overlay = document.querySelector('div#overlay'); // Selecionando o overlay que tambem está escondido
+
+  //Atribuindo aos 2 elementos a classe "active"
   modal.classList.add('active');
   overlay.classList.add('active');
+
+  //Salvando o id da lista da qual serão exibidos os itens( Valor passado por parametro)
   localStorage.setItem('itensRequeridosId', JSON.stringify(itensRequeridosId));
+
+  // Chamando a função para preecher o modal Adequadamente
   carregarItens();
 }
+
+/*===============Função que fecha o modal de Itens*/
 function fecharModalItens() {
   let modal = document.querySelector('div.modal-itens');
   let overlay = document.querySelector('div#overlay')
@@ -13,7 +25,13 @@ function fecharModalItens() {
   overlay.classList.remove('active')
   localStorage.removeItem('itensRequeridosId');
 }
+/*=================================================================================== */
 
+/**
+* A Função a seguir carrega os itens da lista e seu cabeçalho 
+* é gerado um HTML para cada elemento e esse HTML é injetado no 
+* modal, com funções e ids
+*/
 
 function carregarItens() {
   let listaId = Number(localStorage.getItem('itensRequeridosId'));
@@ -80,6 +98,14 @@ function carregarItens() {
   // Todas os itens são inseridas no documento
   verificarCheckboxes(listaId, indexListaDousuario);
 }
+
+ /**
+ * Essa função verifica os dados e atributos do localStorage para
+ * e marca no html inputas que estão checkados de acordo com os dados
+ * salvos
+ * @param {inteiro} lista_id - id de uma das listas do usuário
+ * @param {inteiro} indexDoConjuntoDeListas - posição de todas as listas pertencentes ao usuário no array
+ */
 function verificarCheckboxes(lista_id, indexDoConjuntoDeListas) {
   var db = JSON.parse(localStorage.getItem('db'));
   let indexLista = qualOIndexDaLista(lista_id, indexDoConjuntoDeListas);
@@ -91,6 +117,15 @@ function verificarCheckboxes(lista_id, indexDoConjuntoDeListas) {
     }
   }
 }
+
+/**
+ *A função a seguir é chamada quando um dos checkboxes tem seu
+ *estado alterado pelo usuário no modal enquanto ele ainda 
+ *esta aberto
+ * @param {inteiro} item_id
+ * @param {inteiro} lista_id
+ * @param {inteiro} indexDoConjuntoDeListas
+ */
 function checkCheckbox(item_id, lista_id, indexDoConjuntoDeListas) {
   console.log('ID do Item Checkado: ' + item_id);
   var db = JSON.parse(localStorage.getItem('db'));
@@ -102,7 +137,7 @@ function checkCheckbox(item_id, lista_id, indexDoConjuntoDeListas) {
     if (listaEspecifica[k].item_id == item_id) {
       indexItem = k;
       console.log('O index do item é: ' + indexItem);
-    }else{
+    } else {
       console.log('Não é index do item');
     }
   }
@@ -120,6 +155,14 @@ function checkCheckbox(item_id, lista_id, indexDoConjuntoDeListas) {
 
 }
 
+/**
+ * Essa função é um utilitário que retorna a posição da lista
+ * (index) no array de listas do usuário com base no seu id
+ *
+ * @param {inteiro} lista_id - ID da lista que deseja encontrar
+ * @param {inteiro} indexDoConjuntoDeListas - Index do conjunto de listas do usuário no array listasUsuários
+ * @return {inteiro} - index da lista procurada
+ */
 function qualOIndexDaLista(lista_id, indexDoConjuntoDeListas) {
   var db = JSON.parse(localStorage.getItem('db'));
   let indexLista
@@ -130,9 +173,4 @@ function qualOIndexDaLista(lista_id, indexDoConjuntoDeListas) {
     }
   }
   return indexLista;
-}
-function pegarListaEspecifica(indexLista, indexDoConjuntoDeListas){
-  var db = JSON.parse(localStorage.getItem('db'));
-  
-  return listaEspecifica;
 }
