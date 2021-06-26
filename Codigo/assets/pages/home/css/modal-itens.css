@@ -159,7 +159,25 @@
     text-align: center;
     border-radius: 10px;
 }
+.cancelar-novo-item {
+    color: var(--tomato-red);
+    background-color: var(--juice-red);
+}
 
+.criar-novo-item {
+    color: #0e7432;
+    background-color: #74d897;
+}
+
+.cancelar-novo-item:hover {
+    background-color: var(--tomato-red);
+    color: var(--juice-red);
+}
+
+.criar-novo-item:hover {
+    background-color: #0e7432;
+    color: #74d897;
+}
 /*FIm novo item */
 
 #overlay {

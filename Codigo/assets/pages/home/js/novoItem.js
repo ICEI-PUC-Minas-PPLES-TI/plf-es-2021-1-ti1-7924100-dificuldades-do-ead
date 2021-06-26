@@ -11,7 +11,7 @@ function renderizarTelaNovoItem() {
     preRenderModalHeader.push(`
     <h2>Nome - Nova Tarefa</h2>
     <div class="modal-itens-icones">
-      <i class='bx bx-plus-circle' onclick="novoItem()"></i>
+    <i class='bx bx-arrow-back' onclick="carregarItens()"></i>
       <i class='bx bx-x' onclick="fecharModalItens()"></i>
     </div>
         `);
@@ -25,8 +25,8 @@ function renderizarTelaNovoItem() {
             <textarea name="" id="" cols="30" rows="4" class="descricao-novo-item"></textarea>
         </div>
         <div class="botoes-novo-item">
-            <button class="cancelar-novo-item">Cancelar</button>
-            <button class="criar-novo-item">criar</button>
+            <button class="cancelar-novo-item"><i class='bx bx-x-circle'></i></button>
+            <button class="criar-novo-item"><i class='bx bx-plus-circle'></i></button>
         </div>
     </div>`
 
