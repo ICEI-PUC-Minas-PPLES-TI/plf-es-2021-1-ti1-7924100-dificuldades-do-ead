@@ -27,7 +27,8 @@
     color: var(--dark-blue);
     border: none;
 }
-.modal-itens-icones{
+
+.modal-itens-icones {
     font-size: 3rem;
 }
 
@@ -47,10 +48,10 @@
 
 .modal-itens-body {
     padding: 10px 15px;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 
-.item-do-modal{
+.item-do-modal {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,8 +59,8 @@
     margin-bottom: 20px;
 }
 
-.item-trash{
-    color:var(--tomato-red);
+.item-trash {
+    color: var(--tomato-red);
     width: 60px;
     height: 60px;
     font-size: 50px;
@@ -70,32 +71,35 @@
     justify-content: center;
     align-items: center;
 }
-.item-dados{
-    display:flex;
+
+.item-dados {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:20px;
+    padding: 20px;
     border-radius: 10px !important;
     width: 90%;
-
-
 }
-.item-dados-header{
+
+.item-dados-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:var(--deep-blue);
+    color: var(--deep-blue);
 }
-.item-dados-conteudo{
+
+.item-dados-conteudo {
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
-.item-check{
+
+.item-check {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.item-check input{
+
+.item-check input {
     transform: scale(4);
 }
 
@@ -105,6 +109,58 @@
     grid-column: 1;
     font-size: 1.2rem;
 }
+
+/* NOVO ITEM */
+
+.container-titulo-data {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.titulo-novo-item, .data-novo-item {
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    background-color: rgb(190, 190, 190);
+}
+
+.data-novo-item {
+    width: 40%;
+}
+
+.titulo-novo-item {
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 60%;
+}
+
+.descricao-novo-item {
+    background-color: rgb(190, 190, 190);
+    resize: none;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.botoes-novo-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px 5px;
+}
+
+.criar-novo-item, .cancelar-novo-item {
+    border: none;
+    height: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*FIm novo item */
 
 #overlay {
     position: fixed;

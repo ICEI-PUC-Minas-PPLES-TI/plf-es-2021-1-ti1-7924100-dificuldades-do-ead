@@ -57,7 +57,7 @@ function carregarItens() {
   preRenderModalHeader.push(`
     <h2>${nome}</h2>
     <div class="modal-itens-icones">
-      <i class='bx bx-plus-circle'></i>
+      <i class='bx bx-plus-circle' onclick="renderizarTelaNovoItem()"></i>
       <i class='bx bx-x' onclick="fecharModalItens()"></i>
     </div>
         `);
