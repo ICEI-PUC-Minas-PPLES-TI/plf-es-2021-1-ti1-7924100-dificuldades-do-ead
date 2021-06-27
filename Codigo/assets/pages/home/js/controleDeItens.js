@@ -154,6 +154,16 @@ function checkCheckbox(item_id, lista_id, indexDoConjuntoDeListas) {
   }
 
 }
+
+/**
+ * Essa função remove os itens do local storage e da interface utilizando do ]
+ * mesmo principio que o resto da aplicação. A função é chamada quando o elemento
+ * é clicado e o id do item em específico é passado como parâmetro para essa função
+ * Que fica responsável por recuperar dados e apagar o item na estrutura de dados e
+ * no corpo do modal
+ *
+ * @param {inteiro} item_id
+ */
 function excluirItem(item_id) {
   var db = JSON.parse(localStorage.getItem('db'));
   let lista_id = Number(localStorage.getItem('itensRequeridosId'));
@@ -173,6 +183,15 @@ function excluirItem(item_id) {
   //array.splice(index, 1);
 }
 
+/**
+ *Essa função é um utilitário que busca o index de um item no array de itens do
+ *objeto listas
+ *
+ * @param {inteiro} item_id - Id do item que deseja encontrar o index
+ * @param {inteiro} indexLista Index da lista na qual o item está
+ * @param {inteiro} indexDoConjuntoDeListas - index do conjunto de listas do usuário.
+ * @return {inteiro} 
+ */
 function qualOIndexDoItem(item_id, indexLista, indexDoConjuntoDeListas){
   let db = JSON.parse(localStorage.getItem('db'));
   let indexItem;
@@ -184,19 +203,6 @@ function qualOIndexDoItem(item_id, indexLista, indexDoConjuntoDeListas){
   }
   return indexItem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
