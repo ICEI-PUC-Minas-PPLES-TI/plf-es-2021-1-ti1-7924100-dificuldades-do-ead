@@ -65,8 +65,8 @@ function carregarItens() {
     var cor = listaEspecifica.lista_cor;
 
     preRenderItens.push(`
-        <div class="item-do-modal" id="item-do-modal" >
-        <div class="item-trash"><i class='bx bxs-trash'></i></div>
+        <div class="item-do-modal" id="item-do-modal-id${listaEspecifica.lista_itens[j].item_id}">
+        <div class="item-trash" onclick="excluirItem(${listaEspecifica.lista_itens[j].item_id})"><i class='bx bxs-trash'></i></div>
         <div class="item-dados" style="background-color:${cor} !important;">
           <div class="item-dados-header">
             <h2 class="">${listaEspecifica.lista_itens[j].titulo}</h2>
@@ -99,13 +99,13 @@ function carregarItens() {
   verificarCheckboxes(listaId, indexListaDousuario);
 }
 
- /**
- * Essa função verifica os dados e atributos do localStorage para
- * e marca no html inputas que estão checkados de acordo com os dados
- * salvos
- * @param {inteiro} lista_id - id de uma das listas do usuário
- * @param {inteiro} indexDoConjuntoDeListas - posição de todas as listas pertencentes ao usuário no array
- */
+/**
+* Essa função verifica os dados e atributos do localStorage para
+* e marca no html inputas que estão checkados de acordo com os dados
+* salvos
+* @param {inteiro} lista_id - id de uma das listas do usuário
+* @param {inteiro} indexDoConjuntoDeListas - posição de todas as listas pertencentes ao usuário no array
+*/
 function verificarCheckboxes(lista_id, indexDoConjuntoDeListas) {
   var db = JSON.parse(localStorage.getItem('db'));
   let indexLista = qualOIndexDaLista(lista_id, indexDoConjuntoDeListas);
@@ -154,6 +154,50 @@ function checkCheckbox(item_id, lista_id, indexDoConjuntoDeListas) {
   }
 
 }
+function excluirItem(item_id) {
+  var db = JSON.parse(localStorage.getItem('db'));
+  let lista_id = Number(localStorage.getItem('itensRequeridosId'));
+  let indexDoConjuntoDeListas = Number(localStorage.getItem('indexDaListaDoUsuario'));
+  let indexLista = qualOIndexDaLista(lista_id, indexDoConjuntoDeListas);
+  indexItem = qualOIndexDoItem(item_id, indexLista, indexDoConjuntoDeListas);
+  db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens.splice(indexItem, 1);
+  console.log('Item Removido com sucesso da estrutura\nID removido: '+item_id);
+  localStorage.setItem('db', JSON.stringify(db));
+  console.log('Item excluido foi removido do local storage com sucesso');
+  let modalBody = document.querySelector('div.modal-itens-body');
+  let itemParaRemover = document.querySelector(`div#item-do-modal-id${item_id}`);
+  modalBody.removeChild(itemParaRemover);
+  console.log('Item Removido do Modal');
+  
+  //elem.parentNode.removeChild(elem);
+  //array.splice(index, 1);
+}
+
+function qualOIndexDoItem(item_id, indexLista, indexDoConjuntoDeListas){
+  let db = JSON.parse(localStorage.getItem('db'));
+  let indexItem;
+  for(let i = 0 ; i < db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens.length ; i++){
+    if(db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[i].item_id == item_id){
+      indexItem = i;
+      break;
+    }
+  }
+  return indexItem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Essa função é um utilitário que retorna a posição da lista
