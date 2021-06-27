@@ -1,4 +1,10 @@
 
+
+/**
+ * Essa função é responsável por injetar o 
+ * HTML necessário para a exibição da tela de criação de item no modal
+ * subtituindo a lista de itens vista anteriormente
+ */
 function renderizarTelaNovoItem() {
     var db = JSON.parse(localStorage.getItem('db'));
     var preRenderModalHeader = []
@@ -42,6 +48,12 @@ function renderizarTelaNovoItem() {
 }
 
 
+/**
+ * Quando confirmada a criaçao do item com o pressionar de um botão
+ * essa função é chamada. Ela cria a estrutura da dados do item a ser slavo e 
+ * verifica se há inconsistências como a falta de titulo o data em um item. Caso haja, 
+ * um alert é exibido na tela.
+ */
 function criarItem() {
     var db = JSON.parse(localStorage.getItem('db'));
     let lista_id = Number(localStorage.getItem('itensRequeridosId'));
@@ -56,7 +68,6 @@ function criarItem() {
         data: document.querySelector('input.data-novo-item').value.toString().substr(0, 10).split('-').reverse().join('/'),
         is_checked: false,
     }
-    //console.log(dadosNovoItem);
     if(dadosNovoItem.titulo == ""){
         alert('Dê um nome para a sua nova tarefa 😶');
     }else if(dadosNovoItem.data == ""){
@@ -70,6 +81,11 @@ function criarItem() {
     }
 
 }
+
+/**
+ * Essa função renderiza de volta a tela para visualização de itens da lista
+ * Ela é chamada quando o botão de cancelar a criação é clicado; 
+ */
 function cancelarItem() {
     console.log('Botão de cancelar apertado');
     carregarItens();
