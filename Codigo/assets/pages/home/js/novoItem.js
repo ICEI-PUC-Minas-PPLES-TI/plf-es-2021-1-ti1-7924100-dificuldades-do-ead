@@ -66,8 +66,8 @@ function criarItem() {
         localStorage.setItem('db', JSON.stringify(db));
         console.log('Item criado com sucesso');
         console.log(db);
+        carregarItens();
     }
-    carregarItens();
 
 }
 function cancelarItem() {
