@@ -6,7 +6,12 @@
  * subtituindo a lista de itens vista anteriormente
  */
 function renderizarTelaNovoItem() {
-    var db = JSON.parse(localStorage.getItem('db'));
+    let db = JSON.parse(localStorage.getItem('db'));
+    let indexDoConjuntoDeListas = localStorage.getItem('indexDaListaDoUsuario');
+    var lista_id = localStorage.getItem('itensRequeridosId')
+
+    let indexLista = qualOIndexDaLista(lista_id, indexDoConjuntoDeListas);
+
     var preRenderModalHeader = []
     var preRenderModalContent = `
         <div class="modal-itens-header">
@@ -15,7 +20,7 @@ function renderizarTelaNovoItem() {
         </div>`;
 
     preRenderModalHeader.push(`
-    <h2>Nome - Nova Tarefa</h2>
+    <h2>${db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_nome} - Nova Tarefa</h2>
     <div class="modal-itens-icones">
     <i class='bx bx-arrow-back' onclick="carregarItens()"></i>
       <i class='bx bx-x' onclick="fecharModalItens()"></i>
