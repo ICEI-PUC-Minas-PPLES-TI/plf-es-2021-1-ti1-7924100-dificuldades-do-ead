@@ -1,50 +1,35 @@
 # Gerenciamento de Projeto
+A metodologia contempla as definições de ferramental utilizado pela equipe tanto para a
+manutenção dos códigos e demais artefatos quanto para a organização do time na
+execução das tarefas do projeto.
 
-> Descreva aqui a metodologia de trabalho do grupo para atacar o
-> problema.
 
 ## Divisão de Papéis
 
-> Apresente a divisão de papéis entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+| Papel         | Nome                                  |
+| ------------- | ------------------------------------- |
+| Scrum master  | Gabriel Victor Couto Martins de Paula |
+| Product Owner |                                       |
+| Dev           |                                       |
+| Dev           |                                       |
 
 ## Processo
+### Relação de Ambientes de Trabalho 
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação
+dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
-> Coloque  informações sobre detalhes da implementação do Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+| Ambiente                               | Plataforma   | Link de Acesso                                                                               |
+| -------------------------------------- | ------------ | -------------------------------------------------------------------------------------------- |
+| Repositório de código fonte Plataforma | GitHub       | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti1-7924100-dificuldades-do-ead.git |
+| Documentos do projeto                  | Google Drive | https://docs.google.com/document/d/1HPH3TAGqhN2iFGrAZDkKc8j5B4S_9io70rbb2eggBHE/edit         |
+| Projeto de interface e wireframes      | Figma        | https://www.figma.com/file/hjfku3ZNxccHeu0T37quhI/Projeto-de-interface?node-id=0%3A1         |
+| Gerenciamento do projeto               | GitHub       | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti1-7924100-dificuldades-do-ead.git |
 
 ## Ferramentas
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de diagramação
-
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
-
-> Liste quais ferramentas foram empregadas no desenvolvimento do
-> projeto, justificando a escolha delas, sempre que possível.
-> 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [![Slack](images/slack.jpg)](https://slack.com/)
-> - [![Trello](images/trello.png)](https://trello.com/)
-> 
-> - [![Microsof Project](images/project.png)](https://products.office.com/pt-br/project/project-and-portfolio-management-software)
-> - [![Redbooth](images/redbooth.png)](https://redbooth.com/)
+- Visual Studio Code.
+- Whatsapp
+- Microsoft Teams
+- Microsoft WhiteBoard, Markdown
