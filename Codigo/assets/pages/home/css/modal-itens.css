@@ -108,6 +108,7 @@
     align-items: flex-start;
     grid-column: 1;
     font-size: 1.2rem;
+    min-height: 3rem;
 }
 
 /* NOVO ITEM */

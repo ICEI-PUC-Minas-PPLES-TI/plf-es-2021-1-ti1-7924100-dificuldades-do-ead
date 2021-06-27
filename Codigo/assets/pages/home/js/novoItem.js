@@ -67,9 +67,10 @@ function criarItem() {
         console.log('Item criado com sucesso');
         console.log(db);
     }
-    
+    carregarItens();
 
 }
 function cancelarItem() {
-    console.log('Botão de cancelar apertado')
+    console.log('Botão de cancelar apertado');
+    carregarItens();
 }
