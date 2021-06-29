@@ -10,11 +10,14 @@
     <!--=========BOXICONS===========-->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <!--============================-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
     <!--==================STYLES======================-->
-    <link rel="stylesheet" href="../Config-Conta/css/configconta.css">
+    <link rel="stylesheet" href="css/configconta.css">
+    <link rel="stylesheet" href="css/modalExportarDados.css">
     <link rel="stylesheet" href="../home/css/sidebar.css" />
     <link rel="stylesheet" href="../home/css/styles.css" />
     <link rel="stylesheet" href="../home/css/template.css" />
@@ -55,12 +58,12 @@
                         <i class='bx bx-calendar'></i>
                         <span class="nav__name">Minhas Listas</span>
                     </a>
-                      <a href="../../../index.html" class="nav__link">
+                    <a href="../../../index.html" class="nav__link">
                         <i class='bx bxs-home'></i>
                         <span class="nav__name">Tela Inicial</span>
                     </a>
                     <a href="../Config-Conta/configconta.html" class="nav__link active">
-                        <i class='bx bxs-user-rectangle' ></i>
+                        <i class='bx bxs-user-rectangle'></i>
                         <span class="nav__name">Conta</span>
                     </a>
                     <a href="../Sobre/sobre.html" class="nav__link">
@@ -93,9 +96,9 @@
     <!--fim da barra lateral-->
     <main>
         <h1>Configurações da Conta</h1>
-        
+
         <i class='bx bxs-user-circle img_user'></i>
-        
+
         <form action="">
             <label class="input-field" for="Nome">
                 <i class="fas fa-pen-square edit"></i>
@@ -114,21 +117,68 @@
             </label>
             <label class="btn-log-out" for="Sair">
                 <i class='bx bx-log-out nav__icon icon-log-out edit'></i>
-                <input type="button" value="Sair" class="btn-log-out" >
+                <input type="button" value="Sair" class="btn-log-out">
             </label>
             <label class="btn-delete-account" for="Delete">
                 <i class="fas fa-trash-alt icon-delete-account edit"></i>
-                <input type="button" value="Deletar Conta">
+                <input id="Delete" onclick="deleteAcc()" type="button" value="Deletar Conta">
+            </label>
+            <label class="btn-exportar-dados" for="Exportar">
+                <i class='bx bxs-file-export icon-exportar-dados'></i>
+                <input onclick="abrirModalExportarDados()" type="button" value="Exportar meus dados">
             </label>
             
-    
         </form>
-        
-
-    </main>
-
+        <div class="modal-exportar" id="modal-expotar">
+            <div class="modal-exportar-header">
+              <h1>Como você quer seus dados?</h1>
+            </div>
+            <div class="modal-exportar-body">
+              <div class="radio-buttons">
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="JSON" class="data-export-selector" />
+                  <span class="radio-btn">JSON</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="TXT" class="data-export-selector" />
+                  <span class="radio-btn">TXT</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="PDF" class="data-export-selector" />
+                  <span class="radio-btn">PDF</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="XML" class="data-export-selector" />
+                  <span class="radio-btn">XML</span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio" value="MD" class="data-export-selector" />
+                    <span class="radio-btn">MD</span>
+                  </label>
+              </div>
+              <div class="options-buttons">
+                <button class="modal-cancel-export" onclick="fecharModalExportarDados()">
+                  <i class='bx bx-x-circle'></i>
+                </button>
+                <button class="list-export" onclick="exportarDados()">
+                  <i class='bx bx-plus-circle'></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div id="overlay" onclick="fecharModalExportarDados()"></div>
     
+    
+    <script src="js/deleteacc.js"></script>
     <script src="js/sidebar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="js/exportarDados.js"></script>
+    <script src="../../js/FileSaver.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.60/jspdf.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
 
 </html>

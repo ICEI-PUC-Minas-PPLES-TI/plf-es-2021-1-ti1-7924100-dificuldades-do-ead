@@ -1,0 +1,245 @@
+.modal-itens {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 20px;
+    display: none;
+    background-color: var(--white);
+    width: 900px;
+    height: 500px;
+    padding: 20px;
+}
+
+.modal-itens.active {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-itens-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark-blue);
+    border: none;
+}
+
+.modal-itens-icones {
+    font-size: 3rem;
+}
+
+.modal-itens-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-itens-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-itens-body {
+    padding: 10px 15px;
+    overflow-y: scroll;
+}
+
+.item-do-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.item-trash {
+    color: var(--tomato-red);
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
+    border-radius: 10px;
+    background-color: var(--juice-red);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px !important;
+    width: 90%;
+}
+
+.item-dados-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--deep-blue);
+}
+
+.item-dados-conteudo {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.item-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-check input {
+    transform: scale(4);
+}
+
+.item-descricao {
+    display: flex;
+    align-items: flex-start;
+    grid-column: 1;
+    font-size: 1.2rem;
+    min-height: 3rem;
+}
+
+/* NOVO ITEM */
+
+.container-titulo-data {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.titulo-novo-item, .data-novo-item {
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    background-color: rgb(190, 190, 190);
+}
+
+.data-novo-item {
+    width: 40%;
+}
+
+.titulo-novo-item {
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 60%;
+}
+
+.descricao-novo-item {
+    background-color: rgb(190, 190, 190);
+    resize: none;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.botoes-novo-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px 5px;
+}
+
+.criar-novo-item, .cancelar-novo-item {
+    border: none;
+    height: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+.cancelar-novo-item {
+    color: var(--tomato-red);
+    background-color: var(--juice-red);
+}
+
+.criar-novo-item {
+    color: #0e7432;
+    background-color: #74d897;
+}
+
+.cancelar-novo-item:hover {
+    background-color: var(--tomato-red);
+    color: var(--juice-red);
+}
+
+.criar-novo-item:hover {
+    background-color: #0e7432;
+    color: #74d897;
+}
+/*FIm novo item */
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 999;
+}
+
+.options-buttons button {
+    width: 40%;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+
+@media screen and (max-width: 641px) {
+    .modal-itens {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out;
+        display: none;
+        background-color: white;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    .modal-itens.active {
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 1100;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        max-height: 100%;
+        border-radius: 0;
+        padding-top: 50%;
+    }
+    #overlay.active {
+        opacity: 1;
+        pointer-events: all;
+        z-index: 999;
+    }
+}

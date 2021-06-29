@@ -2,27 +2,28 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!--=========BOXICONS===========-->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <!--============================-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!--=========BOXICONS===========-->
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <!--============================-->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
-    <!--==================STYLES======================-->
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/template.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/modal.css">
-    <link rel="stylesheet" href="css/modal-delete.css">
-    <link rel="stylesheet" href="css/modal-editor.css">
-    <!--==============================================-->
-    <title>Listfy</title>
+  <!--==================STYLES======================-->
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/template.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/modal-delete.css">
+  <link rel="stylesheet" href="css/modal-editor.css">
+  <link rel="stylesheet" href="css/modal-itens.css">
+  <!--==============================================-->
+  <title>Listfy</title>
 </head>
 
 <!--
@@ -33,76 +34,76 @@
 
 <body id="body-pd" onload="renderizarConteudo()">
 
-    <!--BArra lateral-->
-    <header class="header" id="header">
-        <div class="header__toggle">
-            <i class='bx bx-menu' id="header-toggle"></i>
-        </div>
-
-        <div class="header__img">
-            <img src="../../icons/account_circle_black_24dp.svg" alt="">
-        </div>
-
-    </header>
-
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div>
-                <div class="logo-sidebar">
-                    <a href="#" class="nav__logo">
-                        <img src="../../icons/listfy-logo-white.svg" alt="">
-                    </a>
-                </div>
-
-                <div class="nav__list">
-                  <a href="../home/home.html" class="nav__link active">
-                    <i class='bx bx-calendar'></i>
-                    <span class="nav__name">Minhas Listas</span>
-                  </a>
-                  <a href="../../../index.html" class="nav__link">
-                    <i class='bx bxs-home'></i>
-                    <span class="nav__name">Tela Inicial</span>
-                  </a>
-                    <a href="../Config-Conta/configconta.html" class="nav__link">
-                        <i class='bx bxs-user-rectangle'></i>
-                        <span class="nav__name">Conta</span>
-                    </a>
-                    <a href="../Sobre/sobre.html" class="nav__link">
-                        <i class='bx bx-question-mark'></i>
-                        <span class="nav__name">Sobre</span>
-                    </a>
-                    <a href="#" class="nav__link">
-                        <i class='bx bxs-donate-heart'></i>
-                        <span class="nav__name">Fazer uma doação</span>
-                    </a>
-
-                    <a href="../FeedBack/feedback.html" class="nav__link">
-                        <i class='bx bxs-chat'></i>
-                        <span class="nav__name">Feedback</span>
-                    </a>
-
-                    <a href="#" class="nav__link">
-                        <i class='bx bx-code-alt'></i>
-                        <span class="nav__name">Repositório</span>
-                    </a>
-                </div>
-            </div>
-
-            <a href="../login/login.html" class="nav__link">
-                <i class='bx bx-log-out nav__icon'></i>
-                <span class="nav__name">Log Out</span>
-            </a>
-        </nav>
+  <!--BArra lateral-->
+  <header class="header" id="header">
+    <div class="header__toggle">
+      <i class='bx bx-menu' id="header-toggle"></i>
     </div>
-    <!--fim da barra lateral-->
 
-    <main class="main">
-        <h1 class="pageTitle">Listas</h1>
+    <div class="header__img">
+      <img src="../../icons/account_circle_black_24dp.svg" alt="">
+    </div>
 
-        <div class="main-content">
-            <div class="main-content-lists">
+  </header>
 
-                <!--LISTA EXPERIMENTAL
+  <div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+      <div>
+        <div class="logo-sidebar">
+          <a href="#" class="nav__logo">
+            <img src="../../icons/listfy-logo-white.svg" alt="">
+          </a>
+        </div>
+
+        <div class="nav__list">
+          <a href="../home/home.html" class="nav__link active">
+            <i class='bx bx-calendar'></i>
+            <span class="nav__name">Minhas Listas</span>
+          </a>
+          <a href="../../../index.html" class="nav__link">
+            <i class='bx bxs-home'></i>
+            <span class="nav__name">Tela Inicial</span>
+          </a>
+          <a href="../Config-Conta/configconta.html" class="nav__link">
+            <i class='bx bxs-user-rectangle'></i>
+            <span class="nav__name">Conta</span>
+          </a>
+          <a href="../Sobre/sobre.html" class="nav__link">
+            <i class='bx bx-question-mark'></i>
+            <span class="nav__name">Sobre</span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class='bx bxs-donate-heart'></i>
+            <span class="nav__name">Fazer uma doação</span>
+          </a>
+
+          <a href="../FeedBack/feedback.html" class="nav__link">
+            <i class='bx bxs-chat'></i>
+            <span class="nav__name">Feedback</span>
+          </a>
+
+          <a href="#" class="nav__link">
+            <i class='bx bx-code-alt'></i>
+            <span class="nav__name">Repositório</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="../login/login.html" class="nav__link">
+        <i class='bx bx-log-out nav__icon'></i>
+        <span class="nav__name">Log Out</span>
+      </a>
+    </nav>
+  </div>
+  <!--fim da barra lateral-->
+
+  <main class="main">
+    <h1 class="pageTitle">Listas</h1>
+
+    <div class="main-content">
+      <div class="main-content-lists">
+
+        <!--LISTA EXPERIMENTAL-->
                 <div class="list" id="my-list-id99" style="background-color:#1dB954 !important;">
                     <div class="hidded-options" id="lista-99">
                         <div class="list-trash" onclick="abrirModalDeletarLista(99)">
@@ -112,146 +113,158 @@
                             <i class='bx bxs-pencil'></i>
                         </div>
                     </div>
-                    <h2 class="listTitle" onclick="">Lista Experimental</h2>
+                    <h2 class="listTitle" onclick="abrirModalItens(99)">Lista Experimental</h2>
                     <i onclick="mostrarMenu(99)" class='bx bx-dots-vertical-rounded menuList'></i>
                 </div>
-                -->
+                
 
-            </div>
-            <div class="add-list-button" onclick="abrirModalNovaLista()">
-                <i class='bx bx-plus-circle'></i>
-            </div>
-        </div>
-
-
-    </main>
-    <!--MODAL PARA CRIAÇÃO DE LISTAS-->
-    <div class="modal" id="modal">
-        <div class="modal-header">
-          <h1>Nova Lista</h1>
-        </div>
-        <div class="modal-body">
-          <div class="section-nome-da-lista">
-            <input type="text" class="nome-da-lista" placeholder="Nome da lista">
-          </div>
-          <div class="radio-buttons">
-            <label class="custom-radio">
-              <input type="radio" name="radio" value="#FFBE0B" class="color-selector" checked />
-              <span class="radio-btn" style="background-color: #FFBE0B">
-              </span>
-            </label>
-            <label class="custom-radio">
-              <input type="radio" name="radio" value="#FF006E" class="color-selector"/>
-              <span class="radio-btn" style="background-color: #FF006E">
-              </span>
-            </label>
-            <label class="custom-radio">
-              <input type="radio" name="radio" value="#8338EC" class="color-selector"/>
-              <span class="radio-btn" style="background-color: #8338EC">
-              </span>
-            </label>
-            <label class="custom-radio">
-              <input type="radio" name="radio" value="#3A86FF" class="color-selector"/>
-              <span class="radio-btn" style="background-color: #3A86FF">
-              </span>
-            </label>
-          </label>
-          <label class="custom-radio">
-            <input type="radio" name="radio" value="#1Db954" class="color-selector"/>
-            <span class="radio-btn" style="background-color: #1Db954">
-            </span>
-          </label>
-          </div>
-          <div class="options-buttons">
-            <button class="modal-closer" onclick="novaLista(false)">
-              <i class='bx bx-x-circle' ></i>
-            </button>
-            <button class="list-creator" onclick="novaLista(true)">
-              <i class='bx bx-plus-circle' ></i>
-            </button>
-          </div>
-        </div>
       </div>
-      <!--FIM DO MODAL PARA CRIAÇÃO DE LISTAS-->
-
-      <!--MODAL PARA EXCLUSÃO DE LISTAS-->
-      <div class="modal-delete" id="modal-delete">
-        <div class="modal-header">
-          <h1>Quer mesmo apagar essa lista?</h1>
-        </div>
-        <div class="modal-body">
-          <div class="options-buttons">
-            <button class="modal-cancel" onclick="deleteLista(false)">
-                <i class='bx bx-arrow-back' ></i>
-                <d>Não</d>
-            </button>
-            <button class="list-deleter" onclick="deleteLista(true)">
-                <i class='bx bxs-trash' ></i>
-                <b>Sim</b>
-            </button>
-          </div>
-        </div>
+      <div class="add-list-button" onclick="abrirModalNovaLista()">
+        <i class='bx bx-plus-circle'></i>
       </div>
-      <!--FIM DO MODAL PARA EXCLUSÃO DE LISTAS-->
+    </div>
 
-      <!--MODAL PARA EDIÇÂO DE LISTAS-->
-    <div class="modal-editor" id="modal-editor">
-        <div class="modal-editor-header">
-          <h1>Editar Lista</h1>
-        </div>
-        <div class="modal-editor-body">
-          <div class="section-nome-da-lista">
-            <input type="text" class="novo-nome-da-lista" placeholder="Digite um novo nome para a lista">
-          </div>
-          <div class="radio-buttons">
-            <label class="custom-radio">
-              <input type="radio" name="radio" value="#FFBE0B" class="color-editor-selector"/>
-              <span class="radio-btn" style="background-color: #FFBE0B">
-              </span>
-            </label>
-            <label class="custom-radio">
-              <input type="radio" name="radio" value="#FF006E" class="color-editor-selector"/>
-              <span class="radio-btn" style="background-color: #FF006E">
-              </span>
-            </label>
-            <label class="custom-radio">
-              <input type="radio" name="radio" value="#8338EC" class="color-editor-selector"/>
-              <span class="radio-btn" style="background-color: #8338EC">
-              </span>
-            </label>
-            <label class="custom-radio">
-              <input type="radio" name="radio" value="#3A86FF" class="color-editor-selector"/>
-              <span class="radio-btn" style="background-color: #3A86FF">
-              </span>
-            </label>
-          </label>
-          <label class="custom-radio">
-            <input type="radio" name="radio" value="#1Db954" class="color-editor-selector"/>
-            <span class="radio-btn" style="background-color: #1Db954">
-            </span>
-          </label>
-          </div>
-          <div class="options-buttons">
-            <button class="modal-cancel-edit" onclick="editarLista(false)">
-              <i class='bx bx-x-circle' ></i>
-            </button>
-            <button class="list-Editor" onclick="editarLista(true)">
-              <i class='bx bx-plus-circle' ></i>
-            </button>
-          </div>
-        </div>
+
+  </main>
+  <!--MODAL PARA CRIAÇÃO DE LISTAS-->
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h1>Nova Lista</h1>
+    </div>
+    <div class="modal-body">
+      <div class="section-nome-da-lista">
+        <input type="text" class="nome-da-lista" placeholder="Nome da lista">
       </div>
-      <!--FIM DO MODAL PARA EDIÇÂO DE LISTAS-->
+      <div class="radio-buttons">
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#FFBE0B" class="color-selector" checked />
+          <span class="radio-btn" style="background-color: #FFBE0B">
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#FF006E" class="color-selector" />
+          <span class="radio-btn" style="background-color: #FF006E">
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#8338EC" class="color-selector" />
+          <span class="radio-btn" style="background-color: #8338EC">
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#3A86FF" class="color-selector" />
+          <span class="radio-btn" style="background-color: #3A86FF">
+          </span>
+        </label>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#1Db954" class="color-selector" />
+          <span class="radio-btn" style="background-color: #1Db954">
+          </span>
+        </label>
+      </div>
+      <div class="options-buttons">
+        <button class="modal-closer" onclick="novaLista(false)">
+          <i class='bx bx-x-circle'></i>
+        </button>
+        <button class="list-creator" onclick="novaLista(true)">
+          <i class='bx bx-plus-circle'></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--FIM DO MODAL PARA CRIAÇÃO DE LISTAS-->
+
+  <!--MODAL PARA EXCLUSÃO DE LISTAS-->
+  <div class="modal-delete" id="modal-delete">
+    <div class="modal-header">
+      <h1>Quer mesmo apagar essa lista?</h1>
+    </div>
+    <div class="modal-body">
+      <div class="options-buttons">
+        <button class="modal-cancel" onclick="deleteLista(false)">
+          <i class='bx bx-arrow-back'></i>
+          <d>Não</d>
+        </button>
+        <button class="list-deleter" onclick="deleteLista(true)">
+          <i class='bx bxs-trash'></i>
+          <b>Sim</b>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--FIM DO MODAL PARA EXCLUSÃO DE LISTAS-->
+
+  <!--MODAL PARA EDIÇÂO DE LISTAS-->
+  <div class="modal-editor" id="modal-editor">
+    <div class="modal-editor-header">
+      <h1>Editar Lista</h1>
+    </div>
+    <div class="modal-editor-body">
+      <div class="section-nome-da-lista">
+        <input type="text" class="novo-nome-da-lista" placeholder="Digite um novo nome para a lista">
+      </div>
+      <div class="radio-buttons">
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#FFBE0B" class="color-editor-selector" />
+          <span class="radio-btn" style="background-color: #FFBE0B">
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#FF006E" class="color-editor-selector" />
+          <span class="radio-btn" style="background-color: #FF006E">
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#8338EC" class="color-editor-selector" />
+          <span class="radio-btn" style="background-color: #8338EC">
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#3A86FF" class="color-editor-selector" />
+          <span class="radio-btn" style="background-color: #3A86FF">
+          </span>
+        </label>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio" value="#1Db954" class="color-editor-selector" />
+          <span class="radio-btn" style="background-color: #1Db954">
+          </span>
+        </label>
+      </div>
+      <div class="options-buttons">
+        <button class="modal-cancel-edit" onclick="editarLista(false)">
+          <i class='bx bx-x-circle'></i>
+        </button>
+        <button class="list-Editor" onclick="editarLista(true)">
+          <i class='bx bx-plus-circle'></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--FIM DO MODAL PARA EDIÇÂO DE LISTAS-->
+
+  <!--MODAL DE ITENS DA LISTA-->
+  <div class="modal-itens" id="modal-itens">
+    
+  </div>
+  <!--FIM DO MODAL DE ITENS DA LISTA-->
 
 
 
-      <div id="overlay"></div>
-    <script src="js/iniciarSessao.js"></script>
-    <script src="js/sidebar.js"></script>
-    <script src="js/controleDeListas.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-        crossorigin="anonymous"></script>
+
+  <div id="overlay"></div>
+  <script src="js/iniciarSessao.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/controleDeListas.js"></script>
+  <script src="js/controleDeItens.js"></script>
+  <script src="js/novoItem.js"></script>
+  <script src="../../js/gerador.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
 
 
 </html>

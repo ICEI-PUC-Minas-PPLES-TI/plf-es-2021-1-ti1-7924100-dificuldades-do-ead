@@ -172,14 +172,14 @@ a {
 }
 
 
-/*Active links*/
+/*active-siderbar links*/
 
-.active {
+.active-siderbar {
     color: var(--white-color);
     border-radius: 0 5px 5px 0;
 }
 
-.active::before {
+.active-siderbar::before {
     content: '';
     position: absolute;
     left: 0;

@@ -60,6 +60,11 @@
     margin-bottom: 20px;
     grid-row: 2 / 2;
     grid-column: 1 / 1;
+    transition: 100ms;
+}
+.listTitle:hover{
+    border-radius: 8px;
+    background-color: #00000012;
 }
 
 .menuList {

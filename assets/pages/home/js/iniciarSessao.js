@@ -8,6 +8,7 @@ var listas = document.querySelector("div.main-content-lists");
     que acabou de fazer login
 */
 function renderizarConteudo(){
+    console.log('Carregando a pagina')
     var dadosDasListas; // variavel que armazena somente a lista de listas
     var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
     var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
@@ -49,7 +50,7 @@ function renderizarConteudo(){
                         <i class='bx bxs-pencil'></i>
                     </div>
                 </div>
-                <h2 class="listTitle">${dadosDasListas.listas[j].lista_nome}</h2>
+                <h2 class="listTitle" onclick="abrirModalItens(${dadosDasListas.listas[j].lista_id})">${dadosDasListas.listas[j].lista_nome}</h2>
                 <i onclick="mostrarMenu(${dadosDasListas.listas[j].lista_id})" class='bx bx-dots-vertical-rounded menuList'></i>
             </div>
             `);
