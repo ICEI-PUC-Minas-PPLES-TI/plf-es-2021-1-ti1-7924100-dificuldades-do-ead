@@ -140,8 +140,29 @@ function exportarCSV() {
 
 }
 function exportarMD() {
-    console.log('Exportando...');
-
+    console.log('Exportando em MD...');
+    let dadosUsuario = localizarUsuario();
+    let db = JSON.parse(localStorage.getItem('db'));
+    let conteudoCabecalho = `# ${db.usuarios[dadosUsuario.indexDoUsuario].Nome}\n## ==========LISTAS==========\n`;
+    let conteudo = [conteudoCabecalho];
+    let listasDoUsuario = db.listasUsuarios[dadosUsuario.indexDoConjuntoDeListas].listas
+    for (let i = 0; i < listasDoUsuario.length; i++) {
+        let estruturaLista = `\n### Titulo da Lista: ${listasDoUsuario[i].lista_nome}\nCor da lista: ${listasDoUsuario[i].lista_cor}\nItens da lista:\n`
+        let listaItens = [];
+        for (let j = 0; j < listasDoUsuario[i].lista_itens.length; j++) {
+            if (listasDoUsuario[i].lista_itens[j].is_checked) {
+                let listaEstruturaItem = `\n\n**Tarefa:** - [ ] ${listasDoUsuario[i].lista_itens[j].titulo}\n\n**descricao:** ${listasDoUsuario[i].lista_itens[j].descricao}\n\n**data:** ${listasDoUsuario[i].lista_itens[j].data}\n\n`
+                listaItens.push(listaEstruturaItem);
+            } else {
+                let listaEstruturaItem = `\n\n**Tarefa:** [ ] ${listasDoUsuario[i].lista_itens[j].titulo}\n\n**descricao:** ${listasDoUsuario[i].lista_itens[j].descricao}\n\n**data:** ${listasDoUsuario[i].lista_itens[j].data}\n\n`
+                listaItens.push(listaEstruturaItem);
+            }
+        }
+        listaItens.join(",")
+        let preConteudo = `${estruturaLista}\n${listaItens}\n-------------------\n`;
+        conteudo.push(preConteudo);
+    }
+    downloadDados("dados.md", conteudo)
 }
 
 function downloadDados(nomeArquivo, conteudo) {
