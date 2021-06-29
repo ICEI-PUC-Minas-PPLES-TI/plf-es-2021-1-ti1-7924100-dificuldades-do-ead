@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
     <!--==================STYLES======================-->
-    <link rel="stylesheet" href="../Config-Conta/css/configconta.css">
+    <link rel="stylesheet" href="css/configconta.css">
+    <link rel="stylesheet" href="css/modalExportarDados.css">
     <link rel="stylesheet" href="../home/css/sidebar.css" />
     <link rel="stylesheet" href="../home/css/styles.css" />
     <link rel="stylesheet" href="../home/css/template.css" />
@@ -120,17 +121,63 @@
             </label>
             <label class="btn-delete-account" for="Delete">
                 <i class="fas fa-trash-alt icon-delete-account edit"></i>
-                <input onclick="deleteAcc()" type="button" value="Deletar Conta">
+                <input id="Delete" onclick="deleteAcc()" type="button" value="Deletar Conta">
             </label>
-            <script src="js/deleteacc.js"></script>
-
+            <label class="btn-exportar-dados" for="Exportar">
+                <i class='bx bxs-file-export icon-exportar-dados'></i>
+                <input onclick="abrirModalExportarDados()" type="button" value="Exportar meus dados">
+            </label>
+            
         </form>
-
-
-    </main>
-
-
+        <div class="modal-exportar" id="modal-expotar">
+            <div class="modal-exportar-header">
+              <h1>Como você quer seus dados?</h1>
+            </div>
+            <div class="modal-exportar-body">
+              <div class="radio-buttons">
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="JSON" class="color-exportar-selector" />
+                  <span class="radio-btn">JSON</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="TXT" class="color-exportar-selector" />
+                  <span class="radio-btn">TXT</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="PDF" class="color-exportar-selector" />
+                  <span class="radio-btn">PDF</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="CSV" class="color-exportar-selector" />
+                  <span class="radio-btn">CSV</span>
+                </label>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="radio" value="XML" class="color-exportar-selector" />
+                  <span class="radio-btn">XML</span>
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="radio" value="MD" class="color-exportar-selector" />
+                    <span class="radio-btn">MD</span>
+                  </label>
+              </div>
+              <div class="options-buttons">
+                <button class="modal-cancel-export" onclick="">
+                  <i class='bx bx-x-circle'></i>
+                </button>
+                <button class="list-export" onclick="">
+                  <i class='bx bx-plus-circle'></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div id="overlay" onclick="fecharModalExportarDados()"></div>
+    
+    
+    <script src="js/deleteacc.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/exportarDados.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
