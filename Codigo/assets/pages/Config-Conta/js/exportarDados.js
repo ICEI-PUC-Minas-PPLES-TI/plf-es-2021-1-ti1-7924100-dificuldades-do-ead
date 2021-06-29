@@ -1,3 +1,8 @@
+/**
+ * Funções para abertura e fechamento do 
+ * modal de exportação de dados
+ */
+/*========================================================================*/
 function abrirModalExportarDados() {
     let modal = document.querySelector('div.modal-exportar'); // Selecionando o modal de itens escondido no HTML
     let overlay = document.querySelector('div#overlay'); // Selecionando o overlay que tambem está escondido
@@ -13,7 +18,15 @@ function fecharModalExportarDados() {
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
+/*========================================================================*/
 
+
+/**
+ *Essa função exporta os dados
+ *ao ser pressionado o botão de confirmação.
+ *Ela detecta o formato a partir dos input de
+ *tipo radio checkados no HTML.
+ */
 function exportarDados() {
     var dataFormatRadios = document.querySelectorAll('input.data-export-selector');
     let formatoDeExportacao;
@@ -23,7 +36,6 @@ function exportarDados() {
             break;
         }
     }
-
     switch (formatoDeExportacao) {
         case 'JSON':
             exportarJSON();
@@ -45,6 +57,11 @@ function exportarDados() {
             break;
     }
 };
+
+/**
+ *FUNÇÃO QUE EXPORTA EM JSON
+ *
+ */
 function exportarJSON() {
     console.log('Exportando em JSON...');
     let dadosUsuario = localizarUsuario();
@@ -57,6 +74,10 @@ function exportarJSON() {
     downloadDados("Dados.json", conteudoJSON);
 }
 
+/**
+ *FUNÇÃO QUE EXPORTA EM TXT
+ *
+ */
 function exportarTXT() {
     console.log('Exportando em TXT...');
     let dadosUsuario = localizarUsuario();
@@ -82,10 +103,13 @@ function exportarTXT() {
     }
     downloadDados("dados.txt", conteudo)
 }
+
+/**
+ *FUNÇÃO PARA EXPORTAÇÃO DE PDF
+ *
+ */
 function exportarPDF() {
-
     console.log('Exportando em PDF...');
-
     let dadosUsuario = localizarUsuario();
     let db = JSON.parse(localStorage.getItem('db'));
     let conteudoCabecalho = `${db.usuarios[dadosUsuario.indexDoUsuario].Nome}\n==========LISTAS==========\n`;
@@ -116,6 +140,11 @@ function exportarPDF() {
     doc.save("dados.pdf");
 
 }
+
+/**
+ *fUNÇÃO PRINCIPAL DE EXPORTAÇÃO EM XML
+ *
+ */
 function exportarXML() {
     console.log('Exportando em XML...');
     let dadosUsuario = localizarUsuario();
@@ -128,6 +157,10 @@ function exportarXML() {
     downloadDados("dados.xml", conteudoXML);
 }
 
+/**
+ *FUNÇÃO QUE EXPORTA OS DADOS EM MARKDOWN
+ *
+ */
 function exportarMD() {
     console.log('Exportando em MD...');
     let dadosUsuario = localizarUsuario();
@@ -154,6 +187,14 @@ function exportarMD() {
     downloadDados("dados.md", conteudo)
 }
 
+/**
+ *Essa função é utilizada uma vez para cada exportação.
+ *Ela é responsavel por fazer o download do arquivo utilizando uma biblioteca chamada 
+ *FILESAVER.js
+ *
+ * @param {string} nomeArquivo - Uma string com nome e extensão do arquivo a ser baixado
+ * @param {string} conteudo - O conteudo do arquivo. ( trate de tratar e frmatar a strinda da maneira correta para grava-la no arquivo)
+ */
 function downloadDados(nomeArquivo, conteudo) {
     var blob = new Blob([conteudo], {
         type: "sh/plain;charset=utf-8"
@@ -162,6 +203,13 @@ function downloadDados(nomeArquivo, conteudo) {
     saveAs(blob, nomeArquivo);
 }
 
+/**
+ *Essa função recebe um objeto javascript e o transforma em XML
+ *e retorna esse XML como string
+ *
+ * @param {objeto} obj - Objeto javascript a ser transformado em XML ( é objeto mesmo, não precisa de stringify)
+ * @return {string} - string que contem os dados em forma e marcação de XML
+ */
 function converterParaXML(obj) {
     var xml = '';
     for (var prop in obj) {
@@ -184,6 +232,13 @@ function converterParaXML(obj) {
     return xml;
 }
 
+/**
+ *Essa função é umtilitário para a busca de alguns dados obre o usuário
+ *como o index de suas informações no array de usuários, seu id e o
+ *index do seu conjunto de listas no array de listasUsuários do localstorage
+ *
+ * @return {objeto} - um objeto que contem o id, index do usuário e o index do seu conjunto de listas.
+ */
 function localizarUsuario() {
     let db = JSON.parse(localStorage.getItem('db'))
     let usuario_id = db.usuarioLogadoAtualmente;
