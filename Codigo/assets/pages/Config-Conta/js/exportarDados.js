@@ -37,9 +37,6 @@ function exportarDados() {
         case 'XML':
             exportarXML();
             break;
-        case 'CSV':
-            exportarCSV();
-            break;
         case 'MD':
             exportarMD();
             break;
@@ -130,15 +127,7 @@ function exportarXML() {
     let conteudoXML = converterParaXML(conteudo)
     downloadDados("dados.xml", conteudoXML);
 }
-function exportarCSV() {
-    console.log('Exportando em CSV...');
-    let dadosUsuario = localizarUsuario();
-    let db = JSON.parse(localStorage.getItem('db'));
-    let conteudo = [];
-    let conteudoJSON = JSON.stringify(conteudo);
 
-
-}
 function exportarMD() {
     console.log('Exportando em MD...');
     let dadosUsuario = localizarUsuario();
