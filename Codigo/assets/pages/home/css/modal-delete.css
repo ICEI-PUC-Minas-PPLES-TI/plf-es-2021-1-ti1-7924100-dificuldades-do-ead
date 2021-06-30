@@ -13,12 +13,7 @@
     --dark-blue: #000714;
 }
 
-
-/*=========================================================================*/
-/*MODA DE CRIAÇÃO DE LISTAS
-/*=========================================================================*/
-
-.modal {
+.modal-delete {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -31,7 +26,7 @@
     max-width: 80%;
 }
 
-.modal.active {
+.modal-delete.active {
     transform: translate(-50%, -50%) scale(1);
     z-index: 1100;
     display: flex;
@@ -40,7 +35,7 @@
     justify-content: space-around;
 }
 
-.modal-header {
+.modal-delete-header {
     padding: 10px 15px;
     display: flex;
     justify-content: center;
@@ -49,12 +44,12 @@
     border: none;
 }
 
-.modal-header .title {
+.modal-delete-header .title {
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-.modal-header .close-button {
+.modal-delete-header .close-button {
     cursor: pointer;
     border: none;
     outline: none;
@@ -85,7 +80,7 @@
     padding-left: 10px;
 }
 
-.modal-body {
+.modal-delete-body {
     padding: 10px 15px;
 }
 
@@ -108,37 +103,6 @@
     z-index: 999;
 }
 
-.radio-buttons {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.custom-radio input {
-    display: none;
-}
-
-.radio-btn {
-    margin: 10px;
-    width: 40px;
-    height: 40px;
-    border: 3px solid transparent;
-    display: inline-block;
-    border-radius: 10px;
-    position: relative;
-    text-align: center;
-    box-shadow: 0 0 20px #c3c3c367;
-    cursor: pointer;
-}
-
-
-
-
-.custom-radio input:checked+.radio-btn {
-    border: 5px solid #fff;
-    box-shadow: 0 0 2px #000;
-}
-
 .options-buttons {
     display: flex;
     align-items: center;
@@ -159,28 +123,28 @@
     border: none;
 }
 
-.modal-closer {
+.modal-cancel {
+    color: var(--dark-grey);
+    background-color: var(--grey);
+}
+
+.list-deleter {
     color: var(--tomato-red);
     background-color: var(--juice-red);
 }
 
-.list-creator {
-    color: #0e7432;
-    background-color: #74d897;
+.modal-cancel:hover {
+    background-color: var(--dark-grey);
+    color: var(--grey);
 }
 
-.modal-closer:hover {
+.list-deleter:hover {
     background-color: var(--tomato-red);
     color: var(--juice-red);
 }
 
-.list-creator:hover {
-    background-color: #0e7432;
-    color: #74d897;
-}
-
 @media screen and (max-width: 641px) {
-    .modal {
+    .modal-delete {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -192,7 +156,7 @@
         max-width: 100%;
         border-radius: 0;
     }
-    .modal.active {
+    .modal-delete.active {
         transform: translate(-50%, -50%) scale(1);
         z-index: 1100;
         display: flex;

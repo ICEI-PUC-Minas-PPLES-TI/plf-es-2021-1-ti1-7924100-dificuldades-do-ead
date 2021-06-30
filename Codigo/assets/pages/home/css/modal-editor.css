@@ -13,12 +13,7 @@
     --dark-blue: #000714;
 }
 
-
-/*=========================================================================*/
-/*MODA DE CRIAÇÃO DE LISTAS
-/*=========================================================================*/
-
-.modal {
+.modal-editor {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -31,7 +26,7 @@
     max-width: 80%;
 }
 
-.modal.active {
+.modal-editor.active {
     transform: translate(-50%, -50%) scale(1);
     z-index: 1100;
     display: flex;
@@ -40,7 +35,7 @@
     justify-content: space-around;
 }
 
-.modal-header {
+.modal-editor-header {
     padding: 10px 15px;
     display: flex;
     justify-content: center;
@@ -49,12 +44,12 @@
     border: none;
 }
 
-.modal-header .title {
+.modal-editor-header .title {
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-.modal-header .close-button {
+.modal-editor-header .close-button {
     cursor: pointer;
     border: none;
     outline: none;
@@ -70,7 +65,7 @@
     align-content: center;
 }
 
-.nome-da-lista {
+.novo-nome-da-lista {
     background-color: var(--grey);
     border: none;
     border-radius: 10px;
@@ -85,7 +80,7 @@
     padding-left: 10px;
 }
 
-.modal-body {
+.modal-editor-body {
     padding: 10px 15px;
 }
 
@@ -159,28 +154,28 @@
     border: none;
 }
 
-.modal-closer {
+.modal-cancel-edit {
     color: var(--tomato-red);
     background-color: var(--juice-red);
 }
 
-.list-creator {
+.list-editor {
     color: #0e7432;
     background-color: #74d897;
 }
 
-.modal-closer:hover {
+.modal-cancel-edit:hover {
     background-color: var(--tomato-red);
     color: var(--juice-red);
 }
 
-.list-creator:hover {
+.list-editor:hover {
     background-color: #0e7432;
     color: #74d897;
 }
 
 @media screen and (max-width: 641px) {
-    .modal {
+    .modal-editor {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -192,7 +187,7 @@
         max-width: 100%;
         border-radius: 0;
     }
-    .modal.active {
+    .modal-editor.active {
         transform: translate(-50%, -50%) scale(1);
         z-index: 1100;
         display: flex;
@@ -231,7 +226,7 @@
         font-weight: bold;
         border: none;
     }
-    .nome-da-lista {
+    .novo-nome-da-lista {
         background-color: var(--grey);
         border: none;
         border-radius: 10px;
