@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
 *{
     margin: 0;
     border: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 body{
-    font-weight: bold;
     display: flex;
     min-height: 50vh;
     align-items: flex-start;
@@ -40,7 +39,6 @@ main form input{
     width: 100px;
     height: 40px;
     border-radius: 8px;
-    font-weight: bold;
 }
 .icon-log-out{
     display: flex;
