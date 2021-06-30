@@ -45,7 +45,93 @@ h6 a {
 	border-bottom-color: transparent;
 }
 
+/*=========LIST==========*/
 
+.list {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+.hidded-options{
+    display:none;
+}
+.list-options{
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 150px;
+    height: 50px;
+    justify-content: space-around;
+    margin: 25px auto;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #00000012;
+    border-radius: 5px;
+}
+.list-options .list-trash:hover{
+    color: #FF4C4C;
+}
+.list-options .list-edit:hover{
+    color: #fff;
+}
+.listTitle {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+    transition: 100ms;
+	color: #081732;
+}
+.listTitle:hover{
+    border-radius: 8px;
+    background-color: #00000012;
+}
+
+.menuList {
+    margin: 20px 20px 0 0;
+    font-size: 2rem;
+    border-radius: 50%;
+	padding: 10px;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-column: 2 / 2;
+}
+
+.menuList:hover {
+    background-color: #00000012;
+}
+
+.add-list-button{
+    width: 300px;
+    height: 300px;
+    background-color: #AAA;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-list-button i{
+    font-size: 10rem;
+}
+.add-list-button:hover{
+    background-color: #CCC;
+    color: #444;
+    cursor: pointer;
+}
+/*========================*/
 
 
 /*Linhas no Menu*/
