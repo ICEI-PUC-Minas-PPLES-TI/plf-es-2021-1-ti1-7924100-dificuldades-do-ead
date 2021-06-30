@@ -212,7 +212,7 @@
     border: none;
 }
 
-@media screen and (max-width: 641px) {
+@media screen and (max-width: 800px) {
     .modal-itens {
         position: fixed;
         top: 50%;
@@ -224,6 +224,7 @@
         width: 100%;
         max-width: 100%;
         border-radius: 0;
+        padding: 0;
     }
     .modal-itens.active {
         transform: translate(-50%, -50%) scale(1);
@@ -232,10 +233,79 @@
         height: 100%;
         width: 100%;
         flex-direction: column;
-        justify-content: space-around;
         max-height: 100%;
         border-radius: 0;
-        padding-top: 50%;
+        padding-top: 100px;
+    }
+    .modal-itens-header {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: var(--dark-blue);
+        border: none;
+    }
+    .modal-itens-icones {
+        font-size: 3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .modal-itens-header h2 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .modal-itens-body {
+        padding:0;
+        overflow-y: scroll;
+    }
+    .item-do-modal {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin: 0 10px 20px;
+        padding: 0;
+    }
+    .item-dados {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 0 10px 10px 0 !important;
+        width: 90%;
+    }
+    .item-dados-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+        align-items: left;
+        color: var(--deep-blue);
+    }
+    .item-trash {
+        color: var(--tomato-red);
+        font-size: 50px;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        background-color: var(--juice-red);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* NOVO ITEM */
+    .container-novo-item{
+        margin:0 30px;
+    }
+    .titulo-novo-item, .data-novo-item {
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        background-color: rgb(190, 190, 190);
     }
     #overlay.active {
         opacity: 1;
