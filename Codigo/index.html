@@ -52,7 +52,7 @@
     <!--Exemplo da lista-->
     <h1 class="text-center text-integrantes text-white">Exemplo Lista</h1>
     <div class="container lista_area">
-        
+
     </div>
     <!--Fim exemplo Lista-->
     <!--Cards-->
@@ -64,19 +64,21 @@
                 <div class="content">
                     <h2>01</h2>
                     <h3>Integrante 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum delectus repellat esse molestiae suscipit quia?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum
+                        delectus repellat esse molestiae suscipit quia?</p>
                     <i class="fab fa-instagram instagram"></i>
                     <i class="fab fa-facebook-square facebook"></i>
                 </div>
             </div>
         </div>
-        
+
         <div class="card">
             <div class="box">
                 <div class="content">
                     <h2>02</h2>
                     <h3>Integrante 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum delectus repellat esse molestiae suscipit quia?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum
+                        delectus repellat esse molestiae suscipit quia?</p>
                     <i class="fab fa-instagram instagram"></i>
                     <i class="fab fa-facebook-square facebook"></i>
                 </div>
@@ -87,7 +89,8 @@
                 <div class="content">
                     <h2>03</h2>
                     <h3>Integrante 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum delectus repellat esse molestiae suscipit quia?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum
+                        delectus repellat esse molestiae suscipit quia?</p>
                     <i class="fab fa-instagram instagram"></i>
                     <i class="fab fa-facebook-square facebook"></i>
                 </div>
@@ -98,7 +101,8 @@
                 <div class="content">
                     <h2>04</h2>
                     <h3>Integrante 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum delectus repellat esse molestiae suscipit quia?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum
+                        delectus repellat esse molestiae suscipit quia?</p>
                     <i class="fab fa-instagram instagram"></i>
                     <i class="fab fa-facebook-square facebook"></i>
                 </div>
@@ -124,19 +128,30 @@
     <script src="assets/data/DADOS.js"></script>
 
     <script>
+        var HASH_DE_VERSAO = 'd4cc1a62a62b04f818ebab73340160f7'
         var bancogravado;
-        bancogravado = localStorage.getItem('bancogravado');
-        var isbanco = JSON.parse(bancogravado)
-        console.log(typeof(bancogravado));
-        console.log(typeof(isbanco));
-        console.log(isbanco)
-        if (isbanco == null) {
+        var hashDeVersao = localStorage.getItem('hashDeVersao');
+        if (hashDeVersao == HASH_DE_VERSAO) {
+            bancogravado = localStorage.getItem('bancogravado');
+            var isbanco = JSON.parse(bancogravado)
+            console.log(typeof (bancogravado));
+            console.log(typeof (isbanco));
+            console.log(isbanco)
+            if (isbanco == null) {
+                localStorage.setItem('db', JSON.stringify(db));
+                bancogravado = 1;
+                localStorage.setItem('bancogravado', JSON.stringify(bancogravado));
+                console.log(db);
+            } else {
+                console.log("O banco esta gravado");
+            }
+        } else {
+            localStorage.setItem('hashDeVersao', HASH_DE_VERSAO);
+            console.log('A sua versão da estrutra de dados estava defasada, vamos atualizar');
             localStorage.setItem('db', JSON.stringify(db));
             bancogravado = 1;
             localStorage.setItem('bancogravado', JSON.stringify(bancogravado));
             console.log(db);
-        } else {
-            console.log("O banco esta gravado");
         }
     </script>
 </body>
