@@ -37,13 +37,16 @@
     font-weight: bold;
 }
 
-.modal-itens-header .close-button {
-    cursor: pointer;
+.modal-itens-header {
     border: none;
     outline: none;
     background: none;
     font-size: 1.25rem;
     font-weight: bold;
+}
+
+.modal-itens-icones{
+    cursor: pointer;
 }
 
 .modal-itens-body {
@@ -60,6 +63,7 @@
 }
 
 .item-trash {
+    cursor: pointer;
     color: var(--tomato-red);
     width: 60px;
     height: 60px;
@@ -100,6 +104,7 @@
 }
 
 .item-check input {
+    cursor: pointer;
     transform: scale(4);
 }
 
