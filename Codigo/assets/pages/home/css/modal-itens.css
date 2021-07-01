@@ -69,6 +69,7 @@
 }
 
 .item-pencil {
+    cursor: pointer;
     color: #333;
     width: 60px;
     height: 60px;
