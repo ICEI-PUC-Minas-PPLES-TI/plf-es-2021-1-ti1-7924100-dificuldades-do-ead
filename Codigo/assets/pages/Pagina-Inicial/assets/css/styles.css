@@ -3,7 +3,7 @@
 :root {
   --hue-color: 190;
   --bg-box-shadow: #87CEFA;
-  --bs-font-family: 'Open Sans', sans-serif;
+  --bs-font-family: 'Roboto', sans-serif;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 20%, 70%);
   --text-color-light: hsl(var(--hue-color), 8%, 60%);
@@ -27,7 +27,7 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
