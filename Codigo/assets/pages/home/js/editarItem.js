@@ -29,8 +29,8 @@ function editarItem(item_id){
             <textarea name="" id="" cols="30" rows="4" class="descricao-novo-item"></textarea>
         </div>
         <div class="botoes-novo-item">
-            <button class="cancelar-novo-item" onclick="cancelarEdicao()"><i class='bx bx-x-circle'></i></button>
-            <button class="criar-novo-item" onclick="salvarEdicao()"><i class='bx bx-plus-circle'></i></button>
+            <button class="cancelar-novo-item" onclick="cancelarEdicao()"><i class='bx bx-x-circle'></i>Cancelar</button>
+            <button class="criar-novo-item" onclick="salvarEdicao(${item_id})"><i class='bx bx-plus-circle'></i>Salvar</button>
         </div>
     </div>`
 
@@ -46,7 +46,35 @@ function editarItem(item_id){
 
 
     document.querySelector('input.titulo-novo-item').value = db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].titulo
-    document.querySelector('input.data-novo-item').value = db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].data
-    document.querySelector('textarea.container-textarea').value = db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].descricao
+    document.querySelector('input.data-novo-item').value = db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].data.toString().substr(0, 10).split('/').reverse().join('-')
+    document.querySelector('textarea.descricao-novo-item').value = db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].descricao
+
+}
+
+function salvarEdicao(item_id) {
+    var db = JSON.parse(localStorage.getItem('db'));
+    let lista_id = Number(localStorage.getItem('itensRequeridosId'));
+    let indexDoConjuntoDeListas = Number(localStorage.getItem('indexDaListaDoUsuario'));
+    let indexLista = qualOIndexDaLista(lista_id, indexDoConjuntoDeListas);
+    let indexItem = qualOIndexDoItem(item_id, indexLista, indexDoConjuntoDeListas)
+
+    let novosDados = {
+        titulo: document.querySelector('input.titulo-novo-item').value.toString(),
+        data: document.querySelector('input.data-novo-item').value.toString().substr(0, 10).split('-').reverse().join('/'),
+        descricao: document.querySelector('textarea.descricao-novo-item').value.toString(),
+    }
+    if(novosDados.titulo == ""){
+        alert('Dê um nome para a sua nova tarefa 😶');
+    }else if(novosDados.data == ""){
+        alert('Defina uma data para sua tarefa 🗓️')
+    }else{
+        db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].titulo = novosDados.titulo;
+        db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].data = novosDados.data;
+        db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].descricao = novosDados.descricao;
+        localStorage.setItem('db', JSON.stringify(db));
+        console.log('Item criado com sucesso');
+        console.log(db);
+        carregarItens();
+    }
 
 }

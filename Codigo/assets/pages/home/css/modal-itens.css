@@ -58,12 +58,14 @@
     padding: 0 20px;
     margin-bottom: 20px;
 }
-.opcoes-de-item{
+
+.opcoes-de-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.item-pencil{
+
+.item-pencil {
     color: #333;
     width: 60px;
     height: 60px;
@@ -74,8 +76,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
+
 .item-trash {
     color: var(--tomato-red);
     width: 60px;
@@ -177,6 +180,7 @@
     text-align: center;
     border-radius: 10px;
 }
+
 .cancelar-novo-item {
     color: var(--tomato-red);
     background-color: var(--juice-red);
@@ -196,6 +200,7 @@
     background-color: #0e7432;
     color: #74d897;
 }
+
 /*FIm novo item */
 
 #overlay {
@@ -270,28 +275,32 @@
         flex-direction: row;
         flex-wrap: nowrap;
     }
-    
     .modal-itens-header h2 {
         font-size: 3rem;
         font-weight: bold;
     }
     .modal-itens-body {
-        padding:0;
+        padding: 0;
         overflow-y: scroll;
+        padding: 0 2rem;
     }
     .item-do-modal {
-        display: grid;
+        display: grid !important;
+        justify-content:unset;
+        align-items: unset;
         grid-template-columns: 1fr 3fr;
-        margin: 0 10px 20px;
+        margin: 0 0px 20px;
         padding: 0;
     }
     .item-dados {
+        grid-column: 2;
+        flex:1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 20px;
         border-radius: 0 10px 10px 0 !important;
-        width: 90%;
+        width: 100%;
     }
     .item-dados-header {
         display: flex;
@@ -301,22 +310,39 @@
         align-items: left;
         color: var(--deep-blue);
     }
+    .opcoes-de-item {
+        grid-column: 1 !important;
+        flex: 1;
+    }
+    .item-pencil {
+        color: #333;
+        font-size: 50px;
+        border-radius: 10px 0 0 0px;
+        background-color: #aaa;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        flex:1;
+
+    }
     .item-trash {
         color: var(--tomato-red);
         font-size: 50px;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px 0 0 10px;
+        border-radius: 0 0 0 10px;
         background-color: var(--juice-red);
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        flex:1;
     }
-
     /* NOVO ITEM */
-    .container-novo-item{
-        margin:0 30px;
+    .container-novo-item {
+        margin: 0 30px;
     }
     .titulo-novo-item, .data-novo-item {
         line-height: 2.5rem;
