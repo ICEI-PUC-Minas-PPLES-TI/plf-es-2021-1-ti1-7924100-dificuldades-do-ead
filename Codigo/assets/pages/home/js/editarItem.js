@@ -1,3 +1,10 @@
+/**
+ *Quando chamada, essa função desenha atela com os capompos
+ * e inputs de dados assim como a função de Criação de novo item.
+ * Porém com algumas pequenas diferenças como o preenchimento dos campos.
+ *
+ * @param {inteiro} item_id - identificador do item a ser modificado
+ */
 function editarItem(item_id){
     let db = JSON.parse(localStorage.getItem('db'));
     let indexDoConjuntoDeListas = localStorage.getItem('indexDaListaDoUsuario');
@@ -51,6 +58,12 @@ function editarItem(item_id){
 
 }
 
+/**
+ *Essa função é chamada quando a operação de edição do item é concluida
+ * elas subtitui todos os dados do item pelos novos dados inseridos.
+ *
+ * @param {inteiro} item_id - Identificador do item a ter seus dados alterados.
+ */
 function salvarEdicao(item_id) {
     var db = JSON.parse(localStorage.getItem('db'));
     let lista_id = Number(localStorage.getItem('itensRequeridosId'));
