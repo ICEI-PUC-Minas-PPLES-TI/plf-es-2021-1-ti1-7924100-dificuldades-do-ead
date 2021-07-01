@@ -13,8 +13,9 @@ Listfy é uma aplicação web que te ajuda a organizar seus trabalhos e tarefas 
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Roberto Felipe Dias Ferreira Da Rocha
+* Rommel Vieira Carneiro
+* Will Ricardo Dos Santos Machado
 
 **Languages and Tools:**
 
