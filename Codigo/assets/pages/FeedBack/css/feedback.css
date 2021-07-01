@@ -27,9 +27,12 @@ p{
     float: left;
     margin-right: 7px;
 }
-.img_user,.img_arrow{
+.img_user{
     font-size: 50px;
     cursor: pointer;
+}
+.img_arrow{
+    font-size: 40px;
 }
 h1{
     text-align: center;
