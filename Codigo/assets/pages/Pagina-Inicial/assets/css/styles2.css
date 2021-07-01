@@ -200,11 +200,11 @@ h6 a {
 	font-size: 3em;
 	line-height: 1em;
 	margin-top: 3rem;
-	margin-left: -0.5rem;
+	margin-left: -1rem;
 }
 .header-subtitle{
 	margin-top: 2rem;
-	margin-left: -11.3rem;
+	margin-left: -8.8rem;
 	margin-bottom: 1rem;
 }
 .img-checklist{
@@ -293,13 +293,8 @@ h6 a {
 	#header .inner{
 		left: 13%;
 	}
-	body.homepage #header h1{
-		font-size: 2.5em!important;
-	}
-	.header-subtitle{
-		margin-left: -0.5rem;
-		text-align: center;
-		font-size: 1.4rem!important;
+	.text-header{
+		margin-left: 4.3rem;
 	}
 	.img-checklist{
 		width: 400px;
@@ -308,7 +303,7 @@ h6 a {
 		left: 67%!important;
 	}
 	.btn-primary{
-		margin-left: -13rem;
+		margin-left: -17.5rem;
 	}
 	.text-description-title,.text-description{
 		margin-left: 1.9rem;
@@ -333,10 +328,13 @@ h6 a {
 	#header .inner{
 		left: 25%;
 	}
+	.text-header{
+		margin-left: 3.7rem;
+	}
 	.img-checklist{
 		width: 350px!important;
 		height: 350px!important;
-		top: 1rem!important;
+		top: 3.5rem!important;
 		left: 60%!important;
 	}
 	.text-description-title{
@@ -350,15 +348,13 @@ h6 a {
 	.header_logo{
 		margin-left: -2.9rem!important;
 	}
-	.btn-primary{
-		margin-left: -13.5rem;
-	}
 	.card-1{
 		margin-top: 1rem;
-		margin-right: 3rem;
+		margin-left: 1rem;
 	}
 	.card-2{
 		margin-top: 1rem;
+		margin-left: 4rem;
 	}
 	.card-3{
 		margin-left: 1rem;
@@ -388,7 +384,7 @@ h6 a {
 		margin-left: 16rem;
 	}
 	.header_logo{
-		margin-left: 2.5rem!important;
+		margin-left: 0.2rem!important;
 	}
 	.text-description{
 		text-align: center;
@@ -401,8 +397,8 @@ h6 a {
 		font-size: 2em!important;
 	}
 	.header-subtitle{
-		font-size: 1em!important;
-		margin-left: -2.5rem;
+		font-size: 0.8em!important;
+		margin-left: -3.9rem;
 	}
 	.img-checklist{
 		margin-left: 3rem;
@@ -417,7 +413,7 @@ h6 a {
 		margin-left: 0.3rem!important;
 	}
 	.card-1 {
-		margin-left: 2.7rem !important;
+		margin-left: 1rem !important;
 	}
 	.card-2{
 		margin-left: 1rem;
@@ -425,6 +421,7 @@ h6 a {
 	
 	.card-3 {
 		margin-top: 1rem !important;
+		margin-left: 1rem;
 	}
 	
 	.text-description-title {
@@ -460,7 +457,7 @@ h6 a {
 		margin-left: 30rem;
 	}
 	.header_logo{
-		margin-left: 1.2rem!important;
+		margin-left: auto!important;
 	}
 	.img-checklist{
 		margin-left: 6rem;
@@ -481,15 +478,15 @@ h6 a {
 	}
 	.text-header{
 		margin-top: -1rem;
-		margin-left: 35rem;
+		margin-left: 28rem;
 	}
 	.header_logo{
-		margin-left: 4.2rem!important;
-	}
+		margin-left: 1rem!important;
+	}	
 }
 @media (max-width: 445px){
 	.text-header{
-		margin-left: 41rem;
+		margin-left: 37rem;
 	}
 	.header-subtitle{
 		margin-top: 1rem;
@@ -509,20 +506,18 @@ h6 a {
 	.header_logo{
 		width: 120px !important;
   		height: 50px !important;
-		margin-left: auto!important;
+	}
+	.section-heading{
+		font-size: 1.5rem!important;
 	}
 }
 @media (max-width: 360px){
 	body.homepage #header h1{
 		font-size: 1.5em!important;
-		margin-left: -5rem;
+		margin-left: -4rem;
 	}
 	.text-header{
 		margin-left: 45rem;
-	}
-	.header-subtitle{
-		font-size: 0.8rem!important;
-		margin-left: -5.5rem;
 	}
 	.img-checklist{
 		left: 58%!important;
@@ -551,7 +546,7 @@ h6 a {
 }
 @media (max-width: 300px){
 	.text-description-title{
-	  font-size: 1rem;
+	  font-size: 1rem!important;
 	}
 	.text-description{
 	  font-size: 0.6rem;
@@ -562,12 +557,22 @@ h6 a {
 }
 @media (max-width: 280px){
 	.text-header{
-		margin-left: 46rem;
+		margin-left: 49rem;
 	}
 	.img-checklist{
 		width: 220px!important;
 		height: 220px!important;
-		left: 61%!important;
+		left: 64%!important;
+	}
+	.header_logo{
+		width: 90px!important;
+		height: 20px!important;
+	}
+	.list{
+		margin-left: 0.5rem!important;
+	}
+	.section-heading{
+		font-size: 1rem!important;
 	}
 }
 
