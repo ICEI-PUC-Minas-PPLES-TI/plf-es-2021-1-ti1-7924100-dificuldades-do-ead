@@ -31,9 +31,7 @@ p{
     font-size: 50px;
     cursor: pointer;
 }
-.img_arrow{
-    font-size: 40px;
-}
+
 h1{
     text-align: center;
 }
@@ -44,7 +42,7 @@ h1{
     h1{
         font-size: 2rem;
     }
-    .img_user,.img_arrow{
+    .img_user{
         font-size: 40px;
     }
 }
