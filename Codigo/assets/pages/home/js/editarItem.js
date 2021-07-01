@@ -5,7 +5,7 @@
  *
  * @param {inteiro} item_id - identificador do item a ser modificado
  */
-function editarItem(item_id){
+function editarItem(item_id) {
     let db = JSON.parse(localStorage.getItem('db'));
     let indexDoConjuntoDeListas = localStorage.getItem('indexDaListaDoUsuario');
     var lista_id = localStorage.getItem('itensRequeridosId')
@@ -76,11 +76,11 @@ function salvarEdicao(item_id) {
         data: document.querySelector('input.data-novo-item').value.toString().substr(0, 10).split('-').reverse().join('/'),
         descricao: document.querySelector('textarea.descricao-novo-item').value.toString(),
     }
-    if(novosDados.titulo == ""){
+    if (novosDados.titulo == "") {
         alert('Dê um nome para a sua nova tarefa 😶');
-    }else if(novosDados.data == ""){
+    } else if (novosDados.data == "") {
         alert('Defina uma data para sua tarefa 🗓️')
-    }else{
+    } else {
         db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].titulo = novosDados.titulo;
         db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].data = novosDados.data;
         db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_itens[indexItem].descricao = novosDados.descricao;
