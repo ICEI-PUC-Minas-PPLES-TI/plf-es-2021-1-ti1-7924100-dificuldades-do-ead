@@ -9,7 +9,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(../img/bg-login-1.jpg);
+    background-image: url("../img/bg-login-1.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -45,7 +45,7 @@ main h2::before{
     bottom: 2px;
     left: 0;
     border-radius: 8px;
-    background: linear-gradient(to right,#87CEEB 10%,#191970 80%);
+    background: #020230;
 }
 
 .password{
@@ -82,7 +82,7 @@ form .input-field:first-child {
     width: 100%;
     bottom: -5px;
     left: 0;
-    background: linear-gradient(to right,#87CEEB 10%,#191970 80%);
+    background: #020230;
     transform: scaleX(0);
     transition: all .3s ease-in-out;
     transform-origin: left;
@@ -102,7 +102,7 @@ form .input-field:first-child {
 }
 form input[type="button"]{/*Botão Entrar*/
     color: #fff;
-    background: linear-gradient(160deg,#191970 10%,#87CEEB 80%);
+    background: linear-gradient(160deg,#020230 30%,#87CEEB 80%);
     border-color: #87CEEB;
     text-shadow: 
         0 0 0.125em hsl(0 0% 90% / 0.3),
@@ -118,7 +118,7 @@ form input[type="button"]{/*Botão Entrar*/
     font-weight: bold;
 }
 form input[type="button"]:hover {
-    background: linear-gradient(160deg,#87CEEB 10%, #191970 80%);
+    background: linear-gradient(160deg,#87CEEB 10%, #020230 60%);
 }
 .footer {
     display: flex;
