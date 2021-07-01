@@ -66,8 +66,16 @@ function carregarItens() {
 
     preRenderItens.push(`
         <div class="item-do-modal" id="item-do-modal-id${listaEspecifica.lista_itens[j].item_id}">
-        <div class="item-trash" onclick="excluirItem(${listaEspecifica.lista_itens[j].item_id})"><i class='bx bxs-trash'></i></div>
-        <div class="item-dados" style="background-color:${cor} !important;">
+        <div class="opcoes-de-item">
+          <div class="item-pencil" onclick="editarItem(${listaEspecifica.lista_itens[j].item_id})">
+          <i class='bx bxs-pencil'></i>
+          </div>
+          <div class="item-trash" onclick="excluirItem(${listaEspecifica.lista_itens[j].item_id})">
+            <i class='bx bxs-trash'></i>
+          </div>
+        </div>
+        
+        <div class="item-dados" style="background-color:${cor};">
           <div class="item-dados-header">
             <h2 class="">${listaEspecifica.lista_itens[j].titulo}</h2>
             <h3 class=""> <i class='bx bxs-calendar-event'></i>${listaEspecifica.lista_itens[j].data}</h3>
