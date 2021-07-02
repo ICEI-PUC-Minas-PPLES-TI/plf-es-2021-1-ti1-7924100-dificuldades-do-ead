@@ -90,15 +90,27 @@
                 <span>Nome:</span>
                 <input type="text" id="Nome" placeholder="Nome" />
             </label>
+            <label class="btn-exportar-dados" for="Exportar">
+                <i class='bx bxs-file-export icon-exportar-dados'></i>
+                <input onclick="alterarNome()" type="button" value="Alterar Nome">
+            </label>
             <label class="input-field" for="Email">
                 <i class="fas fa-pen-square edit"></i>
                 <span>E-mail:</span>
                 <input type="email" id="Email" placeholder="E-mail" />
             </label>
+            <label class="btn-exportar-dados" for="Exportar">
+                <i class='bx bxs-file-export icon-exportar-dados'></i>
+                <input onclick="alterarEmail()" type="button" value="Alterar Email">
+            </label>
             <label class="input-field" for="Senha">
                 <i class="fas fa-pen-square edit"></i>
                 <span>Senha:</span>
                 <input type="password" id="Senha" placeholder="************" />
+            </label>
+            <label class="btn-exportar-dados" for="Exportar">
+                <i class='bx bxs-file-export icon-exportar-dados'></i>
+                <input onclick="alterarSenha()" type="button" value="Alterar Senha">
             </label>
             <a href="../login/login.html">
             <label class="btn-log-out" for="Sair">
@@ -158,6 +170,8 @@
     
     
     <script src="js/deleteacc.js"></script>
+    <script src="js/editardados.js"></script>
+
     <script src="js/sidebar.js"></script>
     <script src="js/exportarDados.js"></script>
     <script src="../../js/FileSaver.js"></script>
