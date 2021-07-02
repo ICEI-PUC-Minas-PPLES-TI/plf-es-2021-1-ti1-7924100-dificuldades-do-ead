@@ -91,3 +91,13 @@ function salvarEdicao(item_id) {
     }
 
 }
+
+/**
+ *Essa função cancela o processo de edição chamando a função que
+ *desenha na tela a tela convencional de itens
+ *
+ */
+function cancelarEdicao(){
+    console.log('Botão de cancelar apertado');
+    carregarItens();
+}
