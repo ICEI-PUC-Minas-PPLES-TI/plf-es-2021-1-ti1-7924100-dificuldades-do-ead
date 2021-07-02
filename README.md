@@ -22,13 +22,15 @@ Listfy é uma aplicação web que te ajuda a organizar seus trabalhos e tarefas 
 <p align="center">
     <div align="center">
   <code>
-  <img height="40" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png">
-  </code> 
+  <img height="40" src="Artefatos/readme-images/html.png">
+  </code>
+  &nbsp; 
   <code>
-  <img height="40" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png">
+  <img height="40" src="Artefatos/readme-images/css.png">
   </code> 
+  &nbsp;
   <code>
-  <img height="40" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
+  <img height="40" src="Artefatos/readme-images/js.png">
   </code> 
   </div>
 </p>
