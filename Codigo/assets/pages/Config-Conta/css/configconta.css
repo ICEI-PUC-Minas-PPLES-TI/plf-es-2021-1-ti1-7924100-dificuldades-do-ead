@@ -71,6 +71,22 @@ main form input{
     text-align: center;
     padding: auto;
 }
+.btn-config-dados{
+    background-color: #c4c1c1;
+    display: flex;
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    padding: auto;
+}
+.icon-config-dados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
 .icon-exportar-dados{
     display: flex;
     align-items: center;

@@ -39,7 +39,8 @@
             <div>
                 <div class="logo-sidebar">
                     <a href="#" class="nav__logo">
-                        <img src="../../icons/listfy-logo-retraida-white.svg" style="width:55px !important; margin:10px auto 0 10px !important;"/>
+                        <img src="../../icons/listfy-logo-retraida-white.svg"
+                            style="width:55px !important; margin:10px auto 0 10px !important;" />
                     </a>
                 </div>
 
@@ -65,7 +66,8 @@
                         <span class="nav__name">Feedback</span>
                     </a>
 
-                    <a href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti1-7924100-dificuldades-do-ead" class="nav__link">
+                    <a href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti1-7924100-dificuldades-do-ead"
+                        class="nav__link">
                         <i class='bx bx-code-alt'></i>
                         <span class="nav__name">Repositório</span>
                     </a>
@@ -90,8 +92,8 @@
                 <span>Nome:</span>
                 <input type="text" id="Nome" placeholder="Nome" />
             </label>
-            <label class="btn-exportar-dados" for="Exportar">
-                <i class='bx bxs-file-export icon-exportar-dados'></i>
+            <label class="btn-config-dados" for="AlterarNome">
+                <i class='bx bxs-file-export icon-config-dados'></i>
                 <input onclick="alterarNome()" type="button" value="Alterar Nome">
             </label>
             <label class="input-field" for="Email">
@@ -99,8 +101,8 @@
                 <span>E-mail:</span>
                 <input type="email" id="Email" placeholder="E-mail" />
             </label>
-            <label class="btn-exportar-dados" for="Exportar">
-                <i class='bx bxs-file-export icon-exportar-dados'></i>
+            <label class="btn-config-dados" for="AlterarEmail">
+                <i class='bx bxs-file-export icon-config-dados'></i>
                 <input onclick="alterarEmail()" type="button" value="Alterar Email">
             </label>
             <label class="input-field" for="Senha">
@@ -108,16 +110,16 @@
                 <span>Senha:</span>
                 <input type="password" id="Senha" placeholder="************" />
             </label>
-            <label class="btn-exportar-dados" for="Exportar">
-                <i class='bx bxs-file-export icon-exportar-dados'></i>
+            <label class="btn-config-dados" for="AlterarSenha">
+                <i class='bx bxs-file-export icon-config-dados'></i>
                 <input onclick="alterarSenha()" type="button" value="Alterar Senha">
             </label>
             <a href="../login/login.html">
-            <label class="btn-log-out" for="Sair">
-                <i class='bx bx-log-out nav__icon icon-log-out edit'></i>
-                <input type="button" value="Sair" class="btn-log-out">
-            </label>
-        </a>
+                <label class="btn-log-out" for="Sair">
+                    <i class='bx bx-log-out nav__icon icon-log-out edit'></i>
+                    <input type="button" value="Sair" class="btn-log-out">
+                </label>
+            </a>
             <label class="btn-delete-account" for="Delete">
                 <i class="fas fa-trash-alt icon-delete-account edit"></i>
                 <input id="Delete" onclick="deleteAcc()" type="button" value="Deletar Conta">
@@ -126,49 +128,49 @@
                 <i class='bx bxs-file-export icon-exportar-dados'></i>
                 <input onclick="abrirModalExportarDados()" type="button" value="Exportar meus dados">
             </label>
-            
+
         </form>
         <div class="modal-exportar" id="modal-expotar">
             <div class="modal-exportar-header">
-              <h1>Como você quer seus dados?</h1>
+                <h1>Como você quer seus dados?</h1>
             </div>
             <div class="modal-exportar-body">
-              <div class="radio-buttons">
-                <label class="custom-radio">
-                  <input type="radio" name="radio" value="JSON" class="data-export-selector" />
-                  <span class="radio-btn">JSON</span>
-                </label>
-                <label class="custom-radio">
-                  <input type="radio" name="radio" value="TXT" class="data-export-selector" />
-                  <span class="radio-btn">TXT</span>
-                </label>
-                <label class="custom-radio">
-                  <input type="radio" name="radio" value="PDF" class="data-export-selector" />
-                  <span class="radio-btn">PDF</span>
-                </label>
-                <label class="custom-radio">
-                  <input type="radio" name="radio" value="XML" class="data-export-selector" />
-                  <span class="radio-btn">XML</span>
-                </label>
-                <label class="custom-radio">
-                    <input type="radio" name="radio" value="MD" class="data-export-selector" />
-                    <span class="radio-btn">MD</span>
-                  </label>
-              </div>
-              <div class="options-buttons">
-                <button class="modal-cancel-export" onclick="fecharModalExportarDados()">
-                  <i class='bx bx-x-circle'></i> Cancelar
-                </button>
-                <button class="list-export" onclick="exportarDados()">
-                  <i class='bx bx-plus-circle'></i> Exportar
-                </button>
-              </div>
+                <div class="radio-buttons">
+                    <label class="custom-radio">
+                        <input type="radio" name="radio" value="JSON" class="data-export-selector" />
+                        <span class="radio-btn">JSON</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="radio" value="TXT" class="data-export-selector" />
+                        <span class="radio-btn">TXT</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="radio" value="PDF" class="data-export-selector" />
+                        <span class="radio-btn">PDF</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="radio" value="XML" class="data-export-selector" />
+                        <span class="radio-btn">XML</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="radio" value="MD" class="data-export-selector" />
+                        <span class="radio-btn">MD</span>
+                    </label>
+                </div>
+                <div class="options-buttons">
+                    <button class="modal-cancel-export" onclick="fecharModalExportarDados()">
+                        <i class='bx bx-x-circle'></i> Cancelar
+                    </button>
+                    <button class="list-export" onclick="exportarDados()">
+                        <i class='bx bx-plus-circle'></i> Exportar
+                    </button>
+                </div>
             </div>
-          </div>
-        </main>
-        <div id="overlay" onclick="fecharModalExportarDados()"></div>
-    
-    
+        </div>
+    </main>
+    <div id="overlay" onclick="fecharModalExportarDados()"></div>
+
+
     <script src="js/deleteacc.js"></script>
     <script src="js/editardados.js"></script>
 
@@ -177,7 +179,7 @@
     <script src="../../js/FileSaver.js"></script>
     <script src="../../js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.60/jspdf.min.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
