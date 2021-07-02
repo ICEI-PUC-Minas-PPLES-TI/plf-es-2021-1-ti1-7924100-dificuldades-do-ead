@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   /*background: linear-gradient(120deg, #fffC, #081732);*/
-  background-image: url("bg-login-1.jpg");
+  background-image: url("bg-01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -33,8 +33,8 @@ body {
   /*titulo(recuperar senha)*/
   text-align: center;
   padding: 20px 0;
-  background-color: #3498db;
-  box-shadow: inset 0 0 0.1em 0 #2ecc71, 0 0 1em 0 #3498db, 0 0 0.2em 0 #9b59b6,0 0 0.2em 0 #f39c12;
+  background-color: #184292;
+  box-shadow: inset 0 0 0.5em 0 #87CEFA, 0 0 0.5em 0 #87CEFA;
   color: #fff;
   margin: 15px 105px 15px;
   border-radius: 50px;
@@ -47,10 +47,11 @@ body {
 
 form .campo-texto {
   position: relative;
-  background-color: #d1d1d1;
-  border: 0px solid;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
   border-radius: 10px;
   margin: 20px 0;
+  padding: 0.5rem;
 }
 
 .campo-texto input {
@@ -98,8 +99,9 @@ button {
 .btn-trocar-senha {
   margin-top: 1rem;
   padding: 0.4rem;
-  box-shadow: inset 0 0 0.1em 0 #2ecc71, 0 0 1em 0 #3498db, 0 0 0.2em 0 #9b59b6,0 0 0.2em 0 #f39c12;
-  background: linear-gradient(to left, #3498db, rgb(0,61,169));
+  box-shadow: inset 0 0 0.5em 0 #87CEFA, 0 0 0.5em 0 #87CEFA;
+  background: #184292;
+  border-color: #fff;
   cursor: pointer;
   color: white;
   font-size: 1.2rem;
@@ -111,7 +113,8 @@ button {
 
 .btn-trocar-senha:hover {
   letter-spacing: 0.5px;
-  background: linear-gradient(to left,rgb(0,61,169), #3498db);
+  text-shadow: none;
+  background: #4e78f4;
 }
 
 /*Fim animação*/
@@ -121,10 +124,11 @@ button {
 .pergunta-seg {
   width: 100%;
   height: 40px;
-  border: 1px solid #bdc3c7;
-  background-color: #d1d1d1;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
   border: 0;
   color: black;
   border-radius: 25px;
   font-size: 16px;
+  outline: none;
 }
