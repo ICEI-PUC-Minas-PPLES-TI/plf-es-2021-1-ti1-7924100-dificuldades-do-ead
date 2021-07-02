@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    /*background: #1B2029;*/
+    background-image: url("../img/bg-cadastro-2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    min-width: 100vw;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+}
+
+main{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{/*Título Crie sua Conta*/
+    /*Background Gradient*/
+    /*background: linear-gradient(to right,#fffC 50%, #253450 100%);*/
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+    animation: animate 5s linear infinite;
+    -webkit-background-size: 500%;
+    background-size: 500%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+/*Icones Mídias Sociais*/
+main .social-media {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+main .social-media a{
+    text-decoration: none;
+}
+
+main .social-media img{
+    width: 36px;
+    margin-left: 3rem;
+}
+
+main .social-media a:first-child img{
+    margin-left: 0;
+}/*Fim icones*/
+
+main .alternative{
+    margin-top: 1rem;
+}
+
+main .alternative span{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+main .alternative span::before,main .alternative span::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+main .alternative span::after{
+    left: 50px;
+}
+
+label input{
+    color: white;
+}
+
+main h1{
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+main h1::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 350px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 8px;
+    /*background: linear-gradient(120deg,#191970 40%,#87CEEB 100%);*/
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+    box-shadow: inset 0 0 0.1em 0 #2ecc71, 0 0 1em 0 #3498db, 0 0 0.2em 0 #9b59b6,0 0 0.2em 0 #f39c12;
+    animation: animate 5s linear infinite;
+    -webkit-background-size: 500%;
+    background-size: 500%;
+}
+@keyframes animate{
+    0%{
+      background-position: 0 100%;
+    }
+    50%{
+      background-position: 100% 0;
+    }
+    100%{
+      background-position: 0 100%;
+    }
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form label{
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-left: 0.2rem;
+}
+
+main form input{
+    background: #161923;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: rgba(166, 166, 166,);
+    font-size: 1rem;
+    border: 1px solid #040b18;
+    border-radius: 8px;
+}
+
+main form input[type="button"]{
+    cursor: pointer;
+    width: 50%;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 32px;
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+    box-shadow: inset 0 0 0.1em 0 #2ecc71, 0 0 1em 0 #3498db, 0 0 0.2em 0 #9b59b6,0 0 0.2em 0 #f39c12;
+    animation: animate 5s linear infinite;
+    -webkit-background-size: 500%;
+    background-size: 500%;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+main form input[type="button"]:hover{
+    background: transparent;
+}
+
+section.images{
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 4rem;
+}
+
+section.images img{
+    width: 100%;
+}
+/*botao da pergunta*/
+.pergunta-seg{
+    background: #161923;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: rgba(166, 166, 166,);
+    font-size: 1rem;
+    border: 1px solid #040b18;
+    border-radius: 8px;
+    outline: none;
+    color: white;
+}
+
+
+/*Tirar a Imagem quando estiver nessa largura */
+@media only screen and (max-width: 1300px){
+    section.images{
+        display: none;
+        visibility: hidden;
+    }
+    main{
+        width: 100vw;
+    }
+    
+}
+@media only screen and (max-width: 1050px){
+    main h1{
+        font-size: 2.5rem;
+    }
+
+    main .alternative span{
+        font-size: 0.8rem;
+    }
+
+    main form label span, main form input[type="button"]{
+        font-size: 1rem;
+    }
+
+    main h1::before{
+        width: 290px;
+    }
+
+    main form label span{
+        margin-top: 10px;
+        font-size: 0.9rem;
+        margin-left: 0.2rem;
+    }
+
+    main .social-media img {
+        width: 30px;
+    }
+
+    main form input{
+        font-size: 15px;
+    }
+}
