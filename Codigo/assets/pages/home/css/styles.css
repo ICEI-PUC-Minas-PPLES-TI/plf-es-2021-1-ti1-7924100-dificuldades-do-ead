@@ -6,7 +6,7 @@
 
 .main {
     display: grid;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 1fr 2fr 11fr;
 }
 .main-content, .main-content-lists{
     display:flex;
