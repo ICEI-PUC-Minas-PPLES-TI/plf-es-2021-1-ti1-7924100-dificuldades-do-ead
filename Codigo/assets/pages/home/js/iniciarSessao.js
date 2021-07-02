@@ -21,7 +21,7 @@ function renderizarConteudo(){
         }
     }
     let indexEmoji = Math.floor(Math.random() * ((emojis.length - 1) - 0 + 1) + 0);
-    document.querySelector('h2.userNameTitle').innerHTML = `Olá ${db.usuarios[indexUsario].Nome} ${emojis[indexEmoji]}`
+    document.querySelector('h2.userNameTitle').innerHTML = `Olá, ${db.usuarios[indexUsario].Nome} ${emojis[indexEmoji]}`
     arrayDasListas = db.listasUsuarios // Array de listas
     //busca pelas listas no array
     for(let i = 0 ; i < arrayDasListas.length ; i++){
