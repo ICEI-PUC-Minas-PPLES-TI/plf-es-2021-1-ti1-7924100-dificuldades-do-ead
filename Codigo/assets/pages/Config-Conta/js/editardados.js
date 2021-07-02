@@ -21,7 +21,7 @@ function alterarNome() {
 
         if (db.usuarios[i].id == db.usuarioLogadoAtualmente && Nome != null) {
 
-            teste = window.confirm("Tem certeza que deseja alterar o email?");
+            teste = window.confirm("Tem certeza que deseja alterar o nome?");
 
             break;
         }
