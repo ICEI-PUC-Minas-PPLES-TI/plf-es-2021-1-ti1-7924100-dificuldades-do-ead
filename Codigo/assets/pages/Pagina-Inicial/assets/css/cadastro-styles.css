@@ -82,7 +82,7 @@ header.masthead .masthead-heading {
   font-weight: 600;
   font-size: 0.9rem !important;
   padding: 0.7rem !important;
-  box-shadow: 0 0 0.5em 0 #fff, 0 0 0.5em 0 #fff;
+  /*box-shadow: 0 0 0.5em 0 #fff, 0 0 0.5em 0 #fff;*/
 }
 
 .btn-sign-up:hover {
@@ -96,7 +96,7 @@ header.masthead .masthead-heading {
   font-weight: 600;
   font-size: 0.9rem !important;
   padding: 0.7rem !important;
-  box-shadow: inset 0 0 0.5em 0 #fff, 0 0 0.5em 0 #fff;
+  /*box-shadow: inset 0 0 0.5em 0 #fff, 0 0 0.5em 0 #fff;*/
 }
 
 /*Dropoton*/
@@ -833,17 +833,17 @@ fieldset:disabled .btn {
 
 .language_html {
   background-color: #FF4500;
-  width: 28%;
+  width: 22%;
 }
 
 .language_css {
   background-color: #4B0082;
-  width: 50%;
+  width: 47%;
 }
 
 .language_js {
   background-color: #FFFF00;
-  width: 22%;
+  width: 31%;
 }
 
 @media(max-width: 741px) {
