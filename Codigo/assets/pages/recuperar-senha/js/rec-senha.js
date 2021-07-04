@@ -30,6 +30,8 @@ function trocarSenha() {
 
 
             window.alert("Senha alterada com sucesso");
+            console.log("Redirecionano.......");
+            window.location.href = "../login/login.html";
 
             //window.location.href = "#"; //colocar link para pagina de login
 

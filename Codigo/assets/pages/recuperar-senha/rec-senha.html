@@ -1,44 +1,103 @@
 <!DOCTYPE html>
-
-<html lang="pt-bt">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Listfy - Recuperar Senha</title>
-    <link rel="stylesheet" href="../recuperar-senha/rec-senha.css">
+	<title>Listfy - Recuperar Senha</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/rec-senha.css">
+	<!--===============================================================================================-->
+	
 </head>
 
 <body>
-   <!-- <p>&lt/Listfy&gt</p>-->
-    <div class="center">
-        <h1>Trocar Senha</h1>
-        <form>
-            <div class="campo-texto">
-                <input type="text" placeholder="Email" id="Email">
-            </div>
-            <div class="campo-texto">
-                <select class="pergunta-seg">
-                    <option value="">Pergunta de segurança</option>
-                    <option value="1">Nome do animal de estimação da infancia</option>
-                    <option value="2">Primeiro Video Game</option>
-                    <option value="3">exemplo 3</option>
-                </select>
-            </div>
-            <div class="campo-texto">
-                <input type="text" placeholder="Resposta Pergunta Segurança" id="Resposta">
-            </div>
-            <div class=" campo-texto">
-                <input type="password" placeholder="Nova Senha" id="campoSenha">
-            </div>
-            <button onclick="trocarSenha()" value="Trocar Senha" class="btn-trocar-senha">Trocar Senha</button>
 
-            <div class="link-login">
-                <a href="../Login/login.html">Voltar para a página de Login</a>
-            </div>
-        </form>
-    </div>
-    <script src="../../pages/recuperar-senha/rec-senha.js"></script>
+	<div class="limiter">
+		<div class="container-rec-senha">
+			<div class="wrap-rec-senha p-l-100 p-r-100 p-t-40 p-b-33">
+				<form class="rec-senha-form validate-form flex-sb flex-w">
+					<span class="rec-senha-form-title">
+						Recuperação de Senha
+					</span>
+
+					<div class="p-t-25 p-b-9">
+						<span class="txt1">
+							Email
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Email is required">
+						<input class="input100" type="email" name="username" placeholder="Email" id="Email">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="p-t-31 p-b-9">
+						<span class="txt1">
+							Pergunta de Segurança
+						</span>
+					</div>
+					<div class="wrap-input100">
+						<select class="pergunta-seg">
+							<option value="">Pergunta de segurança</option>
+							<option value="1">Nome do animal de estimação da infancia</option>
+							<option value="2">Primeiro Video Game</option>
+							<option value="3">exemplo 3</option>
+						</select>				
+					</div>
+
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Resposta
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Answer is required">
+						<input class="input100" type="text" name="username" placeholder="Resposta" id="Resposta">
+						<span class="focus-input100"></span>
+					</div>
+
+					
+
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Nova Senha
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="New Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Nova Senha" id="campoSenha">
+						<span class="focus-input100"></span>
+					</div>
+					<div>
+						<input type="checkbox" onclick="mostrarSenha()" class="btn-mostrar-senha m-t-15"><span class="m-l-10">Mostrar Senha</span>
+					</div>	
+
+					<div class="container-rec-senha-form-btn m-t-40">
+						<button onclick="trocarSenha()" class="rec-senha-form-btn">
+							Trocar Senha
+						</button>
+					</div>
+
+					<div class="w-full text-center p-t-55">
+						<span class="txt2">
+							Voltar para a página de
+						</span>
+						<a href="../Login/login.html" class="txt2 bo1">
+							Login
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/rec-senha-main.js"></script>
+	<script src="js/rec-senha.js"></script>
+
 </body>
-
 
 </html>
