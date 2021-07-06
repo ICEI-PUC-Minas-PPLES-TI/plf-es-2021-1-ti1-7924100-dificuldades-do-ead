@@ -6,6 +6,72 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+.sobre_area{
+    border: 2px solid black;
+    border-radius: 16px;
+}
+.img-sobre{
+    width: 600px;
+    height: 180px;
+    margin: 0 auto;
+}
+.text-sobre{
+    font-size: 1rem;
+}
+.icon-languages{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+@media (max-width: 1400px){
+    .img-sobre{
+        width: 400px;
+        height: 120px;
+    }
+}
+@media (max-width: 1010px){
+    .img-sobre{
+        width: 300px;
+        height: 90px;
+    }
+}
+@media (max-width: 810px){
+    .img-sobre{
+        width: 230px;
+        height: 70px;
+    }
+}
+@media (max-width: 574px){
+    .img-sobre{
+        width: 400px;
+        height: 120px;
+    }
+}
+@media (max-width: 450px){
+    .img-sobre{
+        width: 300px;
+        height: 100px;
+    }
+}
+@media (max-width: 350px){
+    .img-sobre{
+        width: 230px;
+        height: 70px;
+    }
+}
+@media (max-width: 280px){
+    .img-sobre{
+        width: 170px;
+        height: 50px;
+    }
+}
+@media (max-width: 220px){
+    .img-sobre{
+        width: 100px;
+        height: 30px;
+    }
+}
+
+
 
 
 
