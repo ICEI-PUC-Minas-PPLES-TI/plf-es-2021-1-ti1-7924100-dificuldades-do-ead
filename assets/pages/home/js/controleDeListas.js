@@ -279,6 +279,17 @@ function abrirModalEditarLista(editId) {
     let overlay = document.querySelector('div#overlay')
     modal.classList.add('active')
     overlay.classList.add('active')
+    let inputNomeDaLista = document.querySelector('input.novo-nome-da-lista');
+    let db = JSON.parse(localStorage.getItem('db'));
+    let indexLista;
+    for(let i = 0 ; i < db.listasUsuarios[db.indexDaListaDousuario].listas.length ; i++){
+        if(db.listasUsuarios[db.indexDaListaDousuario].listas[i].lista_id == editId){
+            indexLista = i;
+            break;
+        }
+    }
+    inputNomeDaLista.value = db.listasUsuarios[db.indexDaListaDousuario].listas[indexLista].lista_nome;
+    
     /*
         Selecionando lista a ser deletada, e gravando dados no local
         Storage
@@ -291,5 +302,6 @@ function fecharModalEditarLista() {
     let overlay = document.querySelector('div#overlay')
     modal.classList.remove('active')
     overlay.classList.remove('active')
+    document.querySelector('input.novo-nome-da-lista').reset;
     localStorage.removeItem('editId')
 }

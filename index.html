@@ -1,134 +1,424 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="pt-br">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Listfy</title>
-    <link rel="icon" type="image/x-icon" href="assets/pages/Pagina-Inicial/assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="assets/pages/Pagina-Inicial/css/paginainicial.css" rel="stylesheet" />
+	<title>Listfy</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--===============================================================================================-->
+  	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<!--========================Font Awesome icons (free version)====================================-->
+	<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+		integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+	<!--======================================CSS======================================================-->
+	<link rel="stylesheet" href="assets/pages/Pagina-Inicial/assets/css/pag-Inicial-styles.css">
+	<link rel="stylesheet" href="assets/pages/Pagina-Inicial/assets/css/pag-Inicial-styles2.css" />
 </head>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div class="container px-5">
-            <div class="header__img navbar-brand">
-                <img src="assets/pages/Pagina-Inicial/assets/img/listfy-logo-white.svg" alt="">
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link"
-                            href="assets/pages/login-cadastro/cadastro.html">Inscreva-se</a></li>
-                    <li class="nav-item"><a class="nav-link" href="assets/pages/login/login.html">Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Header-->
-    <header class="masthead text-center text-white">
-        <div class="masthead-content">
-            <div class="px-5">
-                <h1 class="masthead-heading mb-0 margintop text-bv">Bem-Vindo</h1>
-                <h2 class="masthead-subheading mb-0">Ao Listfy</h2>
-                <a href="#" class="button-neon" href="#scroll">Leia Mais</a>
-            </div>
-        </div>
-        <div class="bg-circle-1 bg-circle"></div>
-        <div class="bg-circle-2 bg-circle"></div>
-        <div class="bg-circle-3 bg-circle"></div>
-        <div class="bg-circle-4 bg-circle"></div>
-        <!--<div class="bg-circle-5 bg-circle"></div>
-        <div class="bg-circle-6 bg-circle"></div>-->
-    </header>
-    <!--Exemplo da lista-->
-    <h1 class="text-center text-integrantes text-white">Exemplo Lista</h1>
-    <div class="container lista_area">
+<body class="homepage is-preload">
+	<div>
+		<!-- Header -->
+		<!--Teste-->
+		<div id="header">
+			<!-- Navigation-->
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+				<div class="container">
+					<a class="navbar-brand" href="index.html"><img src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/logos/listfy-logo-white.svg"
+							class="header_logo header-logo" alt="..." /></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+						aria-label="Toggle navigation">
+						Menu
+						<i class="fas fa-bars ms-1"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+							<!-- Nav -->
+							<nav id="nav">
+								<ul>
 
-    </div>
-    <!--Fim exemplo Lista-->
-    <!--Cards-->
-    <h1 class="text-center text-integrantes text-white">Integrantes do Grupo</h1>
-    <div class="container card_area">
-        <!--<div class="bg-circle-1 bg-circle"></div>-->
-        <div class="card">
-            <div class="box">
-                <div class="content">
-                    <h2>01</h2>
-                    <h3>Integrante 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum
-                        delectus repellat esse molestiae suscipit quia?</p>
-                    <i class="fab fa-instagram instagram"></i>
-                    <i class="fab fa-facebook-square facebook"></i>
-                </div>
-            </div>
-        </div>
+									<li class="nav-item dropdown">
+										<a class="nav-link scrolly" href="#">Menu</a>
+										<ul>
+											<li><a class="scrolly" href="#header">Home</a></li>
+											<li><a class="scrolly" href="#description">Descrição</a></li>
+											<li><a class="scrolly" href="#personalize">Lista</a></li>
+											<li><a class="scrolly" href="#languages">Linguagens</a></li>
+											<li><a class="scrolly" href="#desenvolvimento">Desenvolvimento</a></li>
+											<li><a class="scrolly" href="#team">Equipe</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<li class="nav-item"><a class="nav-link btn-sign-up" href="assets/pages/Cadastro/cadastro.html">Cadastrar-se</a></li>
+							<li class="nav-item"><a class="nav-link btn-sign-in" href="assets/pages/login/login.html">Fazer Login</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 
-        <div class="card">
-            <div class="box">
-                <div class="content">
-                    <h2>02</h2>
-                    <h3>Integrante 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum
-                        delectus repellat esse molestiae suscipit quia?</p>
-                    <i class="fab fa-instagram instagram"></i>
-                    <i class="fab fa-facebook-square facebook"></i>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="box">
-                <div class="content">
-                    <h2>03</h2>
-                    <h3>Integrante 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum
-                        delectus repellat esse molestiae suscipit quia?</p>
-                    <i class="fab fa-instagram instagram"></i>
-                    <i class="fab fa-facebook-square facebook"></i>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="box">
-                <div class="content">
-                    <h2>04</h2>
-                    <h3>Integrante 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, natus. Iste eum non rerum
-                        delectus repellat esse molestiae suscipit quia?</p>
-                    <i class="fab fa-instagram instagram"></i>
-                    <i class="fab fa-facebook-square facebook"></i>
-                </div>
-            </div>
-        </div>
-        <!--<div class="bg-circle-2 bg-circle"></div>
-        <div class="bg-circle-3 bg-circle"></div>
-        <div class="bg-circle-4 bg-circle"></div>-->
-    </div>
-    <!--Fim Cards-->
-    <!-- Footer-->
-    <footer class="bg-black">
-        <div class="px-5 footer_area">
-            <p class="m-0 text-center text-white">Copyright 2021 - Disciplina Trabalho Interdisciplinar - ICEI PUC Minas
-            </p>
-        </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="assets/pages/Pagina-Inicial/js/paginainicial.js"></script>
+			<!-- Header -->
+			<div class="inner">
+				<header>
+					<div class="text-header" id="logo">
+						<h1>A sua experiência<br>será inesquecível<br>porque vamos<br>te lembrar sempre!</h1>
+						<div class="header-subtitle">Nunca mais perderá pontos por bobeira.</div>
+						<a class="btn btn-primary btn-xl text-uppercase scrolly" href="#description">Veja mais</a>
+					</div>
+					<img src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/header/Checklist.png" class="img-checklist">
+				</header>
+			</div>
+			
+			<!--Wave 1-->
+			<svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+				<path fill="#FFF" fill-opacity="1"
+					d="M0,160L48,181.3C96,203,192,245,288,250.7C384,256,480,224,576,181.3C672,139,768,85,864,85.3C960,85,1056,139,1152,154.7C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+				</path>
+			</svg>
+		</div>
 
-    <script src="assets/data/DADOS.js"></script>
+		<!--Descrição-->
+		<section class="page-description" id="description">
+			<div class="container card_area">
+				<div class="col-lg-3 section-heading">
+					<h1 class="text-description-title">Porquê o listfy é ideal para você</h1>
+					<p class="text-description">Se você é um estudante, que tem dificuldades de se organizar ou que deseja maximizar sua produtividade, nos te ajudamos com checklists simples e fáceis de serem usados.</p>
+				</div>
+				<div class="col-lg-3 card card-1">
+					<div class="card-content">
+						<div class="timeline-image"><img class="img-description"
+								src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/descrição/img-1-description.png" alt="..." /></div>
+						<h3 class="text-card-1">Vai se organizar melhor com suas atividades escolares.</h3>
+					</div>
+				</div>
+				<div class="col-lg-3 card card-2">
+					<div class="card-content">
+						<div class="timeline-image"><img class="img-description-2"
+								src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/descrição/img-2-description.png" alt="..." /></div>
+						<h3 class="text-card-2">Personalize sua Própria Lista.</h3>
+					</div>
+				</div>
+				<div class="col-lg-3 card card-3">
+					<div class="card-content">
+						<div class="timeline-image"><img class="img-description-3"
+								src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/descrição/Add friends.png" alt="..." /></div>
+						<h3 class="text-card-3">Compartilhe com seus Amigos!</h3>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <script>
-        var HASH_DE_VERSAO = 'd4cc1a62a62b04f818ebab73340160f7'
+		<!--Exemplo Lista-->
+		<section class="page-section" id="personalize">
+			<div class="container">
+				<div class="text-center">
+					<h2 class="section-heading text-uppercase">É assim que suas Listas se parecem</h2>
+				</div>
+
+				<div class="list">
+					<div class="hidded-options">
+						<div class="list-trash" >
+							<i class='bx bxs-trash'></i>
+						</div>
+						<div class="list-edit">
+							<i class='bx bxs-pencil'></i>
+						</div>
+					</div>
+					<h2 class="listTitle">Sua Lista</h2>
+					<img src="assets/pages/Pagina-Inicial/icons/tres-pontos.svg" class="menuList" alt="">
+				</div>
+			</div>
+		</section>
+
+		<!--Linguagens-->
+		<section class="page-section-languages" id="languages">
+			<div class="text-center">
+				<h2 class="section-heading text-language text-uppercase">Linguagens de Programação</h2>
+			</div>
+			<div class="language_container container">
+				<div>
+					<div class="language_header">
+						<div class="language_list">
+							<div class="language_data">
+								<div class="language_titles">
+									<h3 class="language_name">HTML</h3><i class="fab fa-html5 language_icon_html"></i>
+									<span class="language_number">22%</span>
+								</div>
+								<div class="language_bar">
+									<span class="language_percentage language_html">
+									</span>
+								</div>
+							</div>
+							<div class="language_data">
+								<div class="language_titles">
+									<h3 class="language_name">CSS</h3><i class="fab fa-css3-alt language_icon_css"></i>
+									<span class="language_number">47%</span>
+								</div>
+								<div class="language_bar">
+									<span class="language_percentage language_css">
+									</span>
+								</div>
+							</div>
+							<div class="language_data">
+								<div class="language_titles">
+									<h3 class="language_name">JavaScript</h3><i class="fab fa-js language_icon_js"></i>
+									<span class="language_number">31%</span>
+								</div>
+								<div class="language_bar">
+									<span class="language_percentage language_js">
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Desenvolvimento-->
+		<section class="page-section" id="desenvolvimento">
+			<div class="container">
+				<div class="text-center">
+					<h2 class="section-heading text-uppercase">Desenvolvimento do Projeto</h2>
+					<h3 class="section-subheading text-muted"></h3>
+				</div>
+				<ul class="timeline">
+					<li>
+						<div class="timeline-image"><img class="rounded-circle img-fluid"
+								src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/about/1.jpg" alt="..." /></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4>22/04/2021</h4>
+								<h4 class="subheading">Sprint 0 <i class="fas fa-check"></i></h4>
+							</div>
+							<div class="timeline-body">
+								<p>Apresentação e Documento do Projeto.<br>Elaboração dos Artefatos do Projeto.
+									Design
+									Thinking.
+									Exemplos: 1.Problema 2.Objetivo do Trabalho 3.Matriz CSD 4.Mapa de Stakeholders
+									5.Entrevistas Qualitativas e Highlights de Pesquisa 6.Personas e etc...</p>
+							</div>
+						</div>
+					</li>
+					<li class="timeline-inverted">
+						<div class="timeline-image"><img class="rounded-circle img-fluid"
+								src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/about/2.jpg" alt="..." /></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4>21/05/2021</h4>
+								<h4 class="subheading">Sprint 1 <i class="fas fa-check"></i></h4>
+							</div>
+							<div class="timeline-body">
+								<p>Entrega Parcial.<br>Foram entreges: Arquitetura da Solução, Metodologia, Projeto
+									de Interfaces, Template do Site, Template do Cadastro de Usuário/Login.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="timeline-image"><img class="rounded-circle img-fluid"
+								src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/about/3.jpg" alt="..." /></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4>03/06/2021</h4>
+								<h4 class="subheading">Sprint 2 <i class="fas fa-check"></i></h4>
+							</div>
+							<div class="timeline-body">
+								<p>Entrega Parcial.<br>Foram entreges: RF07 - Recuperação de Senha, Plano de Testes
+									de
+									Usabilidade, RF01.1 - Criação de Listas, Plano de Testes de Software, RF06 -
+									Cadastro de Usuário/Login.</p>
+							</div>
+						</div>
+					</li>
+					<li class="timeline-inverted">
+						<div class="timeline-image"><img class="rounded-circle img-fluid"
+								src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/about/4.jpg" alt="..." /></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4>17/06/2021</h4>
+								<h4 class="subheading">Sprint 3 <i class="fas fa-check"></i></h4>
+							</div>
+							<div class="timeline-body">
+								<p>Entrega Parcial.<br>Foram entreges: Registro de Testes de Software, RF-10 -
+									Exibição
+									de itens da Lista, RF01 - Criação, Edição, Exclusão de lista, Registro de Teste
+									de
+									Usabilidade.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="timeline-image"><img class="rounded-circle img-fluid"
+								src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/about/3.jpg" alt="..." /></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4>06/07/2021</h4>
+								<h4 class="subheading">Sprint 4 <i class="fas fa-check"></i></h4>
+							</div>
+							<div class="timeline-body">
+								<p>Processo Final do Nosso Projeto.<br>Apresentação, Video e Documento Final.</p>
+							</div>
+						</div>
+					</li>
+					<li class="timeline-inverted">
+						<div class="timeline-image">
+							<h4>
+								Esse foi
+								<br />
+								o Progresso
+								<br />
+								do Projeto
+							</h4>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- Team-->
+		<section class="page-section bg-team" id="team">
+			<div class="container">
+				<div class="text-center">
+					<h2 class="section-heading text-uppercase">Nossa Equipe</h2>
+					<h3 class="section-subheading text-muted">Trabalho Interdisciplinar - PUC Minas</h3>
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="team-member">
+							<img class="mx-auto rounded-circle" src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/team/gabriel.jpg" alt="..." />
+							<h4>Gabriel Couto</h4>
+							<p class="text-muted text-center">Scrum Master</p>
+							<a class="btn-social mx-2" href="https://github.com/G4BR-13-L"><i
+									class="fab fa-github social-media social-media"></i></a>
+							<a class="btn-social mx-2" href="#!"><i class="fab fa-facebook-f social-media"></i></a>
+							<a class="btn-social mx-2" href="#!"><i class="fab fa-instagram social-media"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="team-member">
+							<img class="mx-auto rounded-circle" src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/team/andre (2).jpg" alt="..." />
+							<h4>André de Oliveira</h4>
+							<p class="text-muted text-center">Development Team</p>
+							<a class="btn-social mx-2" href="https://github.com/andre-brandao"><i class="fab fa-github social-media"></i></a>
+							<a class="btn-social mx-2" href="#!"><i class="fab fa-facebook-f social-media"></i></a>
+							<a class="btn-social mx-2" href="https://www.instagram.com/andre__brandao/"><i class="fab fa-instagram social-media"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="team-member">
+							<img class="mx-auto rounded-circle" src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/team/breno.png" alt="..." />
+							<h4>Breno Rosa</h4>
+							<p class="text-muted text-center">Development Team</p>
+							<a class="btn-social mx-2" href="https://github.com/Breno1210"><i class="fab fa-github social-media"></i></a>
+							<a class="btn-social mx-2" href="#!"><i class="fab fa-facebook-f social-media"></i></a>
+							<a class="btn-social mx-2" href="https://www.instagram.com/breno_1almeida/?hl=pt-br"><i class="fab fa-instagram social-media"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="team-member">
+							<img class="mx-auto rounded-circle" src="../Codigo/assets/pages/Pagina-Inicial/assets/css/img/team/joao.png" alt="..." />
+							<h4>João Gabriel</h4>
+							<p class="text-muted text-center">Development Team</p>
+							<a class="btn-social mx-2" href="https://github.com/jgapadua"><i class="fab fa-github social-media"></i></a>
+							<a class="btn-social mx-2" href="#!"><i class="fab fa-facebook-f social-media"></i></a>
+							<a class="btn-social mx-2" href="#!"><i class="fab fa-instagram social-media"></i></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<div class="py-5">
+
+		</div>
+
+
+		<!--Footer-->
+		<footer>
+			<div class="container">
+				<div class="sec aboutus">
+					<h2>Sobre</h2>
+					
+					<p>Listfy é uma aplicação web que te ajuda a organizar seus trabalhos e tarefas nos estudos de maneira prática, fácil, direto ao ponto e com o mínimo de bugs.
+
+						<br><br><i class="fas fa-users"></i> Alunos integrantes da equipe
+						
+						<br><i class="fas fa-user-tie"></i> André de Oliveira Brandão
+						<br><i class="fas fa-user-tie"></i> Breno Rosa Almeida
+						<br><i class="fas fa-user-tie"></i> Gabriel Victor Couto Martins de Paula
+						<br><i class="fas fa-user-tie"></i> João Gabriel Amorim Pádua
+						
+						<br><br><i class="fas fa-chalkboard-teacher"></i> Professores responsáveis
+						
+						<br>Roberto Felipe Dias Ferreira Da Rocha
+						<br>Rommel Vieira Carneiro
+						<br>Will Ricardo Dos Santos Machado</p>
+					<ul class="sci">
+						<li><a href="#"><i class="fab fa-facebook-f icon-footer"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter icon-footer"></i></a></li>
+						<li><a href="#"><i class="fab fa-instagram icon-footer"></i></a></li>
+						<li><a href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti1-7924100-dificuldades-do-ead"><i class="fab fa-github icon-footer"></i></a></li>
+					</ul>
+				</div>
+				<div class="sec quickLinks">
+					<h2>Quick Links</h2>
+					<ul>
+						<li><a href="../Codigo/assets/pages/Sobre/sobre.html">Sobre</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				<div class="sec contact">
+					<h2>Contact Info</h2>
+					<ul class="info">
+						<li>
+							<span><i class="fas fa-map-marker-alt"></i></span>
+							<span>Av. Brasil, 2023 - Funcionários,<br>
+								Belo Horizonte - MG,<br>Brasil</span>
+						</li>
+						<li>
+							<span><i class="fas fa-phone-alt"></i></span>
+							<p><a href="#">+55 99 99999-9999</a><br></p>
+						</li>
+						<li>
+							<span><i class="fas fa-envelope"></i></span>
+							<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeE9TwNj0jyCe6M41RCIChpKa8f1MznsgIW6NW7vZ0ZXSlvFg/viewform">suportelistfy@gmail.com</a></p>
+						</li>
+					</ul>
+				</div>
+				<div class="copyrightText">
+					<p class="copyright-content"> Copyright &copy; - PUC Minas - Disciplina Trabalho
+						Interdisciplinar
+					</p>
+				</div>
+
+			</div>
+		</footer>
+		<div id="footer2" class="copyrightText">
+			<p class="copyright-content"> Copyright &copy; - PUC Minas - Disciplina Trabalho Interdisciplinar</p>
+		</div>
+
+	</div>
+	
+	<!-- Scripts -->
+	<script src="assets/data/DADOS.js"></script>
+	<!-- Bootstrap core JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<script src="../Codigo/assets/pages/Pagina-Inicial/assets/js/jquery.min.js"></script>
+	<script src="../Codigo/assets/pages/Pagina-Inicial/assets/js/jquery.dropotron.min.js"></script>
+	<script src="../Codigo/assets/pages/Pagina-Inicial/assets/js/jquery.scrolly.min.js"></script>
+	<script src="../Codigo/assets/pages/Pagina-Inicial/assets/js/breakpoints.min.js"></script>
+	<script src="../Codigo/assets/pages/Pagina-Inicial/assets/js/main.js"></script>
+	<script src="../Codigo/assets/pages/Pagina-Inicial/assets/js/scripts.js"></script>
+	
+	<script>
+        var HASH_DE_VERSAO = '8d90df92ad7481147b61eb29f770594033d0be0e57ddedfe8997f2f24c92d9b5'
         var bancogravado;
         var hashDeVersao = localStorage.getItem('hashDeVersao');
         if (hashDeVersao == HASH_DE_VERSAO) {
@@ -141,7 +431,7 @@
                 localStorage.setItem('db', JSON.stringify(db));
                 bancogravado = 1;
                 localStorage.setItem('bancogravado', JSON.stringify(bancogravado));
-                console.log(db);
+                console.table(db);
             } else {
                 console.log("O banco esta gravado");
             }
@@ -151,7 +441,7 @@
             localStorage.setItem('db', JSON.stringify(db));
             bancogravado = 1;
             localStorage.setItem('bancogravado', JSON.stringify(bancogravado));
-            console.log(db);
+            console.table(db);
         }
     </script>
 </body>

@@ -23,7 +23,7 @@ var db = {
     ultimoId: 5,
     usuarios: [{
         id: '521618038d61da2073c0',
-        Nome: "Gabriel Victor",
+        Nome: "Gabriel",
         Email: "gabriel@yahoo.com.br",
         Senha: "gabriel1234",
         Resposta: 'resp'
@@ -59,46 +59,58 @@ var db = {
     ],
     listasUsuarios: [{
         id: '521618038d61da2073c0',
-        listas: [{
-            lista_id: 8368221,
-            lista_nome: 'Lista exemplo',
-            lista_cor: '#FF006E',
-            lista_itens: [{
-                item_id: 31038404,
-                titulo: 'Quiz da palestra',
-                descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
-                data: '07/06/2021',
-                is_checked: true,
+        listas: [
+            {
+                lista_id: 56635049,
+                lista_nome: 'Bem vindo ao listfy',
+                lista_cor: '#1Db954',
+                lista_itens: [{
+                    item_id: 59244453,
+                    titulo: 'Sobre o listfy',
+                    descricao: 'Listfy te ajuda a organizar os estudos da melhor maneira possivel, e com o mínimo de bugs 😉',
+                    data: '04/05/4242',
+                    is_checked: false,
+                }]
             },
             {
-                item_id: 50035049,
-                titulo: 'Teste de software',
-                descricao: 'Fazer teste de um software',
-                data: '10/06/2021',
-                is_checked: true,
-            }
-            ]
-        },
-        {
-            lista_id: 9983067,
-            lista_nome: 'Engenharia de software',
-            lista_cor: '#3A86FF',
-            lista_itens: [{
-                item_id: 56293398,
-                titulo: 'Quiz da palestra',
-                descricao: 'Para segunda feira um quiz sobre a palestra de Ana Regina',
-                data: '07/06/2021',
-                is_checked: false,
+                lista_id: 8368221,
+                lista_nome: 'Minha lista',
+                lista_cor: '#FF006E',
+                lista_itens: [{
+                    item_id: 31038404,
+                    titulo: 'Documento da Sprint 4',
+                    descricao: 'Terminar o documento a ser entregue na sprint 4',
+                    data: '06/07/2021',
+                    is_checked: true,
+                },
+                {
+                    item_id: 50035049,
+                    titulo: 'Teste de software',
+                    descricao: 'Fazer teste das funcionalidades do listfy',
+                    data: '10/09/2021',
+                    is_checked: true,
+                }]
             },
             {
-                item_id: 59248853,
-                titulo: 'Teste de software',
-                descricao: 'Fazer teste de um software',
-                data: '10/06/2021',
-                is_checked: false,
-            }
-            ]
-        }
+                lista_id: 9983067,
+                lista_nome: 'Engenharia de software',
+                lista_cor: '#3A86FF',
+                lista_itens: [{
+                    item_id: 56293398,
+                    titulo: 'Reunião com a equipe',
+                    descricao: 'Microsoft Teams',
+                    data: '06/07/2021',
+                    is_checked: false,
+                },
+                {
+                    item_id: 59248853,
+                    titulo: 'Organização do Backlog',
+                    descricao: 'Ta uma bagunça',
+                    data: '10/08/2021',
+                    is_checked: false,
+                }
+                ]
+            },
         ]
     },
     {

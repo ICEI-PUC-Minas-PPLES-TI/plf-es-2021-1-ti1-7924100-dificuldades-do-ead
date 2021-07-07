@@ -1,0 +1,650 @@
+/*=====================[ FONT ]=====================*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+/*=====================[ RESTYLE TAG ]=====================*/
+
+:root{
+  --hue-color: 190;
+  --scroll-bar-color: #3B3B3B;
+  --scroll-thumb-color: hsl(var(--hue-color), 20%, 70%);;
+  --text-color-light: hsl(var(--hue-color), 8%, 60%);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*==========================================*/
+a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4e78f4;
+  border-color: #4e78f4;
+}
+
+/*========Scroll Bar========*/
+::-webkit-scrollbar {
+  width: .50rem;
+  background-color: var(--scroll-bar-color);
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color-light);
+}
+
+/*==========================================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+}
+
+ul,
+li {
+  margin: 0px;
+  list-style-type: none;
+}
+
+
+/*==========================================*/
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: #555555;
+}
+
+input:-moz-placeholder {
+  color: #555555;
+}
+
+input::-moz-placeholder {
+  color: #555555;
+}
+
+input:-ms-input-placeholder {
+  color: #555555;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #555555;
+}
+
+textarea:-moz-placeholder {
+  color: #555555;
+}
+
+textarea::-moz-placeholder {
+  color: #555555;
+}
+
+textarea:-ms-input-placeholder {
+  color: #555555;
+}
+
+label {
+  display: block;
+  margin: 0;
+}
+
+/*---------------------------------------------*/
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+iframe {
+  border: none !important;
+}
+
+
+/*=====================[ Utility ]=====================*/
+.txt1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.txt2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.5;
+}
+
+.bo1 {
+  border-bottom: 1px solid #999999;
+}
+
+/*=====================[ login ]=====================*/
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-cadastro {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  background-image: url("../images/bg-01.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  ;
+}
+
+
+.wrap-cadastro {
+  width: 600px;
+  background: #fff;
+  border-radius: 20px;
+  position: relative;
+}
+
+/*=====================[ Form ]=====================*/
+
+.cadastro-form {
+  width: 100%;
+}
+
+.cadastro-form-title {
+  width: 100%;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 39px;
+  color: #555555;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 600;
+}
+
+/*=====================[ Button sign in with ]=====================*/
+.btn-face,
+.btn-google {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: calc((100% - 20px) / 2);
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+  
+  position: relative;
+  z-index: 1;
+}
+
+.btn-google::before,
+.btn-face::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+ 
+  
+}
+
+.btn-face {
+  color: #fff;
+  background-color: #3b5998;
+}
+
+.btn-face i {
+  font-size: 30px;
+  margin-right: 17px;
+  padding-bottom: 3px;
+}
+
+.btn-google {
+  color: #555555;
+  background-color: #fff;
+}
+
+.btn-google img {
+  width: 30px;
+  margin-right: 15px;
+  padding-bottom: 3px;
+}
+
+.btn-face:hover:before,
+.btn-google:hover:before {
+  opacity: 1;
+}
+
+.btn-face:hover{
+  color: white;
+}
+.btn-google:hover {
+  color: black;
+}
+
+
+/*=====================[ Input ]=====================*/
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+
+/*==========================================*/
+.input100 {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 60px;
+  padding: 0 20px;
+}
+
+/*=====================[ Focus Input ]=====================*/
+
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  pointer-events: none;
+  border: 1px solid #4e78f4;
+  border-radius: 10px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  -webkit-transform: scaleX(1.1) scaleY(1.3);
+  -moz-transform: scaleX(1.1) scaleY(1.3);
+  -ms-transform: scaleX(1.1) scaleY(1.3);
+  -o-transform: scaleX(1.1) scaleY(1.3);
+  transform: scaleX(1.1) scaleY(1.3);
+}
+
+.input100:focus+.focus-input100 {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.eff-focus-selection {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/*=====================Pergunta de Segurança=====================*/
+.pergunta-seg{
+  position: relative;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  width: 100%;
+  color: #333333;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 60px;
+  padding: 0 15px;
+  outline: none;
+}
+
+/*=====================[ Button ]=====================*/
+.container-cadastro-form-btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cadastro-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 60px;
+  font-weight: 600;
+  color: #fff;
+  background: #184292;
+  border-color: #fff;
+  text-shadow: 
+    0 0 0.125em hsl(0 0% 90% / 0.3),
+    0 0 0.5em currentColor;
+  box-shadow: inset 0 0 0.5em 0 #87CEFA, 0 0 0.5em 0 #87CEFA;
+  border-radius: 6px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.2;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+}
+.login100-form-btn:hover{
+  text-shadow: none;
+  background: #4e78f4;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 100%;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.login100-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover:before {
+  opacity: 1;
+  background: transparent;
+}
+
+/*=====================[ Padding ]=====================*/
+.p-l-100 {padding-left: 100px;}
+
+.p-r-100 {padding-right: 100px;}
+
+.p-t-13 {padding-top: 13px;}
+.p-t-25 {padding-top: 25px;}
+.p-t-31 {padding-top: 31px;}
+.p-t-40 {padding-top: 40px;}
+.p-t-55 {padding-top: 55px;}
+
+.p-b-9 {padding-bottom: 9px;}
+.p-b-33 {padding-bottom: 33px;}
+
+
+/*=====================[ Margin ]=====================*/
+.m-b-20 {margin-bottom: 20px;}
+
+.m-t-15 {margin-top: 15px;}
+.m-t-40 {margin-top: 40px;}
+
+.m-l-10 {margin-left: 10px;}
+
+/*=====================[ Flex ]=====================*/
+.flex-sb {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+}
+.flex-w {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+/*=====================[ Width & Height ]=====================*/
+.w-full {width: 100%;}
+
+/*=====================[ TEXT ]=====================*/
+
+.text-white {color: white;}
+.text-black {color: black;}
+
+.text-hov-white:hover {color: white;}
+
+/*==========================================*/
+.text-up {text-transform: uppercase;}
+
+/*========================================== */
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-middle {vertical-align: middle;}
+
+/*=====================[ Alert validate ]=====================*/
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: #fff;
+  border: 1px solid #c80000;
+  border-radius: 2px;
+  padding: 4px 25px 5px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 12px;
+  pointer-events: none;
+
+  font-family: 'Open Sans', sans-serif;
+  color: #c80000;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f12a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 18px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/*=====================[ Responsive ]=====================*/
+@media (max-width: 768px) {
+  .wrap-login100 {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .wrap-login100 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .btn-face,
+  .btn-google {
+    width: 100%;
+  }
+}

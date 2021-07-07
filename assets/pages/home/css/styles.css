@@ -6,7 +6,7 @@
 
 .main {
     display: grid;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 1fr 2fr 11fr;
 }
 .main-content, .main-content-lists{
     display:flex;
@@ -48,12 +48,15 @@
     border-radius: 5px;
 }
 .list-options .list-trash:hover{
+    cursor: pointer;
     color: #FF4C4C;
 }
 .list-options .list-edit:hover{
+    cursor: pointer;
     color: #fff;
 }
 .listTitle {
+
     display: flex;
     align-items: flex-end;
     margin-left: 20px;
@@ -63,11 +66,13 @@
     transition: 100ms;
 }
 .listTitle:hover{
+    cursor: pointer;
     border-radius: 8px;
     background-color: #00000012;
 }
 
 .menuList {
+    cursor: pointer;
     margin: 20px 20px 0 0;
     font-size: 2rem;
     border-radius: 50%;

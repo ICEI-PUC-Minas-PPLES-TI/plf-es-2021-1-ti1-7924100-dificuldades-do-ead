@@ -127,8 +127,8 @@
 }
 
 .list-export {
-    color: #0e7432;
-    background-color: #74d897;
+    color: #333;
+    background-color: gray;
 }
 
 .modal-cancel-export:hover {
@@ -137,8 +137,8 @@
 }
 
 .list-export:hover {
-    background-color: #0e7432;
-    color: #74d897;
+    background-color: #333;
+    color: gray;
 }
 
 @media(max-width: 641px) {

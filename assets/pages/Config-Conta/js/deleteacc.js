@@ -21,12 +21,12 @@ function deleteAcc() {
         if (db.usuarios[i].id == db.usuarioLogadoAtualmente) {
             indexUsuario = i;
 
-            teste = true;
+            teste = window.confirm("Deletar conta?");
+
             break;
         }
 
     }
-
     if (teste) {
 
         db.usuarios.splice(indexUsuario, 1);

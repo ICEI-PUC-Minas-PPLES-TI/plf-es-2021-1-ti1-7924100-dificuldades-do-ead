@@ -1,7 +1,7 @@
 
 //Armazenamento do elemento que recebe as listas
 var listas = document.querySelector("div.main-content-lists");
-
+const emojis = ['😃','😎','😉','🌚'];
 
 /*
     Essa função busca e apresenta na tela as listas do usuário
@@ -12,10 +12,17 @@ function renderizarConteudo(){
     var dadosDasListas; // variavel que armazena somente a lista de listas
     var preDb = localStorage.getItem('db'); // Recuperando o banco de dados inteiro do localStorage
     var db = JSON.parse(preDb) // Tornando os dados recuperados em um objeto
-
+    let indexUsario;
     console.log("Iniciando sessão");
+    for(let h = 0 ; h < db.usuarios.length ; h++){
+        if(db.usuarios[h].id == db.usuarioLogadoAtualmente){
+            indexUsario = h;
+            break;
+        }
+    }
+    let indexEmoji = Math.floor(Math.random() * ((emojis.length - 1) - 0 + 1) + 0);
+    document.querySelector('h2.userNameTitle').innerHTML = `Olá, ${db.usuarios[indexUsario].Nome} ${emojis[indexEmoji]}`
     arrayDasListas = db.listasUsuarios // Array de listas
-    
     //busca pelas listas no array
     for(let i = 0 ; i < arrayDasListas.length ; i++){
         let numero = arrayDasListas[i].id;
@@ -58,10 +65,8 @@ function renderizarConteudo(){
    
     //Esse trecho remove as virgulas do array antes ser transformados em string
     preRenderListas = preRenderListas.join("");
-
     // Todas as listas são inseridas no documento
     listas.innerHTML += preRenderListas.toString();
-    
     //salva dados no local storage
     localStorage.setItem('db', JSON.stringify(db))
 }
