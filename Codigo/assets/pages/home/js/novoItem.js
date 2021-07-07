@@ -36,8 +36,8 @@ function renderizarTelaNovoItem() {
             <textarea name="" id="" cols="30" rows="4" class="descricao-novo-item"></textarea>
         </div>
         <div class="botoes-novo-item">
-            <button class="cancelar-novo-item" onclick="cancelarItem()"><i class='bx bx-x-circle'></i></button>
-            <button class="criar-novo-item" onclick="criarItem()"><i class='bx bx-plus-circle'></i></button>
+            <button class="cancelar-novo-item" onclick="cancelarItem()"><i class='bx bx-x-circle'></i>Cancelar</button>
+            <button class="criar-novo-item" onclick="criarItem()"><i class='bx bx-plus-circle'></i>Criar</button>
         </div>
     </div>`
 
