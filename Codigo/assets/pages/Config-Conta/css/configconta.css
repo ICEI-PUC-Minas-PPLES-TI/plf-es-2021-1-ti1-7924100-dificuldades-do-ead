@@ -95,10 +95,11 @@ main form input{
     border: 2px solid black;
     border-radius: 16px;
     padding: 2rem;
+    margin: none !important;
 }
 
 
-@media only screen and (max-width: 900px){
+/*@media only screen and (max-width: 900px){
     
     h1{
         font-size: 2rem;
@@ -135,10 +136,12 @@ main form input{
         width: 280px;
     }
     
-}
-@media only screen and (max-width: 550px){
+}*/
+@media only screen and (max-width: 641px){
     .configconta_area{
-        margin-right: 4rem;
+        margin: none !important;
+        width: 100%;
+        padding-left: 4rem;
     }
     h1{
         font-size: 1.5rem;
@@ -169,7 +172,7 @@ main form input{
     }
     
     
-}
+}/*
 @media only screen and (max-width: 450px){
     .configconta_area{
         padding: 1rem;
@@ -206,7 +209,7 @@ main form input{
     main form{
         width: 200px;
     }
-}
+}*/
 
 
 
