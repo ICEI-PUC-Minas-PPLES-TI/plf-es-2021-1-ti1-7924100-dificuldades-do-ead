@@ -167,7 +167,7 @@ var db = {
         id: '96aad3c04efe6d324515',
         listas: [{
             lista_id: 2676438,
-            lista_nome: 'Bem-Vindo!',
+            lista_nome: 'Nova Lista',
             lista_cor: '#FF006E',
             lista_itens: [{
                 item_id: 42533692,
