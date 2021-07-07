@@ -20,7 +20,7 @@ function editarItem(item_id) {
         </div>`;
 
     preRenderModalHeader.push(`
-    <h2>${db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_nome} - Nova Tarefa</h2>
+    <h2>${db.listasUsuarios[indexDoConjuntoDeListas].listas[indexLista].lista_nome} - Editar Tarefa</h2>
     <div class="modal-itens-icones">
     <i class='bx bx-arrow-back' onclick="carregarItens()"></i>
       <i class='bx bx-x' onclick="fecharModalItens()"></i>
