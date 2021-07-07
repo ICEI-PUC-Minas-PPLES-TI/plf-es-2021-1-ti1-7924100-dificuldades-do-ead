@@ -13,14 +13,17 @@ body{
 }
 p{
     font-size: 1.5rem;
-    margin-top: 10px;
+    padding: 1rem;
+    padding-top: 2rem;
 }
 
 .feedback_area{
-    margin-top: 2rem;
+    border: 2px solid black;
+    border-radius: 16px;
 }
 .conteudo_feedback{
     display: table;
+    margin-top: 2rem;
 }
 .texto_feedback{
     display: table-cell;
@@ -31,6 +34,20 @@ p{
     font-size: 50px;
     cursor: pointer;
 }
+.form-feedback{
+    color: black;
+    font-size: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.nome-feedback{
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    padding: 1rem;
+    padding-top: 0.5rem;
+}
+
 
 h1{
     text-align: center;
@@ -45,9 +62,20 @@ h1{
     .img_user{
         font-size: 40px;
     }
+    .nome-feedback{
+        margin-top: 0rem;
+    }
 }
 @media only screen and (max-width: 900px){
     p{
         font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 300px){
+    .nome-feedback{
+        margin-top: 2rem;
+    }
+    .img_user{
+        margin-left: 1rem;
     }
 }

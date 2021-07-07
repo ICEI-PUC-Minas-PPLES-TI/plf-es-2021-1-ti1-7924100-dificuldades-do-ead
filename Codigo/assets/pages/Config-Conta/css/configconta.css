@@ -9,15 +9,6 @@
 body{
     display: flex;
     min-height: 50vh;
-    align-items: flex-start;
-    justify-content: center;
-}
-main{
-    width: 100vw;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 3rem;
 }
 main form{
     display: flex;
@@ -100,17 +91,23 @@ main form input{
 .img_user{
     font-size: 40px;
 }
+.configconta_area{
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 2rem;
+}
 
 
 @media only screen and (max-width: 900px){
+    
     h1{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     main form label{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     main form input{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     main form input:last-child{
@@ -125,26 +122,92 @@ main form input{
     .icon-delete-account{
         font-size: 1.9rem;
     }
+    .icon-delete-account{
+        font-size: 1.5rem;
+    }
+    .btn-delete-account{
+        width: 200px;
+    }
+    .btn-config-dados{
+        width: 200px;
+    }
+    .btn-exportar-dados{
+        width: 280px;
+    }
     
 }
-@media only screen and (max-width: 535px){
+@media only screen and (max-width: 550px){
+    .configconta_area{
+        margin-right: 4rem;
+    }
     h1{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     main form label{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     main form input{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     main form input:last-child{
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+    .img_user{
+        font-size: 35px;
+    }
+    .icon-delete-account{
+        font-size: 1rem;
+    }
+    .btn-delete-account{
+        width: 150px;
+    }
+    .btn-config-dados{
+        width: 150px;
+    }
+    .btn-exportar-dados{
+        width: 200px;
+    }
+    
+    
+}
+@media only screen and (max-width: 450px){
+    .configconta_area{
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 4rem;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    main form label{
+        font-size: 1rem;
+    }
+    main form input{
+        font-size: 1rem;
+    }
+    main form input:last-child{
+        font-size: 1rem;
     }
     .img_user{
         font-size: 35px;
     }
     
 }
+@media only screen and (max-width: 430px){
+    .configconta_area{
+        margin-left: -0.5rem;
+        
+    }
+    main form{
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 430px){
+    main form{
+        width: 200px;
+    }
+}
+
 
 
 
