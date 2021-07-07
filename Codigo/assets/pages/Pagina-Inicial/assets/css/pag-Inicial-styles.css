@@ -82,7 +82,6 @@ header.masthead .masthead-heading {
   font-weight: 600;
   font-size: 0.9rem !important;
   padding: 0.7rem !important;
-  /*box-shadow: 0 0 0.5em 0 #fff, 0 0 0.5em 0 #fff;*/
 }
 
 .btn-sign-up:hover {
@@ -96,7 +95,6 @@ header.masthead .masthead-heading {
   font-weight: 600;
   font-size: 0.9rem !important;
   padding: 0.7rem !important;
-  /*box-shadow: inset 0 0 0.5em 0 #fff, 0 0 0.5em 0 #fff;*/
 }
 
 /*Dropoton*/
@@ -289,6 +287,7 @@ fieldset:disabled .btn {
   font-size: 2.5rem;
   margin-top: 0;
   margin-bottom: 1rem;
+  transition: all .2s ease-in-out;
 }
 
 .page-section h3.section-subheading,
@@ -304,6 +303,7 @@ fieldset:disabled .btn {
   position: relative;
   padding: 0;
   list-style: none;
+  transition: all .4s ease-in-out;
 }
 
 .timeline:before {
@@ -542,6 +542,7 @@ fieldset:disabled .btn {
   background: white;
   border-radius: 8px;
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
+  transition: all .2s ease-in-out;
 }
 
 .card-1 {
@@ -608,6 +609,7 @@ fieldset:disabled .btn {
   margin-top: 2rem;
   text-align: left;
   font-size: 2.5rem;
+  transition: all .2s ease-in-out;
 }
 
 .text-description {
@@ -615,6 +617,7 @@ fieldset:disabled .btn {
   margin-top: 1rem;
   text-align: left;
   font-size: 1rem;
+  transition: all .2s ease-in-out;
 }
 
 
@@ -627,8 +630,6 @@ fieldset:disabled .btn {
 /*========Fim description========*/
 /*========Exemplo lista========*/
 .list {
-  /*background: linear-gradient(160deg,#191970 10%,#87CEEB 80%);
-  box-shadow: inset 0 0 0.5em 0 #87CEFA, 0 0 0.5em 0 #87CEFA;*/
   /*========Animação Lista========*/
   background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
   box-shadow: 0px 0px 10px #999;
@@ -636,6 +637,7 @@ fieldset:disabled .btn {
   -webkit-background-size: 500%;
   background-size: 500%;
   margin:20px auto;
+  transition: all .2s ease-in-out;
 }
 
 @keyframes animate {
@@ -662,6 +664,7 @@ fieldset:disabled .btn {
 .page-section-languages {
   padding: 6rem 0;
   background: rgba(0, 0, 0, 0.03);
+  transition: all .2s ease-in-out;
 }
 
 @media(max-width: 348px) {
@@ -963,11 +966,13 @@ footer .container {
 
 footer .container .sec {
   margin-right: 1rem;
+  transition: all .2s ease-in-out;
 }
 
 footer .container .sec.aboutus {
   width: 40%;
   margin-left: -3.5rem;
+  transition: all .2s ease-in-out;
 }
 
 footer .container h2 {
@@ -1703,6 +1708,7 @@ textarea.form-control.is-invalid {
   color: #fff;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  
 }
 
 @media (max-width: 1399px) {
@@ -1743,6 +1749,7 @@ textarea.form-control.is-invalid {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  
 }
 
 .navbar>.container,
@@ -2232,6 +2239,7 @@ p {
   font-size: 0.8rem;
   color: #fff;
   letter-spacing: 0.0625em;
+  transition: all .2s ease-in-out;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active,

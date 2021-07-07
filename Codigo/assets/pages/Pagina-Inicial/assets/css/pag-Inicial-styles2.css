@@ -148,6 +148,7 @@ h6 a {
 	text-align: center;
 	padding: 7.5em 0 2em 0;
 	cursor: default;
+	transition: all .1s ease-in-out;
 }
 .wave-svg{
 	position: absolute;
@@ -178,11 +179,13 @@ h6 a {
 	line-height: 1em;
 	margin-top: 3rem;
 	margin-left: -1rem;
+	transition: all .2s ease-in-out;
 }
 .header-subtitle{
 	margin-top: 2rem;
 	margin-left: -8.8rem;
 	margin-bottom: 1rem;
+	transition: all .2s ease-in-out;
 }
 .img-checklist{
 	position: absolute;
@@ -190,6 +193,10 @@ h6 a {
 	height: 500px;
 	left: 71%;
 	top: -3rem;
+	transition: all .2s ease-in-out;
+}
+.text-header{
+	transition: all .2s ease-in-out;
 }
 /*.img-checklist:hover{
 	width: 450px;
@@ -209,7 +216,7 @@ h6 a {
 
 @media (max-width: 1400px) {
 	.card {
-	  margin-top: -2rem;
+	  margin-top: -1rem;
 	}
   
 	.card-1 {
@@ -222,7 +229,7 @@ h6 a {
 	}
   
 	.card-3 {
-	  margin-top: -2rem;
+	  margin-top: -1rem;
 	  margin-left: 2rem;
 	}
   
@@ -251,17 +258,17 @@ h6 a {
 	}
 	.card-1 {
 		margin-left: -0.7rem;
-	  }
+	}
 	
-	  .card-2 {
+	.card-2 {
 		margin-top: 2rem;
 		margin-left: 1.5rem;
-	  }
+	}
 	
-	  .card-3 {
-		margin-top: -2rem;
+	.card-3 {
+		margin-top: -1rem;
 		margin-left: 1.5rem;
-	  }
+	}
 }
 @media (max-width: 1226px){
 	
