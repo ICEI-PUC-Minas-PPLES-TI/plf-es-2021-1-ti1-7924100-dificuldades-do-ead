@@ -33,6 +33,8 @@ function renderizarConteudo(){
             //listas encontradas
             dadosDasListas = arrayDasListas[i]
             db.indexDaListaDoUsuario = i;
+            localStorage.setItem('indexDaListaDousuario', i);
+            localStorage.setItem('indexDaListaDoUsuario', i);
             break;
         }else{
             console.log('Procurando...')
