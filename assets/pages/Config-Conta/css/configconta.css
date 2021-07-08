@@ -99,7 +99,7 @@ main form input{
 }
 
 
-/*@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px){
     
     h1{
         font-size: 2rem;
@@ -136,12 +136,11 @@ main form input{
         width: 280px;
     }
     
-}*/
+}
 @media only screen and (max-width: 641px){
     .configconta_area{
         margin: none !important;
-        width: 100%;
-        padding-left: 4rem;
+        width: 280px;
     }
     h1{
         font-size: 1.5rem;
@@ -172,7 +171,7 @@ main form input{
     }
     
     
-}/*
+}
 @media only screen and (max-width: 450px){
     .configconta_area{
         padding: 1rem;
@@ -199,17 +198,16 @@ main form input{
 @media only screen and (max-width: 430px){
     .configconta_area{
         margin-left: -0.5rem;
-        
     }
-    main form{
-        width: 250px;
-    }
+    
 }
-@media only screen and (max-width: 430px){
-    main form{
-        width: 200px;
+@media only screen and (max-width: 330px){
+    .configconta_area{
+        margin-right: 0rem;
     }
-}*/
+    
+}
+
 
 
 

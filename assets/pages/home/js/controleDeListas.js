@@ -282,13 +282,14 @@ function abrirModalEditarLista(editId) {
     let inputNomeDaLista = document.querySelector('input.novo-nome-da-lista');
     let db = JSON.parse(localStorage.getItem('db'));
     let indexLista;
-    for(let i = 0 ; i < db.listasUsuarios[db.indexDaListaDousuario].listas.length ; i++){
-        if(db.listasUsuarios[db.indexDaListaDousuario].listas[i].lista_id == editId){
+    for(let i = 0 ; i < db.listasUsuarios[db.indexDaListaDoUsuario].listas.length ; i++){
+        if(db.listasUsuarios[db.indexDaListaDoUsuario].listas[i].lista_id == editId){
             indexLista = i;
             break;
         }
     }
-    inputNomeDaLista.value = db.listasUsuarios[db.indexDaListaDousuario].listas[indexLista].lista_nome;
+    console.log(db.listasUsuarios[db.indexDaListaDoUsuario].listas[indexLista].lista_nome)
+    inputNomeDaLista.value = db.listasUsuarios[db.indexDaListaDoUsuario].listas[indexLista].lista_nome;
     
     /*
         Selecionando lista a ser deletada, e gravando dados no local
