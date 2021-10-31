@@ -1,0 +1,31 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Listfy
+authors:
+  - family-names: de Oliveira Brandão
+    given-names: André
+  - family-names: Rosa Almeida
+    given-names: Breno 
+  - family-names: Couto Martins de Paula
+    given-names: Gabriel Victor
+  - family-names: Amorim Pádua
+    given-names: João Gabriel
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Felipe Dias Ferreira da Rocha
+    given-names: Roberto
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vieira Carneiro
+    given-names: Rommel
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Ricardo dos Santos Machado
+    given-names: Will
+keywords:
+  - Organizador de Tarefas
+  - Listas de Tarefas
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti1-7924100-dificuldades-do-ead
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2021-06-20
